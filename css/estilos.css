@@ -1,0 +1,693 @@
+
+/* RESET */
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62,5%;
+}
+
+.box-sizing-reset{
+    box-sizing: unset;
+}
+
+img{
+    vertical-align: unset;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: unset; 
+    margin-bottom: unset;
+    font-weight: bold;
+    line-height: 1.2; 
+    color: unset;
+}
+
+ol, ul {
+    padding-left: unset;
+}
+
+body {
+    line-height: unset;
+}
+
+/* EN CONSTRUCCION */
+
+.enconstruccionContainer{
+    border-top: 4px dotted #302e2e;
+    border-bottom: 4px dotted #302e2e;
+    margin-top: 10rem;
+    height: 30rem;
+}
+
+.imgenconstruccion{
+    position: absolute;
+    margin-left: 4rem;
+    width: 40rem;
+}
+
+.enconstruccionH{
+    font-size: 4rem;
+    color: #302e2e;
+    border: 4px double #302e2e;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 45rem;
+    margin-top: 13rem;
+}
+
+
+
+
+
+/* UNIVERSAL */
+
+.universal-p{
+    font-family: 'Raleway';
+    font-size: 1.0625rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+.universal-h{
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 6px;
+}
+
+/* HEADER */
+
+.headerconnectSection{
+    height: 6.5rem;
+}
+
+.headerconnect{
+    height: 6.5rem;
+    width: 100%;
+}
+
+.header{
+    background-image: url(../img/header.png);
+    opacity: 85%;
+    background-size: cover;
+    height: 6.5rem;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px ridge rgb(118, 17, 17);
+    z-index: 1;
+}
+
+.nav{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: unset;
+    margin-right: 2rem;
+}
+
+.navheader{
+    font-size: 3rem;
+    color: white;
+    padding: 0px 20px;
+    line-height: 6.5rem;
+}
+
+.navul{
+    line-height: 6.5rem;
+}
+
+.navicons-1{
+    margin-bottom: -5px;
+    margin-right: 3px;
+    height: 25px;
+    width: 25px;
+}
+
+.naviconplanetas{
+    margin-bottom: -2px;
+    margin-right: 3px;
+    height: 20px;
+    width: 35px;
+}
+
+.naviconobservatorio{
+    margin-bottom: -4px;
+    margin-right: 3px;
+    height: 25px;
+    width: 20px;
+}
+
+.navitem{
+    font-size: 1.5rem;
+    width: max-content;
+    padding: 0px 10px;
+    margin: 10px;
+    border-radius: 1rem;
+    display: inline;
+}
+
+.navitem:hover{
+
+    background-color: #5F5B5B;
+    transition: 0.7s;
+}
+
+.navlink{
+    text-decoration: none;
+    color: #D6D1D1;
+}
+
+.navlink-actual{
+    text-decoration: underline;
+    color: #DE7A7A;
+}
+
+
+
+/* FOOTER */
+
+.footer{
+    background-color: #393838;
+    height: 10rem;
+    width: 100%;
+}
+
+.footerdiv{
+    height: 5rem;
+    background-color: #302e2e;
+    box-sizing: unset;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 2.5rem;
+}
+
+.footerdivdecoration{
+    border-left: 1px solid gray;
+}
+
+.footerItem{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 40px;
+}
+
+/* FOOTER ; SOBRE NOSOTROS*/
+
+.footerSNh{
+    font-size: 20px;
+    width: 12rem;
+    color: #989494;
+}
+
+.footerSN{
+    font-size: 14px;
+    width: 20rem;
+    color: #d3d3d3;
+}
+
+.footerSNmini{
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+/* FOOTER ; SUBIR A ARRIBA */
+
+.footeruptoheaderD{
+    width: 5rem;
+}
+
+.footeruptoheaderA{
+    height: 45px;
+    width: 40px;
+    margin-top: 20%;
+    margin-left: 25%;
+}
+
+.footeruptoheaderA:hover{
+    border: 1px solid gray;
+    height: 70%;
+    width: 70%;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+
+/* FOOTER; LOGO */
+
+.footerlogo{
+    width: 25.5rem;
+}
+
+.footeruniversiumlogo{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
+.footeruniversiumicon{
+
+    margin-left: 25%;
+    height: 50%;
+    width: 50%;
+}
+
+/* FOOTER ; DERECHOS */
+
+.footerderechos{
+    height: 5rem;
+    width: 11rem;
+    overflow: hidden;
+    padding-left: 0.5rem;
+}
+
+.footercredits{
+    height: 50%;
+}
+
+.creditH{
+    font-size: 15px;
+    color: #989494;
+}
+
+.creditP{
+    font-size: 10px;
+    color: white;
+}
+
+/* FOOTER ; REDES SOCIALES */
+
+.footerRSul{
+    height: 5rem;
+    overflow: hidden;
+    padding-left: 0.5rem;
+}
+
+.footerRSitem{
+    display: inline;
+    margin: 2px;
+}
+
+.footerRS{
+    height: 35px;
+    width: 35px;
+    margin-top: 20%;
+}
+
+
+
+
+
+/* INICIO */
+
+.iniciomain{
+    background-color: #5F5B5B;
+    height: 170rem;
+}
+
+.iniciocontainer{
+    background-color: rgb(51, 51, 51);
+    border: 3px inset gray;
+    border-radius: 10px;
+    margin-left: 3rem;
+    margin-top: 5rem;
+    width: 82.5rem;
+    padding: 25px;
+}
+
+.inicio-h{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+    text-align: center;
+    color: gray;
+    border: 2px outset gray;
+    width: 50rem;
+    margin: 0 auto;
+    position: relative;
+    top: 20rem;
+}
+
+/* MAIN ; IMAGEN DEL INICIO Y SEPARACION*/
+
+.universomain{
+    height: 67.0rem;
+    width: 92.5rem;
+    background-size: 92.5rem;
+    background-image: url(../img/fondo.jpg);
+}
+
+
+
+.separacionul{
+    position: relative;
+    top: 57.9rem;
+}
+
+.separacion{
+    height: 3rem;
+    width: 1481px;
+    position: relative;
+    top: 57.9rem;
+}
+
+.separacionitem{
+    display: inline;
+    margin-right: 1px;
+}
+
+/* MAIN; INICIO: BIGBANG */
+
+.bigbangContainer{
+    height: 26rem;
+}
+
+.bigbangtextContainer{
+    height: 100%;
+    width: 55rem;
+}
+
+.bigbangimgContainer{
+    margin-top: -26rem;
+    margin-left: 55rem;
+    height: 100%;
+    width: 27rem;
+}
+
+.bigbangimg{
+    margin-left: 2rem;
+    height: 100%;
+    width: 25rem;
+    border-radius: 20px;
+}
+
+/* MAIN ; INFLACION COSMICA */
+
+.inflacionCosContainer{
+    height: 15rem;
+}
+
+.inflacionCosH{ 
+    text-align: center;
+} /* CAMBIAR POR UN TEXT-CENTER DESPUES */
+
+
+
+
+
+/* PLANETAS */
+
+.planetas-main{
+    background-color: black;
+    height: 430rem;
+    width: 100%;
+}
+
+.background-planetas{
+    background-image: url(../img/planetasfondo1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 90rem;
+    width: 100%;
+    padding-top: 20rem;
+}
+
+.planetas-h{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(242, 242, 181);
+    border: 2px outset rgb(242, 242, 181);
+    width: 40rem;
+    margin-left: 27%;
+}
+
+/* PLANETAS ; INICIO DE LA PAGINA */
+
+
+.planetasInicioItem {
+    list-style: none;
+}
+
+
+/* PLANETAS ; TEXTO */
+
+.planetasContainer{
+    margin-top: 3rem;
+    margin-left: 6rem;
+}
+
+.planetasdescriptionContainer{
+    background-color: #afa51939;
+    border: 1px outset #cac005;
+    border-radius: 2rem;
+    padding: 2rem 3rem;
+    width: 55rem;
+}
+
+
+/* INDICE */
+
+
+.planetasInicioUl{
+    display: flex;
+    margin-top: 10rem;
+}
+
+.indiceContainer{
+    background-image: url(../img/space_rocket.png);
+    /* background-color: red; */
+    background-size: 10rem;
+    background-position-x: center;
+    background-position-y: center;
+    box-sizing: border-box;
+    margin-top: -12rem;
+    margin-left: 5rem;
+    padding-top: 5rem;
+    width: 10rem;
+    height: 54rem;
+}
+
+.indicePlanetasOl{
+    background-color: rgba(255, 255, 255, 0.168);
+    border-radius: 1rem;
+    margin-top: 6.4rem;
+    margin-left: 1rem;
+    padding: 0.3rem 1rem;
+    width: 7rem;
+}
+
+.indicePlanetasItem{
+    /* background-color: rgba(255, 255, 255, 0.39);
+    border: 1px solid white; */
+    border-radius: 1rem;
+    text-align: center;
+    list-style: none;
+    margin: 1.5rem 0rem;
+}
+
+.indicePlaneta{
+    font-family: 'Roboto' ;
+    padding: 2px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fffbfb;
+/*     border-top: 2px solid #3c183e;
+    border-bottom: 2px solid #721579;
+    border-radius: 10px; */
+    
+}
+
+/* .indicePlaneta:hover{
+    padding: 1px;
+    border-top: 2px solid #3c183e;
+    border-bottom: 2px solid #721579;
+    border-left: 2px solid #3c183e;
+    border-right: 2px solid #721579;
+} */
+
+.indicePlanetasItem:hover{
+    padding: 5px;
+    border-style:ridge;
+    border-width: 0.2rem;
+}
+
+
+
+/* PLANETAS ; COLORES */
+
+.color-mercurio{
+    background-color: #75454572;
+    border: 2px solid #742626;
+}
+
+.color-venus{
+    background-color: #ff82516e;
+    border: 2px solid #ff6624;
+}
+
+.color-tierra{
+    background-color: #3d8bf768;
+    border: 2px solid #72bb53;
+}
+
+.color-marte{
+    background-color: #c6643d6d;
+    border: 2px solid #aa532e;
+}
+
+.color-jupiter{
+    background-color: #e0b47f64;
+    border: 2px solid #b09250;
+}
+
+.color-saturno{
+    background-color: #e3c5736a;
+    border: 2px solid #d4b952;
+}
+
+.color-urano{
+    background-color: #8eaad268;
+    border: 2px solid #6b8689;
+}
+
+.color-neptuno{
+    background-color: #5a6ccf64;
+    border: 2px solid #163d8a;
+}
+
+.color-pluton{
+    background-color: #acb5c26b;
+    border: 2px solid #b7ddf3;
+}
+
+
+
+/* PLANETAS ; CONTENEDORES DE CADA PLANETA */
+
+.planetas-detallados-ul{
+    margin-top: 10rem;
+}
+
+.planeta-detallados-container{
+    margin-top: 10rem;
+    border-radius: 1rem;
+}
+
+.planetas-info-container{
+    padding: 1rem;
+}
+
+
+
+
+/* OBSERVATORIO */
+
+.obsmain{
+    background-color: #5F5B5B;
+    height: 55rem;
+}
+
+/* CONTACTOS */
+
+
+.contactomain{
+    background-color: #5F5B5B;
+    height: 43rem;
+}
+
+.contacta_h{
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: #67E88A;
+}
+
+.contacta_p{
+    font-size: 2rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+/* FORMULARIO */
+
+.form{
+    margin-top: 1rem;
+    margin-right:16rem;
+    margin-left:16rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.formdiv{
+    height: 5rem;
+}
+
+.formFirstLineItem{
+    display: inline-block;
+    width: 30%;
+    height: 6rem;
+}
+
+.formlabels{
+    font-size: 1rem;
+    color: white;
+}
+
+.formcampos{
+    background-color: #aaa;
+    border-radius: 0.4rem;
+    border-color: gainsboro;
+    border: 2px inset gainsboro;
+    height: 2rem;
+    width: 15rem;
+    padding: 0px 2px;
+    margin-top: 2px;
+}
+
+.formlabelopinion{
+    font-size: 1.5rem;
+    color: white;
+}
+
+.formcampoopinion{
+    background-color: #aaa;
+    border-radius: 0.4rem;
+    border: 2px inset gainsboro;
+    resize: none;
+    padding-top: 4px;
+    padding-left: 4px;
+    margin-top: 2px;
+    height: 6rem;
+    width: 35rem;
+}
+
+.formbottom{
+    background-color: #82e99a;
+    border: 2px outset lightgreen;
+    border-radius: 9px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    height: 1.5rem;
+    width: 7rem;
+}
+
+.formbottom:hover{
+    background-color: #57af6c;
+    border: 2px outset lightgreen;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1480px) {
+    *{
+        font-size: 85%;
+    }
+
+/*     .planetasInicioUl{
+        background-color: yellow;
+    }
+
+    .planetasContainer{
+        background-color: red;
+} */
+}
+
