@@ -17,12 +17,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
 
+    <!-- BOOSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
     <!-- CSS -->
 
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
 <body>
-    <header class="header" id="header">
+    <header class="header box-sizing-reset" id="header">
         <nav class="nav"> <!-- NAVEGADOR -->
             <h1 class="navheader">UNIVERSIUM</h1> 
             <ul class="navul">
@@ -50,15 +53,12 @@
         </nav>
     </header>
     <main class="iniciomain" id="iniciomain">
-        <section class="universomain"> <!-- IMAGEN DEL PRINCIPIO -->
-            <div> <!-- TITULO -->
-                <h2 class="universal-h inicio-h">EL UNIVERSO</h2>
-            </div>
-            <div> <!-- SEPARACIONES ENTRE IMAGEN DEL PRINCIPIO Y EL MAIN -->
-                <img src="./img/separacion.png" alt="" class="separacion">
+        <section class="universal-background inicio-background"> <!-- FONDO CON TITULO -->
+            <div>
+                <h2 class="universal-h-start inicio-h">EL UNIVERSO</h2>
             </div>
         </section>
-        <section class="iniciocontainer bigbangContainer"> <!-- INICIO: EL BIGBANG -->
+        <section class="iniciocontainer bigbangContainer box-sizing-reset"> <!-- INICIO: EL BIGBANG -->
             <div class="bigbangtextContainer">
                 <h3 class="universal-h">EL INICIO DEL UNIVERSO: EL BIG BANG...</h3>
                 <p class="universal-p">
@@ -78,7 +78,7 @@
                 <img src="./img/bigbangimg.jpg" alt="Imagen del Big bang" class="bigbangimg">
             </div>
         </section>
-        <section class="iniciocontainer inflacionCosContainer"> <!-- INFLACION COSMICA -->
+        <section class="iniciocontainer inflacionCosContainer box-sizing-reset"> <!-- INFLACION COSMICA -->
             <div>
                 <h3 class="universal-h inflacionCosH">LA INFLACION COSMICA</h3>
                 <p class="universal-p"> La inflación cósmica viene de la mano con la teoría del Big Bang ya que aparte de añadirle el inicio que le falta, también resuelve varios problemas que el Big Bang no puede responder por sí mismo, como por ejemplo el problema del horizonte. Como vimos anteriormente, el problema del horizonte consiste en que en el primer segundo de vida del universo, con un tamaño igual al del sistema solar, todos los puntos del mismo tenían exactamente las mismas propiedades, siendo imposible ya que no tendrían tiempo de propagar esta información por todos los lados; el universo nace siendo grande e igual en todas partes.</p>
@@ -93,7 +93,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer box-sizing-reset">
         <section class="footersection">
             <ul class="footerContainer">
                 <li class="footerItem">
@@ -122,7 +122,7 @@
                         </div>
                         <div class= "footercredits">
                             <h6 class="creditH">DERECHOS</h6>
-                            <a class="creditP" href="https://www.freepik.es/vector-gratis/ilustracion-concepto-negocio_2687450.htm#page=2&position=1&from_view=search" target="_blank"><p>Imagen de rawpixel.com en Freepik</p></a>
+                            <a class="creditP" href="https://www.freepik.es/vector-gratis/ilustracion-concepto-negocio_2687450.htm#page=2&position=1&from_view=search" target="_blank">Imagen de rawpixel.com en Freepik</a>
                             <p class="creditP">© Todos los derechos estan reservados</p>
                         </div>
                     </div>
@@ -130,14 +130,24 @@
                 <li class="footerItem">
                     <div class="footerdiv footerdivdecoration"> <!-- REDES SOCIALES -->
                         <ul class="footerRSul">
-                            <li class="footerRSitem"><a href="https://twitter.com/6onzaa_" target="_blank"><img src="./img/twitter.png" alt="Twitter" class="footerRS"></a></li>
-                            <li class="footerRSitem"><a href="https://www.instagram.com/gonza_mayo/?hl=es" target="_blank"><img src="./img/instragram.png" alt="Instragram" class="footerRS"></a></li>
-                            <li class="footerRSitem"><a href="https://www.youtube.com/channel/UCoiCED4G-D_1fA8yQDAVvcw" target="_blank"><img src="./img/youtube.png" alt="Youtube" class="footerRS"></a></li>
+                            <li class="footerRSitem">
+                                <a href="https://twitter.com/6onzaa_" target="_blank"><img src="./img/twitter.png" alt="Twitter" class="footerRS"></a>
+                            </li>
+                            <li class="footerRSitem">
+                                <a href="https://www.instagram.com/gonza_mayo/?hl=es" target="_blank"><img src="./img/instragram.png" alt="Instragram" class="footerRS"></a>
+                            </li>
+                            <li class="footerRSitem">
+                                <a href="https://www.youtube.com/channel/UCoiCED4G-D_1fA8yQDAVvcw" target="_blank"><img src="./img/youtube.png" alt="Youtube" class="footerRS"></a>
+                            </li>
                         </ul>
                     </div>
                 </li>
             </ul>
         </section>
     </footer>
+
+    <!-- BOOSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
 </body>
 </html>
