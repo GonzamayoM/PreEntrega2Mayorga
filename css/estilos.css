@@ -707,5 +707,7 @@ body {
 } */
 
 .navbar-toggler-icon{
-    background-image: url(../img/planetasicon.png);
+    background-image: url(../img/navbar-expand-icon.png);
+    width: 6rem;
+    height: 6rem;
 }
