@@ -32,6 +32,10 @@ body {
     line-height: unset;
 }
 
+.navbar{
+    --bs-navbar-padding-y: 0;
+}
+
 /* EN CONSTRUCCION */
 
 .enconstruccionContainer{
@@ -121,12 +125,12 @@ body {
 .navheader{
     font-size: 4.8rem;
     color: white;
-    padding: 0rem 2rem;
+    padding-left: 1rem;
     line-height: 10.4rem;
 }
 
-.navul{
-    line-height: 10.4rem;
+.navbar-nav{
+    margin-left: 12rem;
 }
 
 .navicons-1{
@@ -317,21 +321,20 @@ body {
 
 .iniciomain{
     background-color: #5F5B5B;
-    height: 272rem;
+    height: 292rem;
 }
 
-.iniciocontainer{
+.inicio-container{
     background-color: rgb(51, 51, 51);
     border: 0.3rem inset gray;
     border-radius: 1rem;
-    margin-left: 4.8rem;
-    margin-top: 8rem;
-    width: 132rem;
     padding: 2.5rem;
+    margin-top: 8rem;
 }
 
 .inicio-h{
     color: gray;
+    text-shadow: gray 1px 1px 10px;
     border: 0.2rem outset gray;
     width: 80rem;
 }
@@ -339,69 +342,35 @@ body {
 /* MAIN ; IMAGEN DEL INICIO Y SEPARACION*/
 
 .inicio-background{
-    height: 107.2rem;
-    width: 100%;
+    background:
+        linear-gradient(0deg,#5F5B5B, 7%, transparent, 15%, transparent),
+        url(../img/inicio-background.png);
     background-size: 100%;
-    background-image: url(../img/fondo.jpg);
+    height: 36.6%;
+    width: 100%;
     background-repeat: no-repeat;
 }
 
 
-
-.separacionul{
-    position: relative;
-    top: 92.64rem;
-}
-
-.separacion{
-    height: 4.8rem;
-    width: 100%;
-    position: relative;
-    top: 92.64rem;
-}
-
-.separacionitem{
-    display: inline;
-    margin-right: 0.1rem;
-}
-
 /* MAIN; INICIO: BIGBANG */
-
-.bigbangContainer{
-    height: 41.6rem;
-}
 
 .bigbangtextContainer{
     height: 100%;
     width: 88rem;
 }
 
-.bigbangimgContainer{
-    margin-top: -41.6rem;
-    margin-left: 88rem;
+.bigbang-img{
+    width: 100%;
     height: 100%;
-    width: 43.2rem;
-}
-
-.bigbangimg{
-    margin-left: 3.2rem;
-    height: 100%;
-    width: 40rem;
     border-radius: 2rem;
 }
 
-/* MAIN ; INFLACION COSMICA */
+/* INICIO ; SISTEMA SOLAR */
 
-.inflacionCosContainer{
-    height: 24rem;
+.sistema-solar-img{
+    width: 100%;
+    height: 100%;
 }
-
-.inflacionCosH{ 
-    text-align: center;
-} /* CAMBIAR POR UN TEXT-CENTER DESPUES */
-
-
-
 
 
 /* PLANETAS */
@@ -421,9 +390,10 @@ body {
     width: 100%;
 }
 
-.planetas-h{
-    color: rgb(242, 242, 181);
-    border: 0.2rem outset rgb(242, 242, 181);
+.planetas-h{ /* rgb(242, 242, 181) 137, 100, 13 */
+    color: rgb(228, 104, 2);
+    text-shadow: rgb(228, 104, 2) 1px 1px 10px;
+    border: 0.2rem outset rgb(228, 104, 2);
     width: 63rem;
 }
 
@@ -574,10 +544,6 @@ body {
 
 /* PLANETAS ; CONTENEDORES DE CADA PLANETA */
 
-.planetas-detallados-ul{
-    margin-top: 16rem;
-}
-
 .planeta-detallados-container{
     margin-top: 16rem;
     border-radius: 1.6rem;
@@ -586,6 +552,16 @@ body {
 .planetas-info-container{
     padding: 1.6rem;
 }
+
+
+/* PLANETAS ; IMAGENES DE CADA PLANETA */
+
+.mercurio-img{
+    width: 31rem;
+    height: 30rem;
+
+}
+
 
 
 
@@ -598,16 +574,19 @@ body {
 }
 
 .observatorio-background{
-    width: 100%;
+    background-image: url(../img/obs-background.png);
+    height: 100%;
+    width: 100%;/* 
     height: 50%;
     background-position-y: bottom;
+    background-image: url(../img/obsimage.jpg); */
     background-size: 100%;
-    background-image: url(../img/obsimage.jpg);
     background-repeat: no-repeat;
 }
 
 .observatorio-h{
     color: rgb(232, 181, 242);
+    text-shadow: rgb(232, 181, 242) 1px 1px 10px;
     border: 0.2rem outset rgb(232, 181, 242);
     width: 84rem;
 }
@@ -711,4 +690,22 @@ body {
     *{
         font-size: 43.5%;
     }
+}
+/* 
+.asd1{
+    margin-top: 10rem;
+    font-size: xx-large;
+    color: #57af6c;
+    text-shadow: 8px 5px 10px black;
+}
+
+.asd2{
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(0 0 0.75rem crimson);
+    margin-left: 50%;
+} */
+
+.navbar-toggler-icon{
+    background-image: url(../img/planetasicon.png);
 }
