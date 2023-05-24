@@ -34,6 +34,10 @@ body {
   --bs-navbar-padding-y: 0;
 }
 
+ul {
+  margin-bottom: unset;
+}
+
 /* EN CONSTRUCCION */
 .enconstruccionContainer {
   border-top: 0.4rem dotted #302e2e;
@@ -82,6 +86,7 @@ body {
   color: white;
   font-size: 3.2rem;
   margin-bottom: 0.6rem;
+  text-shadow: black 6px 5px 9px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -92,6 +97,9 @@ body {
 @media screen and (max-width: 768px) {
   .universal-h-start {
     font-size: 3rem;
+  }
+  .universal-p {
+    font-size: 1.4rem;
   }
 }
 /* HEADER */
@@ -188,139 +196,176 @@ body {
 /* FOOTER */
 .footer {
   background-color: #393838;
-  height: 16rem;
+  height: 100%;
   width: 100%;
+  padding: 3rem 0;
 }
 
-.footerdiv {
-  height: 8rem;
+.footer-ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-item {
+  height: 9rem;
   background-color: #302e2e;
-  box-sizing: unset;
   border-radius: 1rem;
   padding: 0.5rem;
-  margin-top: 4rem;
 }
 
-.footerdivdecoration {
+.footer-item-decoration {
   border-left: 0.1rem solid gray;
 }
 
-.footerItem {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 5rem;
+/* FOOTER ; SOBRE NOSOTROS*/
+.footer-item-sobrenosotros {
+  width: 30rem;
 }
 
-/* FOOTER ; SOBRE NOSOTROS*/
-.footerSNh {
+.footer-sobrenosotros-h {
   font-size: 2rem;
-  width: 19.2rem;
   color: #989494;
 }
 
-.footerSN {
-  font-size: 1.4rem;
-  width: 32rem;
+.footer-sobrenosotros-p {
+  font-size: 1.3rem;
   color: #d3d3d3;
 }
 
-.footerSNmini {
-  margin-top: 1rem;
+.footer-sobrenosotros-mini-p {
   font-size: 1rem;
 }
 
 /* FOOTER ; SUBIR A ARRIBA */
-.footeruptoheaderD {
+.footer-item-up {
   width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footeruptoheaderA {
+.footer-up-img {
   height: 4.5rem;
   width: 4rem;
-  margin-top: 20%;
-  margin-left: 25%;
 }
 
-.footeruptoheaderA:hover {
+.footer-up-img:hover {
   border: 0.1rem solid gray;
-  height: 70%;
-  width: 70%;
-  margin-top: 15%;
-  margin-left: 15%;
+  border-radius: 1rem;
+  scale: 150%;
 }
 
 /* FOOTER; LOGO */
-.footerlogo {
+.footer-item-logo {
   width: 40.8rem;
 }
 
-.footeruniversiumlogo {
-  text-align: center;
+.footer-logo-h {
   color: white;
   font-size: 3.5rem;
 }
 
-.footeruniversiumicon {
-  margin-left: 25%;
+.footer-logo-img {
   height: 50%;
-  width: 50%;
+  width: 55%;
 }
 
 /* FOOTER ; DERECHOS */
-.footerderechos {
-  height: 8rem;
-  width: 17.6rem;
+.footer-item-derechos {
+  width: 20rem;
   overflow: hidden;
   padding-left: 0.8rem;
 }
 
-.footercredits {
+.footer-derechos-div {
   height: 50%;
 }
 
-.creditH {
+.footer-derechos-h {
   font-size: 1.5rem;
   color: #989494;
 }
 
-.creditP {
+.footer-derechos-p {
   font-size: 1rem;
   color: white;
 }
 
 /* FOOTER ; REDES SOCIALES */
-.footerRSul {
-  height: 8rem;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
+.footer-item-redessociales {
+  width: 13rem;
 }
 
-.footerRSitem {
+.footer-redessociales-ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer-redessociales-item {
   list-style: none;
   width: 3rem;
-  height: 3.5rem;
-  margin: 0.2rem;
-  align-self: center;
 }
 
-.footerRS {
+.footer-redessociales-icon {
   height: 3.5rem;
   width: 3.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  .footerlogo {
+  .footer {
+    padding: 3rem 0 0 0;
+  }
+  .footer-escritorio {
+    display: none;
+  }
+  .footer-celular {
+    display: block;
+  }
+  .footer-item {
+    margin-bottom: 4rem;
+  }
+  .footer-item-logo {
     width: 20.8rem;
   }
-  .footerSN {
-    width: 20.8rem;
+  .footer-logo-img {
+    height: 50%;
+    width: 40%;
+    resize: auto;
+  }
+  .footer-celular-item-redessociales {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-celular-div-redessociales {
+    width: 15rem;
+  }
+  .footer-redessociales-ul {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer-logo-img {
+    height: 50%;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-escritorio {
+    display: block;
+  }
+  .footer-celular {
+    display: none;
   }
 }
 /* INICIO */
 .iniciomain {
   background-color: #5F5B5B;
-  height: 292rem;
+  height: 100%;
+  padding-bottom: 8rem;
 }
 
 .inicio-container {
@@ -342,9 +387,9 @@ body {
 .inicio-background {
   background: linear-gradient(0deg, #5F5B5B, 7%, transparent, 15%, transparent), url(../img/inicio-background.png);
   background-size: 100%;
-  height: 36.6%;
-  width: 100%;
   background-repeat: no-repeat;
+  height: 107.3rem;
+  width: 100%;
 }
 
 /* MAIN; INICIO: BIGBANG */
@@ -354,8 +399,8 @@ body {
 }
 
 .bigbang-img {
-  width: 43rem;
-  height: 43rem;
+  width: 100%;
+  height: 100%;
   border-radius: 2rem;
 }
 
@@ -365,11 +410,17 @@ body {
   height: 100%;
 }
 
+@media screen and (max-width: 1200px) {
+  .inicio-h {
+    width: 30rem;
+  }
+}
 /* PLANETAS */
 .planetas-main {
   background-color: black;
   height: 100%;
   width: 100%;
+  padding-bottom: 16rem;
 }
 
 .planetas-background {
@@ -566,18 +617,16 @@ body {
 /* OBSERVATORIO */
 .obsmain {
   background-color: #5F5B5B;
-  height: 165rem;
+  height: 100%;
+  padding-bottom: 10rem;
 }
 
 .observatorio-background {
-  background-image: url(../img/obs-background.png);
-  height: 100%;
-  width: 100%; /* 
-height: 50%;
-background-position-y: bottom;
-background-image: url(../img/obsimage.jpg); */
+  background: linear-gradient(0deg, #5F5B5B, 7%, transparent, 15%, transparent), url(../img/obs-background.png);
   background-size: 100%;
   background-repeat: no-repeat;
+  height: 80.6rem;
+  width: 100%;
 }
 
 .observatorio-h {
@@ -587,6 +636,72 @@ background-image: url(../img/obsimage.jpg); */
   width: 84rem;
 }
 
+/* TITULO Y DESCRIPCION*/
+.observatorio-description-container {
+  margin-top: 10rem;
+  padding: 2rem;
+}
+
+.observatorio-description-h {
+  color: rgb(248, 181, 254);
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.observatorio-description-p {
+  font-size: 2rem;
+}
+
+/* GALERIA */
+.observatorio-galeria {
+  margin-top: 5rem;
+}
+
+.galeria-item {
+  padding: 0 4rem 4rem 4rem;
+}
+
+.galeria-card {
+  background-color: #313133;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 1.5rem;
+}
+
+/* GALERIA TUTLOS */
+.galeria-h-container {
+  background-color: #3f3f40;
+  height: 5rem;
+  border-radius: 1.5rem; /* 
+border-bottom: 1px solid rgb(255, 255, 255); */
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.galeria-h {
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* GALERIA IMAGENES */
+.galeria-img-container {
+  padding: 1rem;
+}
+
+.galeria-img {
+  border-radius: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .observatorio-background {
+    height: 21.7rem;
+  }
+  .observatorio-h {
+    width: 30rem;
+  }
+  .observatorio-description-h {
+    font-size: 3rem;
+  }
+}
 /* CONTACTOS */
 .contactomain {
   background-color: #5F5B5B;

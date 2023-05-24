@@ -2,139 +2,188 @@
 
 .footer{
     background-color: #393838;
-    height: 16rem;
+    height: 100%;
     width: 100%;
+    padding: 3rem 0;
 }
 
-.footerdiv{
-    height: 8rem;
+.footer-ul{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+.footer-item{
+    height: 9rem;
     background-color: #302e2e;
-    box-sizing: unset;
     border-radius: 1rem;
     padding: 0.5rem;
-    margin-top: 4rem;
 }
 
-.footerdivdecoration{
+.footer-item-decoration{
     border-left: 0.1rem solid gray;
 }
 
-.footerItem{
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 5rem;
-}
 
 /* FOOTER ; SOBRE NOSOTROS*/
 
-.footerSNh{
+.footer-item-sobrenosotros{
+    width: 30rem;
+}
+
+.footer-sobrenosotros-h{
     font-size: 2rem;
-    width: 19.2rem;
     color: #989494;
 }
 
-.footerSN{
-    font-size: 1.4rem;
-    width: 32rem;
+.footer-sobrenosotros-p{
+    font-size: 1.3rem;
     color: #d3d3d3;
 }
 
-.footerSNmini{
-    margin-top: 1rem;
+.footer-sobrenosotros-mini-p{
     font-size: 1rem;
 }
 
 /* FOOTER ; SUBIR A ARRIBA */
 
-.footeruptoheaderD{
+.footer-item-up{
     width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.footeruptoheaderA{
+.footer-up-img{
     height: 4.5rem;
     width: 4rem;
-    margin-top: 20%;
-    margin-left: 25%;
 }
 
-.footeruptoheaderA:hover{
+.footer-up-img:hover{
     border: 0.1rem solid gray;
-    height: 70%;
-    width: 70%;
-    margin-top: 15%;
-    margin-left: 15%;
+    border-radius: 1rem;
+    scale: 150%;
 }
 
 /* FOOTER; LOGO */
 
-.footerlogo{
+.footer-item-logo{
     width: 40.8rem;
 }
 
-.footeruniversiumlogo{
-    text-align: center;
+.footer-logo-h{
     color: white;
     font-size: 3.5rem;
 }
 
-.footeruniversiumicon{
-
-    margin-left: 25%;
+.footer-logo-img{
     height: 50%;
-    width: 50%;
+    width: 55%;
 }
 
 /* FOOTER ; DERECHOS */
 
-.footerderechos{
-    height: 8rem;
-    width: 17.6rem;
+.footer-item-derechos{
+    width: 20rem;
     overflow: hidden;
     padding-left: 0.8rem;
 }
 
-.footercredits{
+.footer-derechos-div{
     height: 50%;
 }
 
-.creditH{
+.footer-derechos-h{
     font-size: 1.5rem;
     color: #989494;
 }
 
-.creditP{
+.footer-derechos-p{
     font-size: 1rem;
     color: white;
 }
 
 /* FOOTER ; REDES SOCIALES */
 
-.footerRSul{
-    height: 8rem;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
+.footer-item-redessociales{
+    width: 13rem;
 }
 
-.footerRSitem{
+.footer-redessociales-ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer-redessociales-item{
     list-style: none;
     width: 3rem;
-    height: 3.5rem;
-    margin: 0.2rem;
-    align-self: center;
 }
 
-.footerRS{
+.footer-redessociales-icon{
     height: 3.5rem;
     width: 3.5rem;
 }
 
 @media screen and (max-width: 768px){
-    .footerlogo{
+    .footer{
+        padding: 3rem 0 0 0;
+    }
+
+    .footer-escritorio{
+        display: none;
+    }
+
+    .footer-celular{
+        display: block;
+    }
+
+    .footer-item{
+        margin-bottom: 4rem;
+    }
+
+    .footer-item-logo{
         width: 20.8rem;
     }
 
-    .footerSN{
-        width: 20.8rem;
+    .footer-logo-img{
+        height: 50%;
+        width: 40%;
+        resize: auto;
+    }
+
+    .footer-celular-item-redessociales{
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-celular-div-redessociales{
+        width: 15rem;
+    }
+
+    .footer-redessociales-ul{
+        justify-content: space-evenly;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .footer-logo-img{
+        height: 50%;
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .footer-escritorio{
+        display: block;
+    }
+
+    .footer-celular{
+        display: none;
     }
 }

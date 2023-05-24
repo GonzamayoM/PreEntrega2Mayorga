@@ -52,6 +52,7 @@
     color: white;
     font-size: 3.2rem;
     margin-bottom: 0.6rem;
+    text-shadow: black 6px 5px 9px;
 }
 
 @media screen and (max-width: 1200px)/*  and (max-width: 1400px) */ {
@@ -64,5 +65,9 @@
 @media screen and (max-width: 768px){
     .universal-h-start{
         font-size: 3rem;
+    }
+
+    .universal-p{
+        font-size: 1.4rem;
     }
 }

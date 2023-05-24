@@ -2,18 +2,19 @@
 
 .obsmain{
     background-color: #5F5B5B;
-    height: 165rem;
+    height: 100%;
+    padding-bottom: 10rem;
+
 }
 
 .observatorio-background{
-    background-image: url(../img/obs-background.png);
-    height: 100%;
-    width: 100%;/* 
-    height: 50%;
-    background-position-y: bottom;
-    background-image: url(../img/obsimage.jpg); */
+    background:
+        linear-gradient(0deg,#5F5B5B, 7%, transparent, 15%, transparent),
+        url(../img/obs-background.png);
     background-size: 100%;
     background-repeat: no-repeat;
+    height: 80.6rem;
+    width: 100%;
 }
 
 .observatorio-h{
@@ -22,3 +23,78 @@
     border: 0.2rem outset rgb(232, 181, 242);
     width: 84rem;
 }
+
+/* TITULO Y DESCRIPCION*/
+
+.observatorio-description-container{
+    margin-top: 10rem;
+    padding: 2rem;
+}
+
+.observatorio-description-h{
+    color: rgb(248, 181, 254);
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.observatorio-description-p{
+    font-size: 2rem;
+}
+
+
+/* GALERIA */
+
+.observatorio-galeria{
+    margin-top: 5rem;
+}
+
+.galeria-item{
+    padding: 0 4rem 4rem 4rem;
+}
+
+.galeria-card{
+    background-color: #313133;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1.5rem;
+}
+
+/* GALERIA TUTLOS */
+
+.galeria-h-container{
+    background-color: #3f3f40;
+    height: 5rem;
+    border-radius: 1.5rem;/* 
+    border-bottom: 1px solid rgb(255, 255, 255); */
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.galeria-h{
+    color: white;
+    font-size: 2.5rem;
+}
+
+/* GALERIA IMAGENES */
+
+.galeria-img-container{
+    padding: 1rem;
+}
+
+.galeria-img{
+    border-radius: 1.5rem;
+}
+
+
+@media screen and (max-width: 768px){
+    .observatorio-background{
+        height: 21.7rem;
+    }
+
+    .observatorio-h{
+        width: 30rem;
+    }
+
+    .observatorio-description-h{
+        font-size: 3rem;
+    }
+} 

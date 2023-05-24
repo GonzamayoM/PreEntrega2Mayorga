@@ -2,7 +2,8 @@
 
 .iniciomain{
     background-color: #5F5B5B;
-    height: 292rem;
+    height: 100%;
+    padding-bottom: 8rem;
 }
 
 .inicio-container{
@@ -27,9 +28,9 @@
         linear-gradient(0deg,#5F5B5B, 7%, transparent, 15%, transparent),
         url(../img/inicio-background.png);
     background-size: 100%;
-    height: 36.6%;
-    width: 100%;
     background-repeat: no-repeat;
+    height: 107.3rem;
+    width: 100%;
 }
 
 
@@ -41,8 +42,8 @@
 }
 
 .bigbang-img{
-    width: 43rem;
-    height: 43rem;
+    width: 100%;
+    height: 100%;
     border-radius: 2rem;
 }
 
@@ -52,3 +53,11 @@
     width: 100%;
     height: 100%;
 }
+
+
+@media screen and (max-width: 1200px)/*  and (max-width: 1400px) */ {
+    .inicio-h{
+        width: 30rem;
+    }
+
+} 
