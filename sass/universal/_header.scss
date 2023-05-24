@@ -1,0 +1,95 @@
+/* HEADER */
+$height-navbar: 10.4rem;
+
+.header{
+    background-image: url(../img/header.png);
+    opacity: 85%;
+    background-size: cover;
+    height: $height-navbar;
+    width: 100%;
+    position: fixed;
+    border-bottom: 0.1rem ridge rgb(118, 17, 17);
+    z-index: 1;
+}
+
+.nav{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: unset;
+    margin-right: 3.2rem;
+}
+
+.navheader{
+    font-size: 4.8rem;
+    color: white;
+    padding-left: 1rem;
+    line-height: $height-navbar;
+}
+
+.navbar-nav{
+    margin-left: 12rem;
+}
+
+.navicons-1{
+    margin-bottom: -0.5rem;
+    margin-right: 0.3rem;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.naviconplanetas{
+    margin-bottom: -0.2rem;
+    margin-right: 0.3rem;
+    height: 2rem;
+    width: 3.5rem;
+}
+
+.naviconobservatorio{
+    margin-bottom: -0.4rem;
+    margin-right: 0.3rem;
+    height: 2.5rem;
+    width: 2rem;
+}
+
+.navitem{
+    width: max-content;
+    margin: 1rem;
+    font-size: 2.4rem;
+    padding: 0rem 1rem;
+    border-radius: 1.6rem;
+    display: inline;
+}
+
+.navitem:hover{
+
+    background-color: #5F5B5B;
+    transition: 0.7s;
+}
+
+.navlink{
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: #D6D1D1;
+}
+
+.navlink-actual{
+    text-decoration: underline;
+    color: #DE7A7A;
+}
+
+.navbar-toggler-icon{
+    background-image: url(../img/navbar-expand-icon.png);
+    width: 6rem;
+    height: 6rem;
+}
+
+@media screen and (max-width: 768px){
+    .navheader{
+        font-size: 2.8rem;
+        line-height: $height-navbar - 5;
+    }
+
+    .header{
+        height: 6.66rem;
+    }
+}

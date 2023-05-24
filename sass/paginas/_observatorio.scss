@@ -1,0 +1,24 @@
+/* OBSERVATORIO */
+
+.obsmain{
+    background-color: #5F5B5B;
+    height: 165rem;
+}
+
+.observatorio-background{
+    background-image: url(../img/obs-background.png);
+    height: 100%;
+    width: 100%;/* 
+    height: 50%;
+    background-position-y: bottom;
+    background-image: url(../img/obsimage.jpg); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.observatorio-h{
+    color: rgb(232, 181, 242);
+    text-shadow: rgb(232, 181, 242) 1px 1px 10px;
+    border: 0.2rem outset rgb(232, 181, 242);
+    width: 84rem;
+}

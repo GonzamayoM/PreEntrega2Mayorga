@@ -1,0 +1,68 @@
+
+/* EN CONSTRUCCION */
+
+.enconstruccionContainer{
+    border-top: 0.4rem dotted #302e2e;
+    border-bottom: 0.4rem dotted #302e2e;
+    margin-top: 16rem;
+    height: 48rem;
+}
+
+.imgenconstruccion{
+    position: absolute;
+    margin-left: 6.4rem;
+    width: 64rem;
+}
+
+.enconstruccionH{
+    font-size: 6.4rem;
+    color: #302e2e;
+    border: 0.4rem double #302e2e;
+    border-radius: 1rem;
+    position: absolute;
+    margin-left: 72rem;
+    margin-top: 20.8rem;
+}
+
+
+
+
+/* UNIVERSAL */
+.universal-background{
+    display: flex;
+    justify-content: center;
+    padding-top: 25%;
+}
+
+.universal-h-start{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 8rem;
+    text-align: center;
+}
+
+.universal-p{
+    font-family: 'Raleway';
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+
+.universal-h{
+    color: white;
+    font-size: 3.2rem;
+    margin-bottom: 0.6rem;
+}
+
+@media screen and (max-width: 1200px)/*  and (max-width: 1400px) */ {
+    .universal-h-start{
+        font-size: 6rem;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .universal-h-start{
+        font-size: 3rem;
+    }
+}

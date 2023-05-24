@@ -26,30 +26,37 @@
 </head>
 <body>
     <header class="header box-sizing-reset" id="header">
-        <nav class="nav"> <!-- NAVEGADOR -->
-            <h1 class="navheader">UNIVERSIUM</h1> 
-            <ul class="navul">
-                <li class="navitem"> <!-- ACTUAL -->
-                    <img src="./img/inicioicon.png" alt="" class="navicons-1">
-                    <a href="" class="navlink navlink-actual">INICIO</a>
-                </li>
-                <li class="navitem">
-                    <img src="./img/planetasicon.png" alt="" class="naviconplanetas">
-                    <a href="./pages/planetas.html" class="navlink">PLANETAS</a>
-                </li>
-                <li class="navitem">
-                    <img src="./img/observatorioicon.png" alt="" class="naviconobservatorio">
-                    <a href="./pages/observatorio.html" class="navlink">OBSERVATORIO</a>
-                </li>
-                <li class="navitem">
-                    <img src="./img/comollegaricon.png" alt="" class="navicons-1">
-                    <a href="./pages/eventos.html" class="navlink">EVENTOS</a>
-                </li>
-                <li class="navitem">
-                    <img src="./img/contactoicon.png" alt="" class="navicons-1">
-                    <a href="./pages/contacto.html" class="navlink">CONTACTO</a>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-xl"> <!-- NAVEGADOR -->
+            <div class="container-fluid">
+                <h1 class="navheader">UNIVERSIUM</h1> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="navitem"> <!-- ACTUAL -->
+                            <img src="./img/inicioicon.png" alt="" class="navicons-1">
+                            <a href="" class="navlink navlink-actual" aria-current="page" >INICIO</a>
+                        </li>
+                        <li class="navitem">
+                            <img src="./img/planetasicon.png" alt="" class="naviconplanetas">
+                            <a href="./pages/planetas.html" class="navlink">PLANETAS</a>
+                        </li>
+                        <li class="navitem">
+                            <img src="./img/observatorioicon.png" alt="" class="naviconobservatorio">
+                            <a href="./pages/observatorio.html" class="navlink">OBSERVATORIO</a>
+                        </li>
+                        <li class="navitem">
+                            <img src="./img/comollegaricon.png" alt="" class="navicons-1">
+                            <a href="./pages/eventos.html" class="navlink">EVENTOS</a>
+                        </li>
+                        <li class="navitem">
+                            <img src="./img/contactoicon.png" alt="" class="navicons-1">
+                            <a href="./pages/contacto.html" class="navlink">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="iniciomain" id="iniciomain">
@@ -60,7 +67,7 @@
         </section>
         <section class="inicio-container container"> <!-- INICIO: EL BIGBANG -->
             <div class="row">
-                <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12"> <!-- TITULO Y TEXTO -->
+                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12"> <!-- TITULO Y TEXTO -->
                     <h3 class="universal-h">EL INICIO DEL UNIVERSO: EL BIG BANG...</h3>
                     <p class="universal-p">
                         Seguramente si alguien preguntara cuál fue el inicio del universo, o cuando fue, la respuesta mas comun seria con el estallido del Big Bang: Toda la materia y energía concentrada en un mismo punto del universo que estalló y se fue expandiendo con el paso del tiempo, creando las estrellas, las galaxias, los planetas, etc. Y aunque esta teoría si es cierta, realmente está incompleta ya que no fue como verdaderamente se originó el universo, no fue su inicio y tampoco lo explica. Pero entonces ¿cómo surgió todo?
@@ -75,7 +82,7 @@
                         El universo con un tiempo de vida de 0,00000001 segundos estaba concentrado en un punto con el tamaño del sistema solar, que en todas partes tenían las mismas propiedades, y es aquí en donde yace el problema ¿Cómo puede ser que desde el principio del universo TODA el área tenga las mismas propiedades? ¿Cómo surgió este átomo? Y lo más importante ¿Que provocó esa expansión? 
                     </p>
                 </div>
-                <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12"> <!-- IMAGEN -->
+                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center"> <!-- IMAGEN -->
                     <img src="./img/bigbangimg.jpg" alt="Imagen del Big bang" class="bigbang-img">
                 </div>
             </div>

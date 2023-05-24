@@ -1,0 +1,10 @@
+@use "./universal/reset.scss";
+@use "./universal/universal.scss";
+@use "./universal/header.scss";
+@use "./universal/footer.scss";
+
+@use "./paginas/index";
+@use "./paginas/planetas";
+@use "./paginas/observatorio";
+@use "./paginas/eventos";
+@use "./paginas/contacto";

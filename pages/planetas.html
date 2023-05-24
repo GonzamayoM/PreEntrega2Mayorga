@@ -22,92 +22,95 @@
 </head>
 <body>
     <header class="header" id="header">
-        <nav class="nav"> <!-- NAVEGADOR -->
-            <h1 class="navheader">UNIVERSIUM</h1> 
-            <ul class="navul">
-                <li class="navitem">
-                    <img src="../img/inicioicon.png" alt="" class="navicons-1">
-                    <a href="../index.html" class="navlink">INICIO</a>
-                </li>
-                <li class="navitem">
-                    <img src="../img/planetasicon.png" alt="" class="naviconplanetas"> <!-- ACTUAL -->
-                    <a href="./planetas.html" class="navlink navlink-actual">PLANETAS</a>
-                </li>
-                <li class="navitem">
-                    <img src="../img/observatorioicon.png" alt="" class="naviconobservatorio">
-                    <a href="./observatorio.html" class="navlink">OBSERVATORIO</a>
-                </li>
-                <li class="navitem">
-                    <img src="../img/comollegaricon.png" alt="" class="navicons-1">
-                    <a href="./eventos.html" class="navlink">EVENTOS</a>
-                </li>
-                <li class="navitem">
-                    <img src="../img/contactoicon.png" alt="" class="navicons-1">
-                    <a href="./contacto.html" class="navlink">CONTACTO</a>
-                </li>
-            </ul>
+        <nav class="navbar navbar-expand-xl"> <!-- NAVEGADOR -->
+            <div class="container-fluid">
+                <h1 class="navheader">UNIVERSIUM</h1> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="navitem"> 
+                            <img src="../img/inicioicon.png" alt="" class="navicons-1">
+                            <a href="../index.html" class="navlink">INICIO</a>
+                        </li>
+                        <li class="navitem"> <!-- ACTUAL -->
+                            <img src="../img/planetasicon.png" alt="" class="naviconplanetas">
+                            <a href="" class="navlink navlink-actual" aria-current="page" >PLANETAS</a>
+                        </li>
+                        <li class="navitem">
+                            <img src="../img/observatorioicon.png" alt="" class="naviconobservatorio">
+                            <a href="./observatorio.html" class="navlink">OBSERVATORIO</a>
+                        </li>
+                        <li class="navitem">
+                            <img src="../img/comollegaricon.png" alt="" class="navicons-1">
+                            <a href="./eventos.html" class="navlink">EVENTOS</a>
+                        </li>
+                        <li class="navitem">
+                            <img src="../img/contactoicon.png" alt="" class="navicons-1">
+                            <a href="./contacto.html" class="navlink">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="planetas-main">
-        <section class="universal-background planetas-background"> <!-- FONDO CON TITULO -->
-            <div>
+        <section class="planetas-background"> <!-- FONDO CON TITULO -->
+            <div class="universal-background container">
                 <h2 class="universal-h-start planetas-h">PLANETAS</h2>
             </div>
         </section>
         <section class="planetas-indice-desc-container"> <!-- INDICE Y DESCRIPCION -->
-            <div>
-                <ul class="planetasInicioUl">
-                    <li class="planetasInicioItem"> <!-- INDICE DE PLANETAS -->
-                        <div class="indiceContainer"> 
-                            <ol class="indicePlanetasOl box-sizing-reset"> 
-                                <li class="indicePlanetasItem color-mercurio">
-                                    <a href="./planetas.html#mercurio" class="indicePlaneta">Mercurio</a>
-                                </li>
-                                <li class="indicePlanetasItem color-venus">
-                                    <a href="./planetas.html#venus" class="indicePlaneta">Venus</a>
-                                </li>
-                                <li class="indicePlanetasItem color-tierra">
-                                    <a href="./planetas.html#tierra" class="indicePlaneta">Tierra</a>
-                                </li>
-                                <li class="indicePlanetasItem color-marte">
-                                    <a href="./planetas.html#marte" class="indicePlaneta">Marte</a>
-                                </li>
-                                <li class="indicePlanetasItem color-jupiter">
-                                    <a href="./planetas.html#jupiter" class="indicePlaneta">Jupiter</a>
-                                </li>
-                                <li class="indicePlanetasItem color-saturno">
-                                    <a href="./planetas.html#saturno" class="indicePlaneta">Saturno</a>
-                                </li>
-                                <li class="indicePlanetasItem color-urano">
-                                    <a href="./planetas.html#urano" class="indicePlaneta">Urano</a>
-                                </li>
-                                <li class="indicePlanetasItem color-neptuno">
-                                    <a href="./planetas.html#neptuno" class="indicePlaneta">Neptuno</a>
-                                </li>
-                                <li class="indicePlanetasItem color-pluton">
-                                    <a href="./planetas.html#pluton" class="indicePlaneta">Pluton</a>
-                                </li>
-                            </ol>
-                        </div>
-                    </li>
-                    <li  class="planetasInicioItem"> <!-- DESCRIPCION -->
-                        <div class="planetasContainer">
-                            <div class="planetasdescriptionContainer box-sizing-reset">
-                                <p class="universal-p">
-                                    Para explicar la formación de los planetas primero necesitamos saber cómo se originan las estrellas, ya que son el mecanismo principal de la formación de los planetas y sin ellas no existirían. Lastimosamente el nacimiento de las estrellas permanecen en un completo misterio ya que los telescopios ópticos que tenemos en la actualiad no pueden observar dentro de las polvorientas concentraciones de gas de las que nacen. Lo que sí sabemos es que a partir de unas inmensas nubes que colapsan bajo la fuerza de gravedad empiezan a formarse.
-                                </p>
-                                <p class="universal-p">
-                                    Debido a un proceso de fusión nuclear, estas estrellas primerizas convirtieron con gran eficacia el hidrógeno y helio en otros elementos como el carbono, oxígeno, silicio o hierro. Al término de su corta vida, las primeras estrellas producidas en los inicios del Universo expulsaron estos elementos al espacio, donde dieron forma a diminutos granos de polvo. Estos polvos que se formarian alrededor de las estrellas, se condensan en un disco de gas molecular y polvo incrustado dentro de una nube molecular más grande y las condensaciones aumentan hasta convertirse en planetas gigantes, que se calientan y limpian sus órbitas en el disco. El gas que permanece en el disco finalmente desaparece, dejando planetas y un disco de polvo y deshechos.
-                                </p>
-                                <p class="universal-p">
-                                    A partir de su composición, los planetas, se clasifican en: Planetas rocosos cuando están formados principalmente por materiales rocosos y metálicos, con una estructura interna bien diferenciada; y planetas gaseosos que son caracterizados por sus densas atmósferas, por el rápido movimiento de rotación, inmensos campos magnéticos, con muchos satélites y sistemas de anillos.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <ul class="planetasInicioUl">
+                <li class="planetasInicioItem planetas-indice-item"> <!-- INDICE DE PLANETAS -->
+                    <div class="indiceContainer"> 
+                        <ol class="indicePlanetasOl box-sizing-reset"> 
+                            <li class="indicePlanetasItem color-mercurio">
+                                <a href="./planetas.html#mercurio" class="indicePlaneta">Mercurio</a>
+                            </li>
+                            <li class="indicePlanetasItem color-venus">
+                                <a href="./planetas.html#venus" class="indicePlaneta">Venus</a>
+                            </li>
+                            <li class="indicePlanetasItem color-tierra">
+                                <a href="./planetas.html#tierra" class="indicePlaneta">Tierra</a>
+                            </li>
+                            <li class="indicePlanetasItem color-marte">
+                                <a href="./planetas.html#marte" class="indicePlaneta">Marte</a>
+                            </li>
+                            <li class="indicePlanetasItem color-jupiter">
+                                <a href="./planetas.html#jupiter" class="indicePlaneta">Jupiter</a>
+                            </li>
+                            <li class="indicePlanetasItem color-saturno">
+                                <a href="./planetas.html#saturno" class="indicePlaneta">Saturno</a>
+                            </li>
+                            <li class="indicePlanetasItem color-urano">
+                                <a href="./planetas.html#urano" class="indicePlaneta">Urano</a>
+                            </li>
+                            <li class="indicePlanetasItem color-neptuno">
+                                <a href="./planetas.html#neptuno" class="indicePlaneta">Neptuno</a>
+                            </li>
+                            <li class="indicePlanetasItem color-pluton">
+                                <a href="./planetas.html#pluton" class="indicePlaneta">Pluton</a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="planetasInicioItem planetas-description-item"> <!-- DESCRIPCION -->
+                    <div class="planetasdescriptionContainer container">
+                        <p class="universal-p">
+                            Para explicar la formación de los planetas primero necesitamos saber cómo se originan las estrellas, ya que son el mecanismo principal de la formación de los planetas y sin ellas no existirían. Lastimosamente el nacimiento de las estrellas permanecen en un completo misterio ya que los telescopios ópticos que tenemos en la actualiad no pueden observar dentro de las polvorientas concentraciones de gas de las que nacen. Lo que sí sabemos es que a partir de unas inmensas nubes que colapsan bajo la fuerza de gravedad empiezan a formarse.
+                        </p>
+                        <p class="universal-p">
+                            Debido a un proceso de fusión nuclear, estas estrellas primerizas convirtieron con gran eficacia el hidrógeno y helio en otros elementos como el carbono, oxígeno, silicio o hierro. Al término de su corta vida, las primeras estrellas producidas en los inicios del Universo expulsaron estos elementos al espacio, donde dieron forma a diminutos granos de polvo. Estos polvos que se formarian alrededor de las estrellas, se condensan en un disco de gas molecular y polvo incrustado dentro de una nube molecular más grande y las condensaciones aumentan hasta convertirse en planetas gigantes, que se calientan y limpian sus órbitas en el disco. El gas que permanece en el disco finalmente desaparece, dejando planetas y un disco de polvo y deshechos.
+                        </p>
+                        <p class="universal-p">
+                            A partir de su composición, los planetas, se clasifican en: Planetas rocosos cuando están formados principalmente por materiales rocosos y metálicos, con una estructura interna bien diferenciada; y planetas gaseosos que son caracterizados por sus densas atmósferas, por el rápido movimiento de rotación, inmensos campos magnéticos, con muchos satélites y sistemas de anillos.
+                        </p>
+                    </div>
+                </li>
+            </ul>
         </section>
         <section class="container-sm"> <!-- PLANETAS -->
             <div class="planeta-detallados-container row color-mercurio" id="mercurio"> <!-- MERCURIO -->
@@ -121,8 +124,8 @@
                             At assumenda natus vitae illum animi expedita incidunt, dolor temporibus harum est distinctio doloremque eius vero dignissimos ducimus odit, maxime delectus id. Inventore odio molestias deleniti molestiae amet, fugiat natus!
                         </p>
                 </div>
-                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 text-center">  <!-- FOTO -->
-                    <img src="../img/mercurio.png" alt="Imagen del planeta mercurio" class="mercurio-img">
+                <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 text-center planetas-icon-container">  <!-- FOTO -->
+                    <img src="../img/mercurio-icon.png" alt="Imagen del planeta mercurio" class="mercurio-img">
                 </div>
             </div>
             <div class="planeta-detallados-container row color-venus" id="venus"> <!-- VENUS -->

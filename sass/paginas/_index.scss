@@ -1,0 +1,54 @@
+/* INICIO */
+
+.iniciomain{
+    background-color: #5F5B5B;
+    height: 292rem;
+}
+
+.inicio-container{
+    background-color: rgb(51, 51, 51);
+    border: 0.3rem inset gray;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-top: 8rem;
+}
+
+.inicio-h{
+    color: gray;
+    text-shadow: gray 1px 1px 10px;
+    border: 0.2rem outset gray;
+    width: 80rem;
+}
+
+/* MAIN ; IMAGEN DEL INICIO Y SEPARACION*/
+
+.inicio-background{
+    background:
+        linear-gradient(0deg,#5F5B5B, 7%, transparent, 15%, transparent),
+        url(../img/inicio-background.png);
+    background-size: 100%;
+    height: 36.6%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* MAIN; INICIO: BIGBANG */
+
+.bigbangtextContainer{
+    height: 100%;
+    width: 88rem;
+}
+
+.bigbang-img{
+    width: 43rem;
+    height: 43rem;
+    border-radius: 2rem;
+}
+
+/* INICIO ; SISTEMA SOLAR */
+
+.sistema-solar-img{
+    width: 100%;
+    height: 100%;
+}

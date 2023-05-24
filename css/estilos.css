@@ -1,480 +1,458 @@
-
 /* RESET */
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 62.5%;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
 }
 
-.box-sizing-reset{
-    box-sizing: unset;
+.box-sizing-reset {
+  box-sizing: unset;
 }
 
-img{
-    vertical-align: unset;
+img {
+  vertical-align: unset;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-top: unset; 
-    margin-bottom: unset;
-    font-weight: bold;
-    line-height: 1.2; 
-    color: unset;
+  margin-top: unset;
+  margin-bottom: unset;
+  font-weight: bold;
+  line-height: 1.2;
+  color: unset;
 }
 
 ol, ul {
-    padding-left: unset;
+  padding-left: unset;
 }
 
 body {
-    line-height: unset;
+  line-height: unset;
 }
 
-.navbar{
-    --bs-navbar-padding-y: 0;
+.navbar {
+  --bs-navbar-padding-y: 0;
 }
 
 /* EN CONSTRUCCION */
-
-.enconstruccionContainer{
-    border-top: 0.4rem dotted #302e2e;
-    border-bottom: 0.4rem dotted #302e2e;
-    margin-top: 16rem;
-    height: 48rem;
+.enconstruccionContainer {
+  border-top: 0.4rem dotted #302e2e;
+  border-bottom: 0.4rem dotted #302e2e;
+  margin-top: 16rem;
+  height: 48rem;
 }
 
-.imgenconstruccion{
-    position: absolute;
-    margin-left: 6.4rem;
-    width: 64rem;
+.imgenconstruccion {
+  position: absolute;
+  margin-left: 6.4rem;
+  width: 64rem;
 }
 
-.enconstruccionH{
-    font-size: 6.4rem;
-    color: #302e2e;
-    border: 0.4rem double #302e2e;
-    border-radius: 1rem;
-    position: absolute;
-    margin-left: 72rem;
-    margin-top: 20.8rem;
+.enconstruccionH {
+  font-size: 6.4rem;
+  color: #302e2e;
+  border: 0.4rem double #302e2e;
+  border-radius: 1rem;
+  position: absolute;
+  margin-left: 72rem;
+  margin-top: 20.8rem;
 }
-
-
-
-
 
 /* UNIVERSAL */
-.universal-background{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 32rem;
+.universal-background {
+  display: flex;
+  justify-content: center;
+  padding-top: 25%;
 }
 
-.universal-h-start{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 8rem;
-    text-align: center;
+.universal-h-start {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 8rem;
+  text-align: center;
 }
 
-.universal-p{
-    font-family: 'Raleway';
-    font-size: 1.7rem;
-    color: white;
-    margin-bottom: 1rem;
+.universal-p {
+  font-family: "Raleway";
+  font-size: 1.7rem;
+  color: white;
+  margin-bottom: 1rem;
 }
 
-
-.universal-h{
-    color: white;
-    font-size: 3.2rem;
-    margin-bottom: 0.6rem;
+.universal-h {
+  color: white;
+  font-size: 3.2rem;
+  margin-bottom: 0.6rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .universal-h-start {
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .universal-h-start {
+    font-size: 3rem;
+  }
+}
 /* HEADER */
-
-.headerconnectSection{
-    height: 10.4rem;
+.header {
+  background-image: url(../img/header.png);
+  opacity: 85%;
+  background-size: cover;
+  height: 10.4rem;
+  width: 100%;
+  position: fixed;
+  border-bottom: 0.1rem ridge rgb(118, 17, 17);
+  z-index: 1;
 }
 
-.headerconnect{
-    height: 10.4rem;
-    width: 100%;
+.nav {
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: unset;
+  margin-right: 3.2rem;
 }
 
-.header{
-    background-image: url(../img/header.png);
-    opacity: 85%;
-    background-size: cover;
-    height: 10.4rem;
-    width: 100%;
-    position: fixed;
-    border-bottom: 0.1rem ridge rgb(118, 17, 17);
-    z-index: 1;
+.navheader {
+  font-size: 4.8rem;
+  color: white;
+  padding-left: 1rem;
+  line-height: 10.4rem;
 }
 
-.nav{
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: unset;
-    margin-right: 3.2rem;
+.navbar-nav {
+  margin-left: 12rem;
 }
 
-.navheader{
-    font-size: 4.8rem;
-    color: white;
-    padding-left: 1rem;
-    line-height: 10.4rem;
+.navicons-1 {
+  margin-bottom: -0.5rem;
+  margin-right: 0.3rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
-.navbar-nav{
-    margin-left: 12rem;
+.naviconplanetas {
+  margin-bottom: -0.2rem;
+  margin-right: 0.3rem;
+  height: 2rem;
+  width: 3.5rem;
 }
 
-.navicons-1{
-    margin-bottom: -0.5rem;
-    margin-right: 0.3rem;
-    height: 2.5rem;
-    width: 2.5rem;
+.naviconobservatorio {
+  margin-bottom: -0.4rem;
+  margin-right: 0.3rem;
+  height: 2.5rem;
+  width: 2rem;
 }
 
-.naviconplanetas{
-    margin-bottom: -0.2rem;
-    margin-right: 0.3rem;
-    height: 2rem;
-    width: 3.5rem;
+.navitem {
+  width: max-content;
+  margin: 1rem;
+  font-size: 2.4rem;
+  padding: 0rem 1rem;
+  border-radius: 1.6rem;
+  display: inline;
 }
 
-.naviconobservatorio{
-    margin-bottom: -0.4rem;
-    margin-right: 0.3rem;
-    height: 2.5rem;
-    width: 2rem;
+.navitem:hover {
+  background-color: #5F5B5B;
+  transition: 0.7s;
 }
 
-.navitem{
-    width: max-content;
-    margin: 1rem;
-    font-size: 2.4rem;
-    padding: 0rem 1rem;
-    border-radius: 1.6rem;
-    display: inline;
+.navlink {
+  font-size: 2.4rem;
+  text-decoration: none;
+  color: #D6D1D1;
 }
 
-.navitem:hover{
-
-    background-color: #5F5B5B;
-    transition: 0.7s;
+.navlink-actual {
+  text-decoration: underline;
+  color: #DE7A7A;
 }
 
-.navlink{
-    font-size: 2.4rem;
-    text-decoration: none;
-    color: #D6D1D1;
+.navbar-toggler-icon {
+  background-image: url(../img/navbar-expand-icon.png);
+  width: 6rem;
+  height: 6rem;
 }
 
-.navlink-actual{
-    text-decoration: underline;
-    color: #DE7A7A;
+@media screen and (max-width: 768px) {
+  .navheader {
+    font-size: 2.8rem;
+    line-height: 5.4rem;
+  }
+  .header {
+    height: 6.66rem;
+  }
 }
-
-
-
 /* FOOTER */
-
-.footer{
-    background-color: #393838;
-    height: 16rem;
-    width: 100%;
+.footer {
+  background-color: #393838;
+  height: 16rem;
+  width: 100%;
 }
 
-.footerdiv{
-    height: 8rem;
-    background-color: #302e2e;
-    box-sizing: unset;
-    border-radius: 1rem;
-    padding: 0.5rem;
-    margin-top: 4rem;
+.footerdiv {
+  height: 8rem;
+  background-color: #302e2e;
+  box-sizing: unset;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-top: 4rem;
 }
 
-.footerdivdecoration{
-    border-left: 0.1rem solid gray;
+.footerdivdecoration {
+  border-left: 0.1rem solid gray;
 }
 
-.footerItem{
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 5rem;
+.footerItem {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 5rem;
 }
 
 /* FOOTER ; SOBRE NOSOTROS*/
-
-.footerSNh{
-    font-size: 2rem;
-    width: 19.2rem;
-    color: #989494;
+.footerSNh {
+  font-size: 2rem;
+  width: 19.2rem;
+  color: #989494;
 }
 
-.footerSN{
-    font-size: 1.4rem;
-    width: 32rem;
-    color: #d3d3d3;
+.footerSN {
+  font-size: 1.4rem;
+  width: 32rem;
+  color: #d3d3d3;
 }
 
-.footerSNmini{
-    margin-top: 1rem;
-    font-size: 1rem;
+.footerSNmini {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 /* FOOTER ; SUBIR A ARRIBA */
-
-.footeruptoheaderD{
-    width: 8rem;
+.footeruptoheaderD {
+  width: 8rem;
 }
 
-.footeruptoheaderA{
-    height: 4.5rem;
-    width: 4rem;
-    margin-top: 20%;
-    margin-left: 25%;
+.footeruptoheaderA {
+  height: 4.5rem;
+  width: 4rem;
+  margin-top: 20%;
+  margin-left: 25%;
 }
 
-.footeruptoheaderA:hover{
-    border: 0.1rem solid gray;
-    height: 70%;
-    width: 70%;
-    margin-top: 15%;
-    margin-left: 15%;
+.footeruptoheaderA:hover {
+  border: 0.1rem solid gray;
+  height: 70%;
+  width: 70%;
+  margin-top: 15%;
+  margin-left: 15%;
 }
 
 /* FOOTER; LOGO */
-
-.footerlogo{
-    width: 40.8rem;
+.footerlogo {
+  width: 40.8rem;
 }
 
-.footeruniversiumlogo{
-    text-align: center;
-    color: white;
-    font-size: 3.5rem;
+.footeruniversiumlogo {
+  text-align: center;
+  color: white;
+  font-size: 3.5rem;
 }
 
-.footeruniversiumicon{
-
-    margin-left: 25%;
-    height: 50%;
-    width: 50%;
+.footeruniversiumicon {
+  margin-left: 25%;
+  height: 50%;
+  width: 50%;
 }
 
 /* FOOTER ; DERECHOS */
-
-.footerderechos{
-    height: 8rem;
-    width: 17.6rem;
-    overflow: hidden;
-    padding-left: 0.8rem;
+.footerderechos {
+  height: 8rem;
+  width: 17.6rem;
+  overflow: hidden;
+  padding-left: 0.8rem;
 }
 
-.footercredits{
-    height: 50%;
+.footercredits {
+  height: 50%;
 }
 
-.creditH{
-    font-size: 1.5rem;
-    color: #989494;
+.creditH {
+  font-size: 1.5rem;
+  color: #989494;
 }
 
-.creditP{
-    font-size: 1rem;
-    color: white;
+.creditP {
+  font-size: 1rem;
+  color: white;
 }
 
 /* FOOTER ; REDES SOCIALES */
-
-.footerRSul{
-    height: 8rem;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
+.footerRSul {
+  height: 8rem;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
 }
 
-.footerRSitem{
-    list-style: none;
-    width: 3.rem;
-    height: 3.5rem;
-    margin: 0.2rem;
-    align-self: center;
+.footerRSitem {
+  list-style: none;
+  width: 3rem;
+  height: 3.5rem;
+  margin: 0.2rem;
+  align-self: center;
 }
 
-.footerRS{
-    height: 3.5rem;
-    width: 3.5rem;
+.footerRS {
+  height: 3.5rem;
+  width: 3.5rem;
 }
 
-
-
-
-
+@media screen and (max-width: 768px) {
+  .footerlogo {
+    width: 20.8rem;
+  }
+  .footerSN {
+    width: 20.8rem;
+  }
+}
 /* INICIO */
-
-.iniciomain{
-    background-color: #5F5B5B;
-    height: 292rem;
+.iniciomain {
+  background-color: #5F5B5B;
+  height: 292rem;
 }
 
-.inicio-container{
-    background-color: rgb(51, 51, 51);
-    border: 0.3rem inset gray;
-    border-radius: 1rem;
-    padding: 2.5rem;
-    margin-top: 8rem;
+.inicio-container {
+  background-color: rgb(51, 51, 51);
+  border: 0.3rem inset gray;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  margin-top: 8rem;
 }
 
-.inicio-h{
-    color: gray;
-    text-shadow: gray 1px 1px 10px;
-    border: 0.2rem outset gray;
-    width: 80rem;
+.inicio-h {
+  color: gray;
+  text-shadow: gray 1px 1px 10px;
+  border: 0.2rem outset gray;
+  width: 80rem;
 }
 
 /* MAIN ; IMAGEN DEL INICIO Y SEPARACION*/
-
-.inicio-background{
-    background:
-        linear-gradient(0deg,#5F5B5B, 7%, transparent, 15%, transparent),
-        url(../img/inicio-background.png);
-    background-size: 100%;
-    height: 36.6%;
-    width: 100%;
-    background-repeat: no-repeat;
+.inicio-background {
+  background: linear-gradient(0deg, #5F5B5B, 7%, transparent, 15%, transparent), url(../img/inicio-background.png);
+  background-size: 100%;
+  height: 36.6%;
+  width: 100%;
+  background-repeat: no-repeat;
 }
-
 
 /* MAIN; INICIO: BIGBANG */
-
-.bigbangtextContainer{
-    height: 100%;
-    width: 88rem;
+.bigbangtextContainer {
+  height: 100%;
+  width: 88rem;
 }
 
-.bigbang-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
+.bigbang-img {
+  width: 43rem;
+  height: 43rem;
+  border-radius: 2rem;
 }
 
 /* INICIO ; SISTEMA SOLAR */
-
-.sistema-solar-img{
-    width: 100%;
-    height: 100%;
+.sistema-solar-img {
+  width: 100%;
+  height: 100%;
 }
-
 
 /* PLANETAS */
-
-.planetas-main{
-    background-color: black;
-    height: 100%;
-    width: 100%;
+.planetas-main {
+  background-color: black;
+  height: 100%;
+  width: 100%;
 }
 
-.planetas-background{
-    background-image: url(../img/planetasfondo1.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: black;
-    height: 144rem;
-    width: 100%;
+.planetas-background {
+  background-image: url(../img/planetasfondo1.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  height: 144rem;
+  width: 100%;
 }
 
-.planetas-h{ /* rgb(242, 242, 181) 137, 100, 13 */
-    color: rgb(228, 104, 2);
-    text-shadow: rgb(228, 104, 2) 1px 1px 10px;
-    border: 0.2rem outset rgb(228, 104, 2);
-    width: 63rem;
+.planetas-h { /* rgb(242, 242, 181) 137, 100, 13 */
+  color: rgb(228, 104, 2);
+  text-shadow: rgb(228, 104, 2) 1px 1px 10px;
+  border: 0.2rem outset rgb(228, 104, 2);
+  width: 63rem;
 }
 
-.planetas-indice-desc-container{
-    margin-top: -90rem;
+.planetas-indice-desc-container {
+  margin-top: -89rem;
 }
 
 /* PLANETAS ; INICIO DE LA PAGINA */
-
-
 .planetasInicioItem {
-    list-style: none;
+  list-style: none;
 }
-
 
 /* PLANETAS ; TEXTO */
-
-.planetasContainer{
-    margin-top: 4.8rem;
-    margin-left: 9.6rem;
+.planetas-description-item {
+  padding: 5rem 10rem;
 }
 
-.planetasdescriptionContainer{
-    background-color: #afa51939;
-    border: 0.1rem outset #cac005;
-    border-radius: 3.2rem;
-    padding: 3.2rem 4.8rem;
-    width: 88rem;
+.planetasdescriptionContainer {
+  background-color: rgba(175, 165, 25, 0.2235294118);
+  border: 0.1rem outset #cac005;
+  border-radius: 3.2rem;
+  padding: 3.2rem 4.8rem;
 }
-
 
 /* INDICE */
-
-
-.planetasInicioUl{
-    display: flex;
+.planetasInicioUl {
+  display: flex;
 }
 
-.indiceContainer{
-    background-image: url(../img/space_rocket.png);
-    /* background-color: red; */
-    background-size: 16rem;
-    background-position-x: center;
-    background-position-y: center;
-    box-sizing: border-box;
-    margin-top: -19.2rem;
-    margin-left: 8rem;
-    padding-top: 8rem;
-    width: 16rem;
-    height: 86.4rem;
+.indiceContainer {
+  background-image: url(../img/space_rocket.png);
+  background-size: 16rem;
+  background-position-x: center;
+  background-position-y: center;
+  box-sizing: border-box;
+  margin-top: -19.2rem;
+  margin-left: 8rem;
+  padding-top: 8rem;
+  width: 16rem;
+  height: 86.4rem;
 }
 
-.indicePlanetasOl{
-    background-color: rgba(255, 255, 255, 0.168);
-    border-radius: 1.6rem;
-    margin-top: 10.24rem;
-    margin-left: 1.6rem;
-    padding: 0.48rem 1.6rem;
-    width: 11.2rem;
+.indicePlanetasOl {
+  background-color: rgba(255, 255, 255, 0.168);
+  border-radius: 1.6rem;
+  margin-top: 10.24rem;
+  margin-left: 1.6rem;
+  padding: 0.48rem 1.6rem;
+  width: 11.2rem;
 }
 
-.indicePlanetasItem{
-    /* background-color: rgba(255, 255, 255, 0.39);
-    border: 0.1rem solid white; */
-    border-radius: 1.6rem;
-    text-align: center;
-    list-style: none;
-    margin: 2.4rem 0rem;
+.indicePlanetasItem {
+  border-radius: 1.6rem;
+  text-align: center;
+  list-style: none;
+  margin: 2.4rem 0rem;
 }
 
-.indicePlaneta{
-    font-family: 'Roboto' ;
-    padding: 0.2rem;
-    font-size: 2.08rem;
-    text-decoration: none;
-    font-weight: 600;
-    color: #fffbfb;
-/*     border-top: 0.2rem solid #3c183e;
-    border-bottom: 0.2rem solid #721579;
-    border-radius: 1rem; */
-    
+.indicePlaneta {
+  font-family: "Roboto";
+  padding: 0.2rem;
+  font-size: 2.08rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fffbfb;
+  /*     border-top: 0.2rem solid #3c183e;
+      border-bottom: 0.2rem solid #721579;
+      border-radius: 1rem; */
 }
 
 /* .indicePlaneta:hover{
@@ -484,230 +462,215 @@ body {
     border-left: 0.2rem solid #3c183e;
     border-right: 0.2rem solid #721579;
 } */
-
-.indicePlanetasItem:hover{
-    padding: 0.5rem;
-    border-style:ridge;
-    border-width: 0.32rem;
+.indicePlanetasItem:hover {
+  padding: 0.5rem;
+  border-style: ridge;
+  border-width: 0.32rem;
 }
-
-
 
 /* PLANETAS ; COLORES */
-
-.color-mercurio{
-    background-color: #75454572;
-    border: 0.2rem solid #742626;
+.color-mercurio {
+  background-color: rgba(117, 69, 69, 0.4470588235);
+  border: 0.2rem solid #742626;
 }
 
-.color-venus{
-    background-color: #ff82516e;
-    border: 0.2rem solid #ff6624;
+.color-venus {
+  background-color: rgba(255, 130, 81, 0.431372549);
+  border: 0.2rem solid #ff6624;
 }
 
-.color-tierra{
-    background-color: #3d8bf768;
-    border: 0.2rem solid #72bb53;
+.color-tierra {
+  background-color: rgba(61, 139, 247, 0.4078431373);
+  border: 0.2rem solid #72bb53;
 }
 
-.color-marte{
-    background-color: #c6643d6d;
-    border: 0.2rem solid #aa532e;
+.color-marte {
+  background-color: rgba(198, 100, 61, 0.4274509804);
+  border: 0.2rem solid #aa532e;
 }
 
-.color-jupiter{
-    background-color: #e0b47f64;
-    border: 0.2rem solid #b09250;
+.color-jupiter {
+  background-color: rgba(224, 180, 127, 0.3921568627);
+  border: 0.2rem solid #b09250;
 }
 
-.color-saturno{
-    background-color: #e3c5736a;
-    border: 0.2rem solid #d4b952;
+.color-saturno {
+  background-color: rgba(227, 197, 115, 0.4156862745);
+  border: 0.2rem solid #d4b952;
 }
 
-.color-urano{
-    background-color: #8eaad268;
-    border: 0.2rem solid #6b8689;
+.color-urano {
+  background-color: rgba(142, 170, 210, 0.4078431373);
+  border: 0.2rem solid #6b8689;
 }
 
-.color-neptuno{
-    background-color: #5a6ccf64;
-    border: 0.2rem solid #163d8a;
+.color-neptuno {
+  background-color: rgba(90, 108, 207, 0.3921568627);
+  border: 0.2rem solid #163d8a;
 }
 
-.color-pluton{
-    background-color: #acb5c26b;
-    border: 0.2rem solid #b7ddf3;
+.color-pluton {
+  background-color: rgba(172, 181, 194, 0.4196078431);
+  border: 0.2rem solid #b7ddf3;
 }
-
-
 
 /* PLANETAS ; CONTENEDORES DE CADA PLANETA */
-
-.planeta-detallados-container{
-    margin-top: 16rem;
-    border-radius: 1.6rem;
+.planeta-detallados-container {
+  margin-top: 16rem;
+  border-radius: 1.6rem;
 }
 
-.planetas-info-container{
-    padding: 1.6rem;
+.planetas-info-container {
+  padding: 1.6rem;
 }
-
 
 /* PLANETAS ; IMAGENES DE CADA PLANETA */
-
-.mercurio-img{
-    width: 31rem;
-    height: 30rem;
-
+.planetas-icon-container {
+  padding: 1rem;
 }
 
+.mercurio-img {
+  width: 100%;
+  height: 100%;
+}
 
-
-
-
+@media screen and (max-width: 1200px) {
+  .planetas-h {
+    width: 53rem;
+  }
+  .planetasInicioUl {
+    flex-direction: column-reverse;
+  }
+  .indiceContainer {
+    margin-top: 0rem;
+    margin-left: 0rem;
+  }
+  .planetas-indice-item {
+    align-self: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .planetas-h {
+    width: 25rem;
+  }
+  .planetas-description-item {
+    padding: 5rem 2rem;
+  }
+  .planetasdescriptionContainer {
+    padding: 1.8rem 2rem;
+  }
+  .planetas-indice-desc-container {
+    margin-top: -125rem;
+  }
+}
 /* OBSERVATORIO */
-
-.obsmain{
-    background-color: #5F5B5B;
-    height: 165rem;
+.obsmain {
+  background-color: #5F5B5B;
+  height: 165rem;
 }
 
-.observatorio-background{
-    background-image: url(../img/obs-background.png);
-    height: 100%;
-    width: 100%;/* 
-    height: 50%;
-    background-position-y: bottom;
-    background-image: url(../img/obsimage.jpg); */
-    background-size: 100%;
-    background-repeat: no-repeat;
+.observatorio-background {
+  background-image: url(../img/obs-background.png);
+  height: 100%;
+  width: 100%; /* 
+height: 50%;
+background-position-y: bottom;
+background-image: url(../img/obsimage.jpg); */
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
-.observatorio-h{
-    color: rgb(232, 181, 242);
-    text-shadow: rgb(232, 181, 242) 1px 1px 10px;
-    border: 0.2rem outset rgb(232, 181, 242);
-    width: 84rem;
+.observatorio-h {
+  color: rgb(232, 181, 242);
+  text-shadow: rgb(232, 181, 242) 1px 1px 10px;
+  border: 0.2rem outset rgb(232, 181, 242);
+  width: 84rem;
 }
 
 /* CONTACTOS */
-
-
-.contactomain{
-    background-color: #5F5B5B;
-    height: 43rem;
+.contactomain {
+  background-color: #5F5B5B;
+  height: 43rem;
 }
 
-.contacta_h{
-    font-size: 3rem;
-    text-align: center;
-    padding-top: 1rem;
-    color: #67E88A;
+.contacta_h {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 1rem;
+  color: #67E88A;
 }
 
-.contacta_p{
-    font-size: 2rem;
-    text-align: center;
-    color: whitesmoke;
+.contacta_p {
+  font-size: 2rem;
+  text-align: center;
+  color: whitesmoke;
 }
 
 /* FORMULARIO */
-
-.form{
-    margin-top: 1rem;
-    margin-right:16rem;
-    margin-left:16rem;
-    padding: 1rem;
-    text-align: center;
+.form {
+  margin-top: 1rem;
+  margin-right: 16rem;
+  margin-left: 16rem;
+  padding: 1rem;
+  text-align: center;
 }
 
-.formdiv{
-    height: 5rem;
+.formdiv {
+  height: 5rem;
 }
 
-.formFirstLineItem{
-    display: inline-block;
-    width: 30%;
-    height: 6rem;
+.formFirstLineItem {
+  display: inline-block;
+  width: 30%;
+  height: 6rem;
 }
 
-.formlabels{
-    font-size: 1rem;
-    color: white;
+.formlabels {
+  font-size: 1rem;
+  color: white;
 }
 
-.formcampos{
-    background-color: #aaa;
-    border-radius: 0.4rem;
-    border-color: gainsboro;
-    border: 0.2rem inset gainsboro;
-    height: 2rem;
-    width: 15rem;
-    padding: 0rem 0.2rem;
-    margin-top: 0.2rem;
+.formcampos {
+  background-color: #aaa;
+  border-radius: 0.4rem;
+  border-color: gainsboro;
+  border: 0.2rem inset gainsboro;
+  height: 2rem;
+  width: 15rem;
+  padding: 0rem 0.2rem;
+  margin-top: 0.2rem;
 }
 
-.formlabelopinion{
-    font-size: 1.5rem;
-    color: white;
+.formlabelopinion {
+  font-size: 1.5rem;
+  color: white;
 }
 
-.formcampoopinion{
-    background-color: #aaa;
-    border-radius: 0.4rem;
-    border: 0.2rem inset gainsboro;
-    resize: none;
-    padding-top: 0.4rem;
-    padding-left: 0.4rem;
-    margin-top: 0.2rem;
-    height: 6rem;
-    width: 35rem;
+.formcampoopinion {
+  background-color: #aaa;
+  border-radius: 0.4rem;
+  border: 0.2rem inset gainsboro;
+  resize: none;
+  padding-top: 0.4rem;
+  padding-left: 0.4rem;
+  margin-top: 0.2rem;
+  height: 6rem;
+  width: 35rem;
 }
 
-.formbottom{
-    background-color: #82e99a;
-    border: 0.2rem outset lightgreen;
-    border-radius: 0.9rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    height: 1.5rem;
-    width: 7rem;
+.formbottom {
+  background-color: #82e99a;
+  border: 0.2rem outset lightgreen;
+  border-radius: 0.9rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  height: 1.5rem;
+  width: 7rem;
 }
 
-.formbottom:hover{
-    background-color: #57af6c;
-    border: 0.2rem outset lightgreen;
+.formbottom:hover {
+  background-color: #57af6c;
+  border: 0.2rem outset lightgreen;
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1480px) {
-    *{
-        font-size: 50.5%;
-    }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-    *{
-        font-size: 43.5%;
-    }
-}
-/* 
-.asd1{
-    margin-top: 10rem;
-    font-size: xx-large;
-    color: #57af6c;
-    text-shadow: 8px 5px 10px black;
-}
-
-.asd2{
-    width: 100px;
-    height: 100px;
-    filter: drop-shadow(0 0 0.75rem crimson);
-    margin-left: 50%;
-} */
-
-.navbar-toggler-icon{
-    background-image: url(../img/navbar-expand-icon.png);
-    width: 6rem;
-    height: 6rem;
-}
+/*# sourceMappingURL=estilos.css.map */
