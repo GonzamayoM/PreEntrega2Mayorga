@@ -75,11 +75,20 @@ ul {
   text-align: center;
 }
 
+.universal-description-container {
+  margin-top: 10rem;
+  padding: 2rem;
+}
+
 .universal-p {
   font-family: "Raleway";
   font-size: 1.7rem;
   color: white;
   margin-bottom: 1rem;
+}
+
+.universal-p-variante {
+  font-size: 2rem;
 }
 
 .universal-h {
@@ -126,10 +135,19 @@ ul {
   color: white;
   padding-left: 1rem;
   line-height: 10.4rem;
+  margin-right: 12rem;
 }
 
 .navbar-nav {
-  margin-left: 12rem;
+  background-image: url(../img/header.png);
+  background-size: 100%;
+}
+
+.show {
+  border: 0rem 0.1rem 0.1rem 0.1rem;
+  border-bottom: 0.2rem ridge rgb(118, 17, 17);
+  border-right: 0.2rem ridge rgb(118, 17, 17);
+  border-left: 0.2rem ridge rgb(118, 17, 17);
 }
 
 .navicons-1 {
@@ -188,6 +206,7 @@ ul {
   .navheader {
     font-size: 2.8rem;
     line-height: 5.4rem;
+    margin-right: 0rem;
   }
   .header {
     height: 6.66rem;
@@ -347,18 +366,35 @@ ul {
     justify-content: space-evenly;
   }
 }
-@media screen and (max-width: 576px) {
-  .footer-logo-img {
-    height: 50%;
-    width: 60%;
-  }
-}
 @media screen and (min-width: 768px) {
   .footer-escritorio {
     display: block;
   }
   .footer-celular {
     display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer-logo-img {
+    height: 50%;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .footer-item-derechos {
+    font-size: 15%;
+  }
+  .footer-item-logo {
+    font-size: 15%;
+  }
+  .footer-item-redessociales {
+    font-size: 15%;
+  }
+  .footer-item-sobrenosotros {
+    font-size: 15%;
+  }
+  .footer-item-up {
+    font-size: 15%;
   }
 }
 /* INICIO */
@@ -580,9 +616,11 @@ ul {
   padding: 1rem;
 }
 
-.mercurio-img {
+.planetas-icon-img {
   width: 100%;
   height: 100%;
+  font-size: 1.7rem;
+  color: white;
 }
 
 @media screen and (max-width: 1200px) {
@@ -637,19 +675,10 @@ ul {
 }
 
 /* TITULO Y DESCRIPCION*/
-.observatorio-description-container {
-  margin-top: 10rem;
-  padding: 2rem;
-}
-
 .observatorio-description-h {
   color: rgb(248, 181, 254);
   font-size: 5rem;
   margin-bottom: 1.5rem;
-}
-
-.observatorio-description-p {
-  font-size: 2rem;
 }
 
 /* GALERIA */
@@ -702,90 +731,176 @@ border-bottom: 1px solid rgb(255, 255, 255); */
     font-size: 3rem;
   }
 }
-/* CONTACTOS */
-.contactomain {
+/* EVENTOS */
+.eventos-main {
   background-color: #5F5B5B;
-  height: 43rem;
+  height: 100%;
+  padding-bottom: 5rem;
 }
 
-.contacta_h {
-  font-size: 3rem;
-  text-align: center;
-  padding-top: 1rem;
+.eventos-h {
+  color: #e86794;
+  text-shadow: #e86794 1px 1px 10px;
+  border: 0.2rem outset #e86794;
+  width: 63rem;
+}
+
+.eventos-h-container {
+  padding-top: 15rem;
+  display: flex;
+  justify-content: center;
+}
+
+.eventos-container {
+  margin-top: 10rem;
+}
+
+.eventos-ul {
+  background-image: url(../img/linea-eventos.png);
+  background-repeat: repeat-y;
+  background-position: center;
+  height: 200rem;
+}
+
+.eventos-item {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: space-evenly;
+  justify-self: center;
+  align-items: center;
+}
+
+.eventos-descripcion-container {
+  width: 30rem;
+  height: 20rem;
+  background-color: rgba(58, 56, 56, 0.404);
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.eventos-h2 {
+  color: rgb(236, 218, 218);
+}
+
+.eventos-h3 {
+  color: lightcoral;
+}
+
+.eventos-p {
+  color: lightcyan;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.eventos-img-container {
+  width: 35rem;
+  height: 25rem;
+  background-color: rgba(58, 56, 56, 0.404);
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+}
+
+/* CONTACTOS */
+.contacto-main {
+  background-color: #5F5B5B;
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+.contacto-h {
   color: #67E88A;
+  text-shadow: #67E88A 1px 1px 10px;
+  border: 0.2rem outset #67E88A;
+  width: 63rem;
 }
 
-.contacta_p {
-  font-size: 2rem;
-  text-align: center;
-  color: whitesmoke;
+.contacto-h-container {
+  padding-top: 15rem;
+  display: flex;
+  justify-content: center;
+}
+
+.contacto-form-container {
+  margin-top: 5rem;
+  padding: 0 20rem;
+}
+
+.contacto-form {
+  padding: 1rem;
+  background-color: #313133;
+  border-radius: 1rem;
+}
+
+.form-item {
+  margin-bottom: 5rem;
 }
 
 /* FORMULARIO */
-.form {
-  margin-top: 1rem;
-  margin-right: 16rem;
-  margin-left: 16rem;
-  padding: 1rem;
-  text-align: center;
-}
-
-.formdiv {
-  height: 5rem;
-}
-
-.formFirstLineItem {
-  display: inline-block;
-  width: 30%;
-  height: 6rem;
-}
-
-.formlabels {
-  font-size: 1rem;
+.form-label {
+  font-size: 2rem;
   color: white;
 }
 
-.formcampos {
+.form-campo {
+  font-size: 1.7rem;
   background-color: #aaa;
-  border-radius: 0.4rem;
-  border-color: gainsboro;
   border: 0.2rem inset gainsboro;
-  height: 2rem;
-  width: 15rem;
-  padding: 0rem 0.2rem;
+  border-radius: 0.4rem;
   margin-top: 0.2rem;
+  padding: 0rem 0.2rem;
+  height: 3.5rem;
+  width: 25rem;
 }
 
-.formlabelopinion {
-  font-size: 1.5rem;
+.form-label-opinion {
+  font-size: 2.5rem;
   color: white;
 }
 
-.formcampoopinion {
-  background-color: #aaa;
-  border-radius: 0.4rem;
-  border: 0.2rem inset gainsboro;
+.form-campo-opinion {
   resize: none;
   padding-top: 0.4rem;
   padding-left: 0.4rem;
   margin-top: 0.2rem;
-  height: 6rem;
-  width: 35rem;
+  height: 16rem;
+  width: 50rem;
 }
 
-.formbottom {
+.form-boton {
   background-color: #82e99a;
   border: 0.2rem outset lightgreen;
   border-radius: 0.9rem;
   margin-top: 1rem;
   margin-left: 1rem;
-  height: 1.5rem;
-  width: 7rem;
+  height: 3.5rem;
+  width: 17rem;
+  font-size: 1.7rem;
 }
 
-.formbottom:hover {
+.form-boton:hover {
   background-color: #57af6c;
   border: 0.2rem outset lightgreen;
+}
+
+option {
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 768px) {
+  .contacto-h {
+    width: 25rem;
+  }
+  .contacto-form-container {
+    padding: 0 0rem;
+  }
+  .form-campo-opinion {
+    width: 100%;
+  }
+}
+.pruebas-main {
+  height: 100rem;
+  background-color: gray;
 }
 
 /*# sourceMappingURL=estilos.css.map */

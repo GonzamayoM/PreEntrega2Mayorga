@@ -170,14 +170,6 @@
     }
 }
 
-
-@media screen and (max-width: 576px){
-    .footer-logo-img{
-        height: 50%;
-        width: 60%;
-    }
-}
-
 @media screen and (min-width: 768px){
     .footer-escritorio{
         display: block;
@@ -186,4 +178,34 @@
     .footer-celular{
         display: none;
     }
+}
+
+@media screen and (max-width: 576px){
+    .footer-logo-img{
+        height: 50%;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .footer-item-derechos{
+        font-size: 15%;
+    }
+    
+    .footer-item-logo{
+        font-size: 15%;
+    }
+
+    .footer-item-redessociales{
+        font-size: 15%;
+    }
+
+    .footer-item-sobrenosotros{
+        font-size: 15%;
+    }
+
+    .footer-item-up{
+        font-size: 15%;
+    }
+
 }

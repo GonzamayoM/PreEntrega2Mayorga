@@ -1,88 +1,102 @@
 /* CONTACTOS */
 
 
-.contactomain{
+.contacto-main{
     background-color: #5F5B5B;
-    height: 43rem;
+    height: 100%;
+    padding-bottom: 5rem;
 }
 
-.contacta_h{
-    font-size: 3rem;
-    text-align: center;
-    padding-top: 1rem;
+.contacto-h{
     color: #67E88A;
+    text-shadow: #67E88A 1px 1px 10px;
+    border: 0.2rem outset #67E88A;
+    width: 63rem;
 }
 
-.contacta_p{
-    font-size: 2rem;
-    text-align: center;
-    color: whitesmoke;
+.contacto-h-container{
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contacto-form-container{
+    margin-top: 5rem;
+    padding: 0 20rem;
+}
+
+.contacto-form{
+    padding: 1rem;
+    background-color: #313133;
+    border-radius: 1rem;
+}
+
+.form-item {
+    margin-bottom: 5rem;
 }
 
 /* FORMULARIO */
 
-.form{
-    margin-top: 1rem;
-    margin-right:16rem;
-    margin-left:16rem;
-    padding: 1rem;
-    text-align: center;
-}
-
-.formdiv{
-    height: 5rem;
-}
-
-.formFirstLineItem{
-    display: inline-block;
-    width: 30%;
-    height: 6rem;
-}
-
-.formlabels{
-    font-size: 1rem;
+.form-label{
+    font-size: 2rem;
     color: white;
 }
 
-.formcampos{
+.form-campo{
+    font-size: 1.7rem;
     background-color: #aaa;
-    border-radius: 0.4rem;
-    border-color: gainsboro;
     border: 0.2rem inset gainsboro;
-    height: 2rem;
-    width: 15rem;
-    padding: 0rem 0.2rem;
+    border-radius: 0.4rem;
     margin-top: 0.2rem;
+    padding: 0rem 0.2rem;
+    height: 3.5rem;
+    width: 25rem;
 }
 
-.formlabelopinion{
-    font-size: 1.5rem;
+.form-label-opinion{
+    font-size: 2.5rem;
     color: white;
 }
 
-.formcampoopinion{
-    background-color: #aaa;
-    border-radius: 0.4rem;
-    border: 0.2rem inset gainsboro;
+.form-campo-opinion{
     resize: none;
     padding-top: 0.4rem;
     padding-left: 0.4rem;
     margin-top: 0.2rem;
-    height: 6rem;
-    width: 35rem;
+    height: 16rem;
+    width: 50rem;
 }
 
-.formbottom{
+.form-boton{
     background-color: #82e99a;
     border: 0.2rem outset lightgreen;
     border-radius: 0.9rem;
     margin-top: 1rem;
     margin-left: 1rem;
-    height: 1.5rem;
-    width: 7rem;
+    height: 3.5rem;
+    width: 17rem;
+    font-size: 1.7rem;
 }
 
-.formbottom:hover{
+.form-boton:hover{
     background-color: #57af6c;
     border: 0.2rem outset lightgreen;
 }
+
+option {
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width: 768px)/*  and (max-width: 1400px) */ {
+    .contacto-h{
+        width: 25rem;
+    }
+
+    .contacto-form-container{
+        padding: 0 0rem;
+    }
+
+    .form-campo-opinion{
+        width: 100%;
+    }
+} 
