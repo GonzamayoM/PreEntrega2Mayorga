@@ -692,7 +692,7 @@ ul {
 
 .galeria-card {
   background-color: #313133;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid;
   border-radius: 1.5rem;
 }
 
@@ -707,8 +707,23 @@ border-bottom: 1px solid rgb(255, 255, 255); */
 }
 
 .galeria-h {
+  font-size: 2rem;
+}
+
+/* COLORES */
+.color-andromeda {
   color: white;
-  font-size: 2.5rem;
+  border-color: white;
+}
+
+.color-planeta-de-diamante {
+  color: #b5f1f7;
+  border-color: #b5f1f7;
+}
+
+.color-quasar {
+  color: #f7b5f6;
+  border-color: #f7b5f6;
 }
 
 /* GALERIA IMAGENES */
@@ -759,14 +774,13 @@ border-bottom: 1px solid rgb(255, 255, 255); */
   background-image: url(../img/linea-eventos.png);
   background-repeat: repeat-y;
   background-position: center;
-  height: 200rem;
+  height: 100% rem;
 }
 
 .eventos-item {
   margin-bottom: 10rem;
   display: flex;
   justify-content: space-evenly;
-  justify-self: center;
   align-items: center;
 }
 
@@ -776,11 +790,22 @@ border-bottom: 1px solid rgb(255, 255, 255); */
   background-color: rgba(58, 56, 56, 0.404);
   border: 1px solid gray;
   border-radius: 0.5rem;
-  padding: 1rem;
+  margin: 0rem 2.5rem;
+}
+
+.eventos-descripcion-h-container {
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: rgba(58, 56, 56, 0.758);
+  border-bottom: 1px solid gray;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.eventos-descripcion-p-container {
+  padding: 1rem 1rem 0 1rem;
 }
 
 .eventos-h2 {
-  color: rgb(236, 218, 218);
+  color: rgb(237, 194, 194);
 }
 
 .eventos-h3 {
@@ -788,7 +813,7 @@ border-bottom: 1px solid rgb(255, 255, 255); */
 }
 
 .eventos-p {
-  color: lightcyan;
+  color: rgb(255, 255, 255);
   font-size: 1.5rem;
   margin-top: 0.5rem;
 }
@@ -799,8 +824,51 @@ border-bottom: 1px solid rgb(255, 255, 255); */
   background-color: rgba(58, 56, 56, 0.404);
   border: 1px solid gray;
   border-radius: 0.5rem;
+  padding: 1rem;
 }
 
+.eventos-img {
+  border-radius: 1rem;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .eventos-h {
+    width: 25rem;
+  }
+  .eventos-ul {
+    background-position: 15%;
+    margin-left: 5rem;
+  }
+  .eventos-item {
+    margin-bottom: 10rem;
+    flex-direction: column;
+    height: 60rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .eventos-ul {
+    margin-left: -5rem;
+  }
+  .eventos-item {
+    height: 60rem;
+    align-items: flex-end;
+  }
+}
+@media screen and (max-width: 400px) {
+  .eventos-descripcion-container {
+    width: 25rem;
+    height: 20rem;
+  }
+  .eventos-img-container {
+    width: 30rem;
+    height: 25rem;
+    background-color: rgba(58, 56, 56, 0.404);
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+}
 /* CONTACTOS */
 .contacto-main {
   background-color: #5F5B5B;
