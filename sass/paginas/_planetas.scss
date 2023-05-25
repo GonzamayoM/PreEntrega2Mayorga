@@ -8,7 +8,7 @@
 }
 
 .planetas-background{
-    background-image: url(../img/planetasfondo1.png);
+    background-image: url(../img/fondos/planetasfondo1.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: black;
@@ -56,7 +56,7 @@
 }
 
 .indiceContainer{
-    background-image: url(../img/space_rocket.png);
+    background-image: url(../img/cohete.png);
     background-size: 16rem;
     background-position-x: center;
     background-position-y: center;
@@ -91,19 +91,7 @@
     text-decoration: none;
     font-weight: 600;
     color: #fffbfb;
-/*     border-top: 0.2rem solid #3c183e;
-    border-bottom: 0.2rem solid #721579;
-    border-radius: 1rem; */
-    
 }
-
-/* .indicePlaneta:hover{
-    padding: 0.1rem;
-    border-top: 0.2rem solid #3c183e;
-    border-bottom: 0.2rem solid #721579;
-    border-left: 0.2rem solid #3c183e;
-    border-right: 0.2rem solid #721579;
-} */
 
 .indicePlanetasItem:hover{
     padding: 0.5rem;

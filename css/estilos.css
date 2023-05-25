@@ -113,7 +113,7 @@ ul {
 }
 /* HEADER */
 .header {
-  background-image: url(../img/header.png);
+  background-image: url(../img/header-footer/header.png);
   opacity: 85%;
   background-size: cover;
   height: 10.4rem;
@@ -139,7 +139,7 @@ ul {
 }
 
 .navbar-nav {
-  background-image: url(../img/header.png);
+  background-image: url(../img/header-footer/header.png);
   background-size: 100%;
 }
 
@@ -197,7 +197,7 @@ ul {
 }
 
 .navbar-toggler-icon {
-  background-image: url(../img/navbar-expand-icon.png);
+  background-image: url(../img/header-footer/navbar-expand-icon.png);
   width: 6rem;
   height: 6rem;
 }
@@ -421,7 +421,7 @@ ul {
 
 /* MAIN ; IMAGEN DEL INICIO Y SEPARACION*/
 .inicio-background {
-  background: linear-gradient(0deg, #5F5B5B, 7%, transparent, 15%, transparent), url(../img/inicio-background.png);
+  background: linear-gradient(0deg, #5F5B5B, 7%, transparent, 15%, transparent), url(../img/fondos/inicio-background.png);
   background-size: 100%;
   background-repeat: no-repeat;
   height: 107.3rem;
@@ -446,9 +446,12 @@ ul {
   height: 100%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .inicio-h {
     width: 30rem;
+  }
+  .inicio-background {
+    height: 25rem;
   }
 }
 /* PLANETAS */
@@ -460,7 +463,7 @@ ul {
 }
 
 .planetas-background {
-  background-image: url(../img/planetasfondo1.png);
+  background-image: url(../img/fondos/planetasfondo1.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: black;
@@ -502,7 +505,7 @@ ul {
 }
 
 .indiceContainer {
-  background-image: url(../img/space_rocket.png);
+  background-image: url(../img/cohete.png);
   background-size: 16rem;
   background-position-x: center;
   background-position-y: center;
@@ -537,18 +540,8 @@ ul {
   text-decoration: none;
   font-weight: 600;
   color: #fffbfb;
-  /*     border-top: 0.2rem solid #3c183e;
-      border-bottom: 0.2rem solid #721579;
-      border-radius: 1rem; */
 }
 
-/* .indicePlaneta:hover{
-    padding: 0.1rem;
-    border-top: 0.2rem solid #3c183e;
-    border-bottom: 0.2rem solid #721579;
-    border-left: 0.2rem solid #3c183e;
-    border-right: 0.2rem solid #721579;
-} */
 .indicePlanetasItem:hover {
   padding: 0.5rem;
   border-style: ridge;
@@ -660,7 +653,7 @@ ul {
 }
 
 .observatorio-background {
-  background: linear-gradient(0deg, #5F5B5B, 7%, transparent, 15%, transparent), url(../img/obs-background.png);
+  background: linear-gradient(0deg, #5F5B5B, 7%, transparent, 15%, transparent), url(../img/fondos/obs-background.png);
   background-size: 100%;
   background-repeat: no-repeat;
   height: 80.6rem;

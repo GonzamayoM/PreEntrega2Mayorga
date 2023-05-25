@@ -26,7 +26,7 @@
 .inicio-background{
     background:
         linear-gradient(0deg,#5F5B5B, 7%, transparent, 15%, transparent),
-        url(../img/inicio-background.png);
+        url(../img/fondos/inicio-background.png);
     background-size: 100%;
     background-repeat: no-repeat;
     height: 107.3rem;
@@ -55,9 +55,12 @@
 }
 
 
-@media screen and (max-width: 1200px)/*  and (max-width: 1400px) */ {
+@media screen and (max-width: 768px){
     .inicio-h{
         width: 30rem;
     }
 
+    .inicio-background{
+        height: 25rem;
+    }
 } 

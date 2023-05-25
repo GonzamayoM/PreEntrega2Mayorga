@@ -2,7 +2,7 @@
 $height-navbar: 10.4rem;
 
 .header{
-    background-image: url(../img/header.png);
+    background-image: url(../img/header-footer/header.png);
     opacity: 85%;
     background-size: cover;
     height: $height-navbar;
@@ -28,7 +28,7 @@ $height-navbar: 10.4rem;
 }
 
 .navbar-nav{
-    background-image: url(../img/header.png);
+    background-image: url(../img/header-footer/header.png);
     background-size: 100%;
 }
 
@@ -87,7 +87,7 @@ $height-navbar: 10.4rem;
 }
 
 .navbar-toggler-icon{
-    background-image: url(../img/navbar-expand-icon.png);
+    background-image: url(../img/header-footer/navbar-expand-icon.png);
     width: 6rem;
     height: 6rem;
 }
