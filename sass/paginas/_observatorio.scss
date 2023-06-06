@@ -1,10 +1,24 @@
+$galeria-cards:(
+    color-andromeda: white,
+    color-planeta-de-diamante: #b5f1f7,
+    color-quasar: #f7b5f6
+);
+
+@each $galeria-cards-colors, $color in $galeria-cards {
+    .#{$galeria-cards-colors}{
+        color: $color;
+        border-color: $color;
+    }
+}
+
+
 /* OBSERVATORIO */
 
 .obsmain{
     background-color: #5F5B5B;
     height: 100%;
     padding-bottom: 10rem;
-
+    overflow: hidden;
 }
 
 .observatorio-background{
@@ -43,10 +57,16 @@
     padding: 0 4rem 4rem 4rem;
 }
 
+
 .galeria-card{
     background-color: #313133;
     border: 1px solid;
     border-radius: 1.5rem;
+}
+.galeria-card:hover{
+    background-color: #1e1e1f;
+    scale: 120%;
+    transition: 0.5s;
 }
 
 /* GALERIA TUTLOS */
@@ -66,7 +86,8 @@
 
 /* COLORES */
 
-.color-andromeda{
+
+/* .color-andromeda{
     color: white;
     border-color: white;
 }
@@ -79,8 +100,7 @@
 .color-quasar{
     color: #f7b5f6;
     border-color: #f7b5f6;
-}
-
+} */
 
 /* GALERIA IMAGENES */
 

@@ -20,14 +20,17 @@
     <!-- BOOSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
-    <!-- CSS -->
+    <!--AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./css/estilos.css">
+
 </head>
 <body>
-    <header class="header box-sizing-reset" id="header">
+    <header class="header" id="header">
         <nav class="navbar navbar-expand-xl"> <!-- NAVEGADOR -->
-            <div class="container-fluid">
+            <div class="navbar-container container-fluid">
                 <h1 class="navheader">UNIVERSIUM</h1> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,23 +38,23 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="navitem"> <!-- ACTUAL -->
-                            <img src="./img/header-footer/inicioicon.png" alt="" class="navicons-1">
+                            <img src="./img/header-footer/inicioicon.png" alt="" class="nav-icon nav-icon-actual">
                             <a href="" class="navlink navlink-actual" aria-current="page" >INICIO</a>
                         </li>
                         <li class="navitem">
-                            <img src="./img/header-footer/planetasicon.png" alt="" class="naviconplanetas">
+                            <img src="./img/header-footer/planetasicon.png" alt="" class="nav-icon nav-icon-planetas">
                             <a href="./pages/planetas.html" class="navlink">PLANETAS</a>
                         </li>
                         <li class="navitem">
-                            <img src="./img/header-footer/observatorioicon.png" alt="" class="naviconobservatorio">
+                            <img src="./img/header-footer/observatorioicon.png" alt="" class="nav-icon nav-icon-observatorio">
                             <a href="./pages/observatorio.html" class="navlink">OBSERVATORIO</a>
                         </li>
                         <li class="navitem">
-                            <img src="./img/header-footer/comollegaricon.png" alt="" class="navicons-1">
+                            <img src="./img/header-footer/comollegaricon.png" alt="" class="nav-icon">
                             <a href="./pages/eventos.html" class="navlink">EVENTOS</a>
                         </li>
                         <li class="navitem">
-                            <img src="./img/header-footer/contactoicon.png" alt="" class="navicons-1">
+                            <img src="./img/header-footer/contactoicon.png" alt="" class="nav-icon">
                             <a href="./pages/contacto.html" class="navlink">CONTACTO</a>
                         </li>
                     </ul>
@@ -60,12 +63,12 @@
         </nav>
     </header>
     <main class="iniciomain" id="iniciomain">
-        <section class="inicio-background"> <!-- FONDO CON TITULO -->
-            <div class="universal-background container">
+        <section class="inicio-background "> <!-- FONDO CON TITULO -->
+            <div class="universal-background container-fluid">
                 <h2 class="universal-h-start inicio-h">EL UNIVERSO</h2>
             </div>
         </section>
-        <section class="inicio-container container"> <!-- INICIO: EL BIGBANG -->
+        <section class="inicio-container container" data-aos="zoom-out-down" data-aos-duration="500" data-aos-offset="210"> <!-- INICIO: EL BIGBANG -->
             <div class="row">
                 <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12"> <!-- TITULO Y TEXTO -->
                     <h3 class="universal-h">EL INICIO DEL UNIVERSO: EL BIG BANG...</h3>
@@ -87,7 +90,7 @@
                 </div>
             </div>
         </section>
-        <section class="inicio-container container"> <!-- INFLACION COSMICA -->
+        <section class="inicio-container container" data-aos="zoom-out-down" data-aos-duration="500" data-aos-offset="210"> <!-- INFLACION COSMICA -->
             <div>
                 <h3 class="universal-h text-center">LA INFLACION COSMICA</h3>
                 <p class="universal-p">
@@ -98,7 +101,7 @@
                 </p>
             </div>
         </section>
-        <section class="inicio-container container"> <!-- EL SISTEMA SOLAR -->
+        <section class="inicio-container container" data-aos="zoom-out-down" data-aos-duration="500" data-aos-offset="210"> <!-- EL SISTEMA SOLAR -->
             <div class="row">
                 <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12"> <!-- TITULO Y TEXTO -->
                     <h3 class="universal-h">EL SISTEMA SOLAR</h3>
@@ -114,7 +117,7 @@
                 </div>
             </div>
         </section>
-        <section class="inicio-container container"> <!-- EL PLANETA TIERRA -->
+        <section class="inicio-container container" data-aos="zoom-out-down" data-aos-duration="500" data-aos-offset="210"> <!-- EL PLANETA TIERRA -->
             <div class="row">
                 <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12"> <!-- TITULO Y TEXTO -->
                     <h3 class="universal-h">EL PLANETA TIERRA</h3>
@@ -229,5 +232,11 @@
     <!-- BOOSTRAP SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    
 </body>
 </html>

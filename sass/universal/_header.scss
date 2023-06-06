@@ -1,10 +1,15 @@
 /* HEADER */
 $height-navbar: 10.4rem;
 
+@mixin nav-icon-size($height, $width){
+    height: $height;
+    width: $width;
+}
+
 .header{
     background-image: url(../img/header-footer/header.png);
     opacity: 85%;
-    background-size: cover;
+    background-size: 100%;
     height: $height-navbar;
     width: 100%;
     position: fixed;
@@ -12,24 +17,36 @@ $height-navbar: 10.4rem;
     z-index: 1;
 }
 
-.nav{
-    justify-content: space-between;
+.navbar-container{
+    height: $height-navbar;
     display: flex;
-    flex-wrap: unset;
-    margin-right: 3.2rem;
+    justify-content: space-around;
+
 }
 
 .navheader{
     font-size: 4.8rem;
     color: white;
+    height: calc($height-navbar / 2);/* 
+    margin-right: 12rem; */
     padding-left: 1rem;
-    line-height: $height-navbar;
-    margin-right: 12rem;
+    transition: text-shadow 5s;
+}
+
+.navheader:hover{
+    text-shadow: 1px 1px 8px white;
+    transition: 1s;
 }
 
 .navbar-nav{
     background-image: url(../img/header-footer/header.png);
     background-size: 100%;
+    width: 100%;
+    gap: 2rem;
+}
+
+.navbar-collapse{
+    flex-grow: unset;
 }
 
 .show{
@@ -39,38 +56,13 @@ $height-navbar: 10.4rem;
     border-left: 0.2rem ridge rgb(118, 17, 17);
 }
 
-.navicons-1{
-    margin-bottom: -0.5rem;
-    margin-right: 0.3rem;
-    height: 2.5rem;
-    width: 2.5rem;
-}
-
-.naviconplanetas{
-    margin-bottom: -0.2rem;
-    margin-right: 0.3rem;
-    height: 2rem;
-    width: 3.5rem;
-}
-
-.naviconobservatorio{
-    margin-bottom: -0.4rem;
-    margin-right: 0.3rem;
-    height: 2.5rem;
-    width: 2rem;
-}
-
 .navitem{
     width: max-content;
-    margin: 1rem;
-    font-size: 2.4rem;
     padding: 0rem 1rem;
     border-radius: 1.6rem;
-    display: inline;
 }
 
 .navitem:hover{
-
     background-color: #5F5B5B;
     transition: 0.7s;
 }
@@ -84,6 +76,28 @@ $height-navbar: 10.4rem;
 .navlink-actual{
     text-decoration: underline;
     color: #DE7A7A;
+    text-shadow: 1px 1px 6px;
+}
+
+/* ICONOS */
+
+.nav-icon{
+    @include nav-icon-size(2.5rem, 2.5rem);
+    margin-bottom: -0.5rem;
+    margin-right: 0.5rem;
+}
+
+.nav-icon-planetas{
+    @include nav-icon-size(2rem, 3.5rem);
+    margin-bottom: -0.2rem;
+}
+
+.nav-icon-observatorio{
+    @include nav-icon-size(2.5rem, 2rem);
+}
+
+.nav-icon-actual{
+    filter: drop-shadow(1px 1px 6px white);
 }
 
 .navbar-toggler-icon{
@@ -92,14 +106,37 @@ $height-navbar: 10.4rem;
     height: 6rem;
 }
 
-@media screen and (max-width: 768px){
-    .navheader{
-        font-size: 2.8rem;
-        line-height: $height-navbar - 5;
-        margin-right: 0rem;
+@media screen and (max-width: 1400px){
+    .navlink{
+        font-size: 2rem;
     }
 
+    .nav-icon{
+        @include nav-icon-size(2.2rem, 2.2rem);
+    }
+    
+    .nav-icon-planetas{
+        @include nav-icon-size(1.7rem, 3rem);
+    }
+    
+    .nav-icon-observatorio{
+        @include nav-icon-size(2.2rem, 1.7rem);
+    }
+}
+
+@media screen and (max-width: 768px){
     .header{
         height: 6.66rem;
     }
+
+    .navheader{
+        font-size: 2.8rem;
+        margin-right: 0rem;
+        height: calc($height-navbar / 3);
+    }
+
+    .navbar-container{
+        height: 100%;
+    }
+
 }

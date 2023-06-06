@@ -63,7 +63,8 @@
 .footer-up-img:hover{
     border: 0.1rem solid gray;
     border-radius: 1rem;
-    scale: 150%;
+    transform: scale(1.5);
+    transition-duration: 0.2s;
 }
 
 /* FOOTER; LOGO */
@@ -128,6 +129,11 @@
     height: 3.5rem;
     width: 3.5rem;
 }
+
+.footer-redessociales-icon:hover{
+    filter:brightness(80%);
+}
+
 
 @media screen and (max-width: 768px){
     .footer{
