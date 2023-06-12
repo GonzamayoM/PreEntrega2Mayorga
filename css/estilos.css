@@ -866,7 +866,7 @@ ul {
     font-size: 3rem;
   }
   .galeria-card:hover {
-    background-color: unset;
+    background-color: #313133;
     scale: unset;
   }
 }
