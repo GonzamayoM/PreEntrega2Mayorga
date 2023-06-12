@@ -1,5 +1,7 @@
 /* EVENTOS */
 
+/* EVENTOS INICIO */
+
 .eventos-main{
     background-color: #5F5B5B;
     height: 100%;
@@ -9,8 +11,7 @@
 .eventos-h{
     color: #e86794;
     text-shadow: #e86794 1px 1px 10px;
-    border: 0.2rem outset #e86794;
-    width: 63rem;
+    top: 40%; 
 }
 
 .eventos-h-container{
@@ -18,6 +19,8 @@
     display: flex;
     justify-content: center;
 }
+
+/* EVENTOS LISTA DE EVENTOS */
 
 .eventos-container{
     margin-top: 10rem;
@@ -36,6 +39,8 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* CONTENEDOR */
 
 .eventos-descripcion-container{
     width: 30rem;
@@ -72,17 +77,19 @@
 }
 
 .eventos-img-container{
-    width: 35rem;
-    height: 25rem;
     background-color: rgba(58, 56, 56, 0.404);
     border: 1px solid gray;
     border-radius: 0.5rem;
     padding: 1rem;
+    width: 35rem;
+    height: 25rem;
 }
 
 .eventos-img{
     border-radius: 1rem;
+    height: 100%;
     max-height: 100%;
+    object-position: cover;
 }
 
 @media screen and (max-width: 768px){

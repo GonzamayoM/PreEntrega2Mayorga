@@ -8,10 +8,9 @@
 }
 
 .contacto-h{
-    color: #67E88A;
-    text-shadow: #67E88A 1px 1px 10px;
-    border: 0.2rem outset #67E88A;
-    width: 63rem;
+    color: #72d2b5;
+    text-shadow: 1px 1px 10px;
+    top: 40%; 
 }
 
 .contacto-h-container{
@@ -21,7 +20,7 @@
 }
 
 .contacto-form-container{
-    margin-top: 5rem;
+    margin-top: 10rem;
     padding: 0 20rem;
 }
 
@@ -68,19 +67,24 @@
 }
 
 .form-boton{
-    background-color: #82e99a;
+    background-color: #67E88A;
     border: 0.2rem outset lightgreen;
-    border-radius: 0.9rem;
+    border-radius: 1rem;
     margin-top: 1rem;
     margin-left: 1rem;
     height: 3.5rem;
-    width: 17rem;
+    padding: 0 4rem;
     font-size: 1.7rem;
 }
 
 .form-boton:hover{
     background-color: #57af6c;
     border: 0.2rem outset lightgreen;
+}
+
+.form-boton:active{
+    background-color: #82e99a;
+    box-shadow: 0px 0px 10px #82e99a;
 }
 
 option {

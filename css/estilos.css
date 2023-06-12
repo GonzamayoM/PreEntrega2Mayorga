@@ -39,41 +39,36 @@ ul {
   margin-bottom: unset;
 }
 
-/* EN CONSTRUCCION */
-.enconstruccionContainer {
-  border-top: 0.4rem dotted #302e2e;
-  border-bottom: 0.4rem dotted #302e2e;
-  margin-top: 16rem;
-  height: 48rem;
-}
-
-.imgenconstruccion {
-  position: absolute;
-  margin-left: 6.4rem;
-  width: 64rem;
-}
-
-.enconstruccionH {
-  font-size: 6.4rem;
-  color: #302e2e;
-  border: 0.4rem double #302e2e;
-  border-radius: 1rem;
-  position: absolute;
-  margin-left: 72rem;
-  margin-top: 20.8rem;
-}
-
 /* UNIVERSAL */
-.universal-background {
+.universal-background-container {
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 25%;
+}
+
+.universal-background-container::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #5F5B5B, 7%, transparent, 15%, transparent);
+}
+
+.universal-background-image {
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
 }
 
 .universal-h-start {
+  position: absolute;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 8rem;
   text-align: center;
+  padding: 0rem 5%;
 }
 
 .universal-description-container {
@@ -114,14 +109,19 @@ ul {
 }
 /* HEADER */
 .header {
-  background-image: url(../img/header-footer/header.png);
-  opacity: 85%;
-  background-size: 100%;
   height: 10.4rem;
   width: 100%;
   position: fixed;
-  border-bottom: 0.1rem ridge rgb(118, 17, 17);
   z-index: 1;
+  backdrop-filter: blur(3px);
+}
+
+.navbar {
+  background-image: url(../img/header-footer/header.png);
+  background-size: 100%;
+  opacity: 85%;
+  border-bottom: 0.1rem ridge rgb(118, 17, 17);
+  width: 100%;
 }
 
 .navbar-container {
@@ -133,8 +133,7 @@ ul {
 .navheader {
   font-size: 4.8rem;
   color: white;
-  height: 5.2rem; /* 
-margin-right: 12rem; */
+  height: 5.2rem;
   padding-left: 1rem;
   transition: text-shadow 5s;
 }
@@ -145,8 +144,6 @@ margin-right: 12rem; */
 }
 
 .navbar-nav {
-  background-image: url(../img/header-footer/header.png);
-  background-size: 100%;
   width: 100%;
   gap: 2rem;
 }
@@ -155,11 +152,13 @@ margin-right: 12rem; */
   flex-grow: unset;
 }
 
-.show {
-  border: 0rem 0.1rem 0.1rem 0.1rem;
-  border-bottom: 0.2rem ridge rgb(118, 17, 17);
-  border-right: 0.2rem ridge rgb(118, 17, 17);
-  border-left: 0.2rem ridge rgb(118, 17, 17);
+.collapsing, .show {
+  background-image: url(../img/header-footer/header.png);
+  background-size: 100%;
+  padding: 1rem 0 0.5rem 0.5rem;
+  border-width: 0 0.2rem 0.2rem 0.2rem;
+  border-style: dashed;
+  border-color: rgb(118, 17, 17);
 }
 
 .navitem {
@@ -344,11 +343,11 @@ margin-right: 12rem; */
 }
 
 /* FOOTER ; REDES SOCIALES */
-.footer-item-redessociales {
+.footer-item-redes-sociales {
   width: 13rem;
 }
 
-.footer-redessociales-ul {
+.footer-redes-sociales-ul {
   width: 100%;
   height: 100%;
   display: flex;
@@ -357,20 +356,45 @@ margin-right: 12rem; */
   overflow: hidden;
 }
 
-.footer-redessociales-item {
+.footer-redes-sociales-item {
   list-style: none;
   width: 3rem;
 }
 
-.footer-redessociales-icon {
+.footer-redes-sociales-icon {
   height: 3.5rem;
   width: 3.5rem;
 }
 
-.footer-redessociales-icon:hover {
+.footer-redes-sociales-icon:hover {
   filter: brightness(80%);
 }
 
+@media screen and (max-width: 1200px) {
+  .footer-ul {
+    flex-wrap: wrap;
+  }
+  .footer-item-sobrenosotros {
+    order: 3;
+    margin-top: 2rem;
+  }
+  .footer-item-derechos {
+    order: 4;
+    margin-top: 2rem;
+  }
+  .footer-item-logo {
+    order: 1;
+    margin: 0 30%;
+  }
+  .footer-item-up {
+    order: 2;
+    margin-top: 2rem;
+  }
+  .footer-item-redes-sociales {
+    order: 5;
+    margin-top: 2rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .footer {
     padding: 3rem 0 0 0;
@@ -392,14 +416,14 @@ margin-right: 12rem; */
     width: 40%;
     resize: auto;
   }
-  .footer-celular-item-redessociales {
+  .footer-celular-item-redes-sociales {
     display: flex;
     justify-content: center;
   }
-  .footer-celular-div-redessociales {
+  .footer-celular-div-redes-sociales {
     width: 15rem;
   }
-  .footer-redessociales-ul {
+  .footer-redes-sociales-ul {
     justify-content: space-evenly;
   }
 }
@@ -417,23 +441,6 @@ margin-right: 12rem; */
     width: 60%;
   }
 }
-@media screen and (max-width: 1200px) {
-  .footer-item-derechos {
-    font-size: 15%;
-  }
-  .footer-item-logo {
-    font-size: 15%;
-  }
-  .footer-item-redessociales {
-    font-size: 15%;
-  }
-  .footer-item-sobrenosotros {
-    font-size: 15%;
-  }
-  .footer-item-up {
-    font-size: 15%;
-  }
-}
 /* INICIO */
 .iniciomain {
   background-color: #5F5B5B;
@@ -448,14 +455,13 @@ margin-right: 12rem; */
   border-radius: 1rem;
   padding: 2.5rem;
   margin-top: 10rem;
-  box-shadow: 2px 2px 6px black;
+  box-shadow: 0px 0px 30px black;
 }
 
 .inicio-h {
   color: gray;
   text-shadow: gray 1px 1px 10px;
-  border: 0.2rem outset gray;
-  width: 80rem;
+  top: 30%;
 }
 
 /* MAIN ; IMAGEN DEL INICIO Y SEPARACION*/
@@ -494,6 +500,7 @@ margin-right: 12rem; */
   }
 }
 /* PLANETAS */
+/* PLANETAS INICIO */
 .planetas-main {
   background-color: black;
   height: 100%;
@@ -501,32 +508,32 @@ margin-right: 12rem; */
   padding-bottom: 16rem;
 }
 
-.planetas-background {
-  background-image: url(../img/fondos/planetasfondo1.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-color: black;
-  height: 144rem;
-  width: 100%;
+.planetas-h-container {
+  display: flex;
+  justify-content: center;
 }
 
-.planetas-h { /* rgb(242, 242, 181) 137, 100, 13 */
-  color: rgb(228, 104, 2);
-  text-shadow: rgb(228, 104, 2) 1px 1px 10px;
-  border: 0.2rem outset rgb(228, 104, 2);
-  width: 63rem;
+.planetas-h {
+  color: rgb(205, 228, 2);
+  text-shadow: rgb(205, 228, 2) 1px 1px 10px;
+  top: 50%;
 }
 
+.planetas-background-image {
+  position: absolute;
+}
+
+/* PLANETAS INDICE Y DESCRIPCION */
 .planetas-indice-desc-container {
-  margin-top: -89rem;
+  position: relative;
+  margin-top: 60rem;
 }
 
-/* PLANETAS ; INICIO DE LA PAGINA */
 .planetasInicioItem {
   list-style: none;
 }
 
-/* PLANETAS ; TEXTO */
+/* PLANETAS ; DESCRIPCION */
 .planetas-description-item {
   padding: 5rem 10rem;
 }
@@ -534,6 +541,7 @@ margin-right: 12rem; */
 .planetasdescriptionContainer {
   background-color: rgba(175, 165, 25, 0.2235294118);
   border: 0.1rem outset #cac005;
+  box-shadow: inset 0px 0px 10px #cac005, 0px 0px 10px #cac005;
   border-radius: 3.2rem;
   padding: 3.2rem 4.8rem;
 }
@@ -548,21 +556,31 @@ margin-right: 12rem; */
   background-size: 16rem;
   background-position-x: center;
   background-position-y: center;
-  box-sizing: border-box;
   margin-top: -19.2rem;
   margin-left: 8rem;
   padding-top: 8rem;
   width: 16rem;
   height: 86.4rem;
+  animation-name: despegue;
+  animation-duration: 1s;
 }
 
+@keyframes despegue { /* ANIMACION DEL DESPEGUE DEL COHETE */
+  from {
+    transform: translateY(20rem);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 .indicePlanetasOl {
   background-color: rgba(255, 255, 255, 0.168);
   border-radius: 1.6rem;
   margin-top: 10.24rem;
   margin-left: 1.6rem;
   padding: 0.48rem 1.6rem;
-  width: 11.2rem;
+  width: 14rem;
+  box-shadow: inset 0px 0px 10px white;
 }
 
 .indicePlanetasItem {
@@ -573,12 +591,13 @@ margin-right: 12rem; */
 }
 
 .indicePlaneta {
-  font-family: "Roboto";
+  font-family: "Raleways";
   padding: 0.2rem;
   font-size: 2.08rem;
   text-decoration: none;
   font-weight: 600;
-  color: #fffbfb;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 8px black;
 }
 
 .indicePlanetasItem:hover {
@@ -591,47 +610,101 @@ margin-right: 12rem; */
 /* PLANETAS ; COLORES */
 .color-mercurio {
   background-color: rgba(117, 69, 69, 0.4470588235);
-  border: 0.2rem solid #742626;
+  border-color: #742626;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.planeta-detallados-container.color-mercurio {
+  box-shadow: 0px 0px 50px #742626;
 }
 
 .color-venus {
   background-color: rgba(255, 130, 81, 0.431372549);
-  border: 0.2rem solid #ff6624;
+  border-color: #ff6624;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.planeta-detallados-container.color-venus {
+  box-shadow: 0px 0px 50px #ff6624;
 }
 
 .color-tierra {
   background-color: rgba(61, 139, 247, 0.4078431373);
-  border: 0.2rem solid #72bb53;
+  border-color: #72bb53;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.planeta-detallados-container.color-tierra {
+  box-shadow: 0px 0px 50px #72bb53;
 }
 
 .color-marte {
   background-color: rgba(198, 100, 61, 0.4274509804);
-  border: 0.2rem solid #aa532e;
+  border-color: #aa532e;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.planeta-detallados-container.color-marte {
+  box-shadow: 0px 0px 50px #aa532e;
 }
 
 .color-jupiter {
   background-color: rgba(224, 180, 127, 0.3921568627);
-  border: 0.2rem solid #b09250;
+  border-color: #b09250;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.planeta-detallados-container.color-jupiter {
+  box-shadow: 0px 0px 50px #b09250;
 }
 
 .color-saturno {
   background-color: rgba(227, 197, 115, 0.4156862745);
-  border: 0.2rem solid #d4b952;
+  border-color: #d4b952;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.planeta-detallados-container.color-saturno {
+  box-shadow: 0px 0px 50px #d4b952;
 }
 
 .color-urano {
   background-color: rgba(142, 170, 210, 0.4078431373);
-  border: 0.2rem solid #6b8689;
+  border-color: #6b8689;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.planeta-detallados-container.color-urano {
+  box-shadow: 0px 0px 50px #6b8689;
 }
 
 .color-neptuno {
   background-color: rgba(90, 108, 207, 0.3921568627);
-  border: 0.2rem solid #163d8a;
+  border-color: #163d8a;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.planeta-detallados-container.color-neptuno {
+  box-shadow: 0px 0px 50px #163d8a;
 }
 
 .color-pluton {
-  background-color: rgba(172, 181, 194, 0.4196078431);
-  border: 0.2rem solid #b7ddf3;
+  background-color: rgba(253, 253, 253, 0.4196078431);
+  border-color: #cee8f7;
+  border-width: 0.2rem;
+  border-style: solid;
+}
+
+.planeta-detallados-container.color-pluton {
+  box-shadow: 0px 0px 50px #cee8f7;
 }
 
 /* PLANETAS ; CONTENEDORES DE CADA PLANETA */
@@ -676,15 +749,14 @@ margin-right: 12rem; */
     width: 25rem;
   }
   .planetas-description-item {
-    padding: 5rem 2rem;
+    padding: 1rem;
   }
   .planetasdescriptionContainer {
     padding: 1.8rem 2rem;
   }
-  .planetas-indice-desc-container {
-    margin-top: -125rem;
-  }
 }
+/* OBSERVATORIO */
+/* OBSERVATORIO COLORES */
 .color-andromeda {
   color: white;
   border-color: white;
@@ -700,7 +772,32 @@ margin-right: 12rem; */
   border-color: #f7b5f6;
 }
 
-/* OBSERVATORIO */
+.color-uy-scuty {
+  color: rgb(165, 39, 17);
+  border-color: rgb(165, 39, 17);
+}
+
+.color-psr {
+  color: rgb(1, 0, 34);
+  border-color: rgb(1, 0, 34);
+}
+
+.color-nebulosa-cangrejo {
+  color: rgb(219, 199, 101);
+  border-color: rgb(219, 199, 101);
+}
+
+.color-messier {
+  color: rgb(24, 14, 0);
+  border-color: rgb(24, 14, 0);
+}
+
+.color-nube-smith {
+  color: rgb(96, 18, 41);
+  border-color: rgb(96, 18, 41);
+}
+
+/* OBSERVATORIO INICIO */
 .obsmain {
   background-color: #5F5B5B;
   height: 100%;
@@ -708,19 +805,10 @@ margin-right: 12rem; */
   overflow: hidden;
 }
 
-.observatorio-background {
-  background: linear-gradient(0deg, #5F5B5B, 7%, transparent, 15%, transparent), url(../img/fondos/obs-background.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 80.6rem;
-  width: 100%;
-}
-
 .observatorio-h {
   color: rgb(232, 181, 242);
   text-shadow: rgb(232, 181, 242) 1px 1px 10px;
-  border: 0.2rem outset rgb(232, 181, 242);
-  width: 84rem;
+  top: 40%;
 }
 
 /* TITULO Y DESCRIPCION*/
@@ -743,43 +831,27 @@ margin-right: 12rem; */
   background-color: #313133;
   border: 1px solid;
   border-radius: 1.5rem;
+  transition: scale 0.5s;
 }
 
 .galeria-card:hover {
   background-color: #1e1e1f;
   scale: 120%;
-  transition: 0.5s;
 }
 
 /* GALERIA TUTLOS */
 .galeria-h-container {
   background-color: #3f3f40;
   height: 5rem;
-  border-radius: 1.5rem; /* 
-border-bottom: 1px solid rgb(255, 255, 255); */
-  padding-top: 1rem;
+  border-radius: 1.5rem;
+  padding-top: 1.4rem;
   margin-bottom: 1rem;
 }
 
 .galeria-h {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
 }
 
-/* COLORES */
-/* .color-andromeda{
-    color: white;
-    border-color: white;
-}
-
-.color-planeta-de-diamante{
-    color: #b5f1f7;
-    border-color: #b5f1f7;
-}
-
-.color-quasar{
-    color: #f7b5f6;
-    border-color: #f7b5f6;
-} */
 /* GALERIA IMAGENES */
 .galeria-img-container {
   padding: 1rem;
@@ -790,17 +862,16 @@ border-bottom: 1px solid rgb(255, 255, 255); */
 }
 
 @media screen and (max-width: 768px) {
-  .observatorio-background {
-    height: 21.7rem;
-  }
-  .observatorio-h {
-    width: 30rem;
-  }
   .observatorio-description-h {
     font-size: 3rem;
   }
+  .galeria-card:hover {
+    background-color: unset;
+    scale: unset;
+  }
 }
 /* EVENTOS */
+/* EVENTOS INICIO */
 .eventos-main {
   background-color: #5F5B5B;
   height: 100%;
@@ -810,8 +881,7 @@ border-bottom: 1px solid rgb(255, 255, 255); */
 .eventos-h {
   color: #e86794;
   text-shadow: #e86794 1px 1px 10px;
-  border: 0.2rem outset #e86794;
-  width: 63rem;
+  top: 40%;
 }
 
 .eventos-h-container {
@@ -820,6 +890,7 @@ border-bottom: 1px solid rgb(255, 255, 255); */
   justify-content: center;
 }
 
+/* EVENTOS LISTA DE EVENTOS */
 .eventos-container {
   margin-top: 10rem;
 }
@@ -838,6 +909,7 @@ border-bottom: 1px solid rgb(255, 255, 255); */
   align-items: center;
 }
 
+/* CONTENEDOR */
 .eventos-descripcion-container {
   width: 30rem;
   height: 20rem;
@@ -873,17 +945,19 @@ border-bottom: 1px solid rgb(255, 255, 255); */
 }
 
 .eventos-img-container {
-  width: 35rem;
-  height: 25rem;
   background-color: rgba(58, 56, 56, 0.404);
   border: 1px solid gray;
   border-radius: 0.5rem;
   padding: 1rem;
+  width: 35rem;
+  height: 25rem;
 }
 
 .eventos-img {
   border-radius: 1rem;
+  height: 100%;
   max-height: 100%;
+  object-position: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -931,10 +1005,9 @@ border-bottom: 1px solid rgb(255, 255, 255); */
 }
 
 .contacto-h {
-  color: #67E88A;
-  text-shadow: #67E88A 1px 1px 10px;
-  border: 0.2rem outset #67E88A;
-  width: 63rem;
+  color: #72d2b5;
+  text-shadow: 1px 1px 10px;
+  top: 40%;
 }
 
 .contacto-h-container {
@@ -944,7 +1017,7 @@ border-bottom: 1px solid rgb(255, 255, 255); */
 }
 
 .contacto-form-container {
-  margin-top: 5rem;
+  margin-top: 10rem;
   padding: 0 20rem;
 }
 
@@ -990,19 +1063,24 @@ border-bottom: 1px solid rgb(255, 255, 255); */
 }
 
 .form-boton {
-  background-color: #82e99a;
+  background-color: #67E88A;
   border: 0.2rem outset lightgreen;
-  border-radius: 0.9rem;
+  border-radius: 1rem;
   margin-top: 1rem;
   margin-left: 1rem;
   height: 3.5rem;
-  width: 17rem;
+  padding: 0 4rem;
   font-size: 1.7rem;
 }
 
 .form-boton:hover {
   background-color: #57af6c;
   border: 0.2rem outset lightgreen;
+}
+
+.form-boton:active {
+  background-color: #82e99a;
+  box-shadow: 0px 0px 10px #82e99a;
 }
 
 option {
@@ -1035,6 +1113,37 @@ option {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+}
+
+.add {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url(../img/fondos/obs-background.png) center;
+  background-size: cover;
+}
+
+.wrap {
+  /* background-color: #fff; */
+  /* padding: 2rem 3rem; */
+  text-align: center;
+  color: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0px 0px 25px #222;
+  backdrop-filter: blur(4px);
+  height: 50rem;
+  width: 50rem;
+}
+
+.wrap2 {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/header-footer/header.png);
+  background-size: 100%;
+  opacity: 80%;
 }
 
 /*# sourceMappingURL=estilos.css.map */

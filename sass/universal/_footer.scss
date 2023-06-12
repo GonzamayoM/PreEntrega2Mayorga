@@ -10,9 +10,7 @@
 .footer-ul{
     display: flex;
     justify-content: space-evenly;
-
 }
-
 
 .footer-item{
     height: 9rem;
@@ -107,11 +105,11 @@
 
 /* FOOTER ; REDES SOCIALES */
 
-.footer-item-redessociales{
+.footer-item-redes-sociales{
     width: 13rem;
 }
 
-.footer-redessociales-ul{
+.footer-redes-sociales-ul{
     width: 100%;
     height: 100%;
     display: flex;
@@ -120,20 +118,50 @@
     overflow: hidden;
 }
 
-.footer-redessociales-item{
+.footer-redes-sociales-item{
     list-style: none;
     width: 3rem;
 }
 
-.footer-redessociales-icon{
+.footer-redes-sociales-icon{
     height: 3.5rem;
     width: 3.5rem;
 }
 
-.footer-redessociales-icon:hover{
+.footer-redes-sociales-icon:hover{
     filter:brightness(80%);
 }
 
+@media screen and (max-width: 1200px) {
+    .footer-ul{
+        flex-wrap: wrap;
+    }
+
+    .footer-item-sobrenosotros{
+        order: 3;
+        margin-top: 2rem;
+    }
+
+    .footer-item-derechos{
+        order: 4;
+        margin-top: 2rem;
+    }
+
+    .footer-item-logo{
+        order: 1;
+        margin: 0 30%;
+    }
+
+    .footer-item-up{
+        order: 2;
+        margin-top: 2rem;
+    }
+
+    .footer-item-redes-sociales{
+        order: 5;
+        margin-top: 2rem;
+    }
+}
 
 @media screen and (max-width: 768px){
     .footer{
@@ -162,16 +190,16 @@
         resize: auto;
     }
 
-    .footer-celular-item-redessociales{
+    .footer-celular-item-redes-sociales{
         display: flex;
         justify-content: center;
     }
 
-    .footer-celular-div-redessociales{
+    .footer-celular-div-redes-sociales{
         width: 15rem;
     }
 
-    .footer-redessociales-ul{
+    .footer-redes-sociales-ul{
         justify-content: space-evenly;
     }
 }
@@ -191,27 +219,4 @@
         height: 50%;
         width: 60%;
     }
-}
-
-@media screen and (max-width: 1200px){
-    .footer-item-derechos{
-        font-size: 15%;
-    }
-    
-    .footer-item-logo{
-        font-size: 15%;
-    }
-
-    .footer-item-redessociales{
-        font-size: 15%;
-    }
-
-    .footer-item-sobrenosotros{
-        font-size: 15%;
-    }
-
-    .footer-item-up{
-        font-size: 15%;
-    }
-
 }

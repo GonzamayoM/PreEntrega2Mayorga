@@ -1,7 +1,15 @@
+/* OBSERVATORIO */
+
+/* OBSERVATORIO COLORES */
 $galeria-cards:(
     color-andromeda: white,
     color-planeta-de-diamante: #b5f1f7,
-    color-quasar: #f7b5f6
+    color-quasar: #f7b5f6,
+    color-uy-scuty: rgb(165, 39, 17),
+    color-psr: rgb(1, 0, 34),
+    color-nebulosa-cangrejo: rgb(219, 199, 101),
+    color-messier: rgb(24, 14, 0),
+    color-nube-smith: rgb(96, 18, 41)
 );
 
 @each $galeria-cards-colors, $color in $galeria-cards {
@@ -11,8 +19,7 @@ $galeria-cards:(
     }
 }
 
-
-/* OBSERVATORIO */
+/* OBSERVATORIO INICIO */
 
 .obsmain{
     background-color: #5F5B5B;
@@ -21,22 +28,12 @@ $galeria-cards:(
     overflow: hidden;
 }
 
-.observatorio-background{
-    background:
-        linear-gradient(0deg,#5F5B5B, 7%, transparent, 15%, transparent),
-        url(../img/fondos/obs-background.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 80.6rem;
-    width: 100%;
-}
-
 .observatorio-h{
     color: rgb(232, 181, 242);
     text-shadow: rgb(232, 181, 242) 1px 1px 10px;
-    border: 0.2rem outset rgb(232, 181, 242);
-    width: 84rem;
+    top: 40%; 
 }
+
 
 /* TITULO Y DESCRIPCION*/
 
@@ -57,16 +54,16 @@ $galeria-cards:(
     padding: 0 4rem 4rem 4rem;
 }
 
-
 .galeria-card{
     background-color: #313133;
     border: 1px solid;
     border-radius: 1.5rem;
+    transition: scale 0.5s;
 }
+
 .galeria-card:hover{
     background-color: #1e1e1f;
     scale: 120%;
-    transition: 0.5s;
 }
 
 /* GALERIA TUTLOS */
@@ -74,33 +71,14 @@ $galeria-cards:(
 .galeria-h-container{
     background-color: #3f3f40;
     height: 5rem;
-    border-radius: 1.5rem;/* 
-    border-bottom: 1px solid rgb(255, 255, 255); */
-    padding-top: 1rem;
+    border-radius: 1.5rem;
+    padding-top: 1.4rem;
     margin-bottom: 1rem;
 }
 
 .galeria-h{
-    font-size: 2.0rem;
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
 }
-
-/* COLORES */
-
-
-/* .color-andromeda{
-    color: white;
-    border-color: white;
-}
-
-.color-planeta-de-diamante{
-    color: #b5f1f7;
-    border-color: #b5f1f7;
-}
-
-.color-quasar{
-    color: #f7b5f6;
-    border-color: #f7b5f6;
-} */
 
 /* GALERIA IMAGENES */
 
@@ -114,15 +92,13 @@ $galeria-cards:(
 
 
 @media screen and (max-width: 768px){
-    .observatorio-background{
-        height: 21.7rem;
-    }
-
-    .observatorio-h{
-        width: 30rem;
-    }
-
     .observatorio-description-h{
         font-size: 3rem;
     }
+
+    .galeria-card:hover{
+        background-color: unset;
+        scale: unset;
+    }
+    
 } 

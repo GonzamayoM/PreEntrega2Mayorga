@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¡Queremos saber tu opinion! Cuentanos que te parece el universo.">
+    <meta name="keywords" content="universium, universo, espacio, contacto, opinion">
+
     <title>Universium</title>
     <link rel="shortcut icon" href="../img/icono.png" type="image/x-icon">
 
@@ -60,31 +63,32 @@
         </nav>
     </header>
     <main class="contacto-main" id="contacto-main">
-        <section class="contacto-h-container text-center"> <!-- FONDO CON TITULO -->
+        <section class="universal-background-container"> <!-- FONDO CON TITULO -->
+            <img src="../img/fondos/contacto-background.png" alt="" class="universal-background-image"> 
             <h2 class="universal-h-start contacto-h">CONTACTO</h2>
         </section>
         <section class="contacto-form-container"> <!-- FORMULARIO -->
             <form class="contacto-form container-sm">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
+                <ul class="row">
+                    <li class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
                         <label for="nombre" class="form-label">NOMBRE</label>
                         <div>
                             <input type="text" name="nombre" id="nombre" required class="form-campo">
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
+                    </li>
+                    <li class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
                         <label for="apellido" class="form-label">APELLIDO</label>
                         <div>
                             <input type="text" name="apellido" id="apellido" required class="form-campo">
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
+                    </li>
+                    <li class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
                         <label for="email" class="form-label">EMAIL</label>
                         <div>
                             <input type="email" name="email" id="email" required class="form-campo">
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
+                    </li>
+                    <li class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
                         <label for="pais" class="form-label">PAIS</label>
                         <div>
                             <select name="pais" id="pais" class="form-campo">
@@ -101,18 +105,18 @@
                                 <option value=".">Otro  </option>
                             </select>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    </li>
+                    <li class="col-sm-12 col-md-12 col-lg-12 text-center">
                         <label for="info" class="form-label-opinion">TU OPINION</label>
                         <div>
                             <textarea name="info" id="info" cols="30" rows="10" class="form-campo form-campo-opinion"></textarea>
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    </li>
+                    <li class="col-sm-12 col-md-12 col-lg-12 text-center">
                         <input type="submit" value="ENVIAR" class="form-boton">
                         <input type="reset" value="RESETEAR" class="form-boton">
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </form>
         </section>
     </main>
@@ -121,8 +125,12 @@
             <ul class="footer-ul">
                 <li class="footer-item footer-item-decoration footer-item-sobrenosotros"> <!-- SOBRE NOSOTROS -->
                     <h5 class="footer-sobrenosotros-h">SOBRE NOSOTROS</h5>
-                    <p class="footer-sobrenosotros-p">Universium es un sitio web que indaga sobre el universo y el cosmos y sus curiosidades.</p>
-                    <p class="footer-sobrenosotros-p footer-sobrenosotros-mini-p">(!) Hecho con fines de entretenimiento, no educativos.</p>
+                    <p class="footer-sobrenosotros-p">
+                        Universium es un sitio web que indaga sobre el universo y el cosmos y sus curiosidades.
+                    </p>
+                    <p class="footer-sobrenosotros-p footer-sobrenosotros-mini-p">
+                        (!) Hecho con fines de entretenimiento, no educativos.
+                    </p>
                 </li>
                 <li class="footer-item footer-item-up"> <!-- SUBIR HASTA ARRIBA -->
                     <a href="./contacto.html#contacto-main"><img src="../img/header-footer/uptoheader.png" alt="Volver a arriba" class="footer-up-img"></a>
@@ -142,40 +150,40 @@
                         <p class="footer-derechos-p">© Todos los derechos estan reservados</p>
                     </div>
                 </li>
-                <li class="footer-item footer-item-decoration footer-item-redessociales"> <!-- REDES SOCIALES -->
-                    <ul class="footer-redessociales-ul">
-                        <li class="footer-redessociales-item">
-                            <a href="https://twitter.com/6onzaa_" target="_blank"><img src="../img/header-footer/twitter.png" alt="Twitter" class="footer-redessociales-icon"></a>
+                <li class="footer-item footer-item-decoration footer-item-redes-sociales"> <!-- REDES SOCIALES -->
+                    <ul class="footer-redes-sociales-ul">
+                        <li class="footer-redes-sociales-item">
+                            <a href="https://twitter.com/6onzaa_" target="_blank"><img src="../img/header-footer/twitter.png" alt="Twitter" class="footer-redes-sociales-icon"></a>
                         </li>
-                        <li class="footer-redessociales-item">
-                            <a href="https://www.instagram.com/gonza_mayo/?hl=es" target="_blank"><img src="../img/header-footer/instragram.png" alt="Instragram" class="footer-redessociales-icon"></a>
+                        <li class="footer-redes-sociales-item">
+                            <a href="https://www.instagram.com/gonza_mayo/?hl=es" target="_blank"><img src="../img/header-footer/instragram.png" alt="Instragram" class="footer-redes-sociales-icon"></a>
                         </li>
-                        <li class="footer-redessociales-item">
-                            <a href="https://www.youtube.com/channel/UCoiCED4G-D_1fA8yQDAVvcw" target="_blank"><img src="../img/header-footer/youtube.png" alt="Youtube" class="footer-redessociales-icon"></a>
+                        <li class="footer-redes-sociales-item">
+                            <a href="https://www.youtube.com/channel/UCoiCED4G-D_1fA8yQDAVvcw" target="_blank"><img src="../img/header-footer/youtube.png" alt="Youtube" class="footer-redes-sociales-icon"></a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </section>
         <section class="footer-celular container-fluid"> <!-- FOOTER PARA CELULARES -->
-            <div class="row">
-                <div class="col-sm-12"> <!-- LOGO -->
+            <ul class="row">
+                <li class="col-sm-12"> <!-- LOGO -->
                     <div class="footer-item container-sm text-center">
                         <h3 class="footer-logo-h">UNIVERSIUM</h3>
                         <img src="../img/header-footer/universiumicon.png" alt="" class="footer-logo-img">
                     </div>
-                </div>
-                <div class="col-sm-12"> <!-- SOBRE NOSOTROS -->
+                </li>
+                <li class="col-sm-12"> <!-- SOBRE NOSOTROS -->
                     <div class="footer-item container-sm text-center">
                         <h5 class="footer-sobrenosotros-h">SOBRE NOSOTROS</h5>
                         <p class="footer-sobrenosotros-p">Universium es un sitio web que indaga sobre el universo y el cosmos y sus curiosidades.</p>
                         <p class="footer-sobrenosotros-p footer-sobrenosotros-mini-p">(!) Hecho con fines de entretenimiento, no educativos.</p>
                     </div>
-                </div>
-                <div class="col-sm-12"> <!-- DERECHOS Y REDES SOCIALES -->
+                </li>
+                <li class="col-sm-12"> <!-- DERECHOS Y REDES SOCIALES -->
                     <div class="container-sm">
-                        <div class="row">
-                            <div class="col-sm-6 text-center"> <!-- DERECHOS -->
+                        <ul class="row">
+                            <li class="col-sm-6 text-center"> <!-- DERECHOS -->
                                 <div class="footer-item footer-item-decoration">
                                     <div class="footer-derechos-div">
                                         <h6 class="footer-derechos-h">DESARROLLADOR</h6>
@@ -187,26 +195,26 @@
                                         <p class="footer-derechos-p">© Todos los derechos estan reservados</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6 text-center footer-celular-item-redessociales"> <!-- REDES SOCIALES -->
-                                <div class="footer-item footer-celular-div-redessociales footer-item-decoration">
-                                    <ul class="footer-redessociales-ul">
-                                        <li class="footer-redessociales-item">
-                                            <a href="https://twitter.com/6onzaa_" target="_blank"><img src="../img/header-footer/twitter.png" alt="Twitter" class="footer-redessociales-icon"></a>
+                            </li>
+                            <li class="col-sm-6 text-center footer-celular-item-redes-sociales"> <!-- REDES SOCIALES -->
+                                <div class="footer-item footer-celular-div-redes-sociales footer-item-decoration">
+                                    <ul class="footer-redes-sociales-ul">
+                                        <li class="footer-redes-sociales-item">
+                                            <a href="https://twitter.com/6onzaa_" target="_blank"><img src="../img/header-footer/twitter.png" alt="Twitter" class="footer-redes-sociales-icon"></a>
                                         </li>
-                                        <li class="footer-redessociales-item">
-                                            <a href="https://www.instagram.com/gonza_mayo/?hl=es" target="_blank"><img src="../img/header-footer/instragram.png" alt="Instragram" class="footer-redessociales-icon"></a>
+                                        <li class="footer-redes-sociales-item">
+                                            <a href="https://www.instagram.com/gonza_mayo/?hl=es" target="_blank"><img src="../img/header-footer/instragram.png" alt="Instragram" class="footer-redes-sociales-icon"></a>
                                         </li>
-                                        <li class="footer-redessociales-item">
-                                            <a href="https://www.youtube.com/channel/UCoiCED4G-D_1fA8yQDAVvcw" target="_blank"><img src="../img/header-footer/youtube.png" alt="Youtube" class="footer-redessociales-icon"></a>
+                                        <li class="footer-redes-sociales-item">
+                                            <a href="https://www.youtube.com/channel/UCoiCED4G-D_1fA8yQDAVvcw" target="_blank"><img src="../img/header-footer/youtube.png" alt="Youtube" class="footer-redes-sociales-icon"></a>
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
     </footer>
 
