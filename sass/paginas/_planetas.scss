@@ -7,6 +7,7 @@
     height: 100%;
     width: 100%;
     padding-bottom: 16rem;
+    overflow: hidden;
 }
 
 .planetas-h-container{
@@ -144,7 +145,7 @@ $planetas-colores:(
 /* PLANETAS ; CONTENEDORES DE CADA PLANETA */
 
 .planeta-detallados-container{
-    margin-top: 16rem;
+    margin-top: 12rem;
     border-radius: 1.6rem;
 }
 
@@ -163,7 +164,9 @@ $planetas-colores:(
     width: 100%;
     height: 100%;
     font-size: 1.7rem;
-    color: white;
+    color: white;/* 
+    object-fit: cover;
+    object-position: center; */
 }
 
 
