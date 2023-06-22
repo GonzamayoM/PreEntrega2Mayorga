@@ -67,58 +67,66 @@
             <img src="../img/fondos/contacto-background.png" alt="" class="universal-background-image"> 
             <h2 class="universal-h-start contacto-h">CONTACTO</h2>
         </section>
-        <section class="contacto-form-container"> <!-- FORMULARIO -->
-            <form class="contacto-form container-sm">
-                <ul class="row">
-                    <li class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
-                        <label for="nombre" class="form-label">NOMBRE</label>
-                        <div>
-                            <input type="text" name="nombre" id="nombre" required class="form-campo">
-                        </div>
-                    </li>
-                    <li class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
-                        <label for="apellido" class="form-label">APELLIDO</label>
-                        <div>
-                            <input type="text" name="apellido" id="apellido" required class="form-campo">
-                        </div>
-                    </li>
-                    <li class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
-                        <label for="email" class="form-label">EMAIL</label>
-                        <div>
-                            <input type="email" name="email" id="email" required class="form-campo">
-                        </div>
-                    </li>
-                    <li class="col-sm-12 col-md-12 col-lg-6 form-item text-center">
-                        <label for="pais" class="form-label">PAIS</label>
-                        <div>
-                            <select name="pais" id="pais" class="form-campo">
-                                <option value=""></option>
-                                <option value="AR">Argentina</option>
-                                <option value="CL">Chile</option>
-                                <option value="UY">Uruguay</option>
-                                <option value="PY">Paraguay</option>
-                                <option value="BO">Bolivia</option>
-                                <option value="EC">Ecuador</option>
-                                <option value="CO">Colombia</option>
-                                <option value="MX">Mexico</option>
-                                <option value="ES">España</option>
-                                <option value=".">Otro  </option>
-                            </select>
-                        </div>
-                    </li>
-                    <li class="col-sm-12 col-md-12 col-lg-12 text-center">
-                        <label for="info" class="form-label-opinion">TU OPINION</label>
-                        <div>
-                            <textarea name="info" id="info" cols="30" rows="10" class="form-campo form-campo-opinion"></textarea>
-                        </div>
-                    </li>
-                    <li class="col-sm-12 col-md-12 col-lg-12 text-center">
-                        <input type="submit" value="ENVIAR" class="form-boton">
-                        <input type="reset" value="RESETEAR" class="form-boton">
-                    </li>
-                </ul>
-            </form>
+
+
+
+
+        <section class="contacto-container"> <!-- FORMULARIO -->
+            <ul class="contacto-ul">
+                <li class="contacto-antena-img"> <!-- IMAGEN DE LA ANTENA -->
+                    <div>
+                        <img src="../img/antena-contacto.png" alt="" class="contacto-antena-img">
+                    </div>
+                </li>
+                <li class="contacto-form-container"> <!-- FORMULARIO -->
+                    <form class="contacto-form">
+                        <ul class="form-ul">
+                            <li class="form-item text-center"> <!-- NOMBRE -->
+                                <input type="text" id="nombre" required placeholder=" " class="form-campo">
+                                <label for="nombre" class="form-label">Nombre</label>
+                            </li>
+                            <li class="form-item text-center"> <!-- APELLIDO -->
+                                <input type="text" id="apellido" required placeholder=" " class="form-campo">
+                                <label for="apellido" class="form-label">Apellido</label>
+                            </li>
+                            <li class="form-item text-center"> <!-- CORREO -->
+                                <input type="email" id="email" required placeholder=" " class="form-campo">
+                                <label for="email" class="form-label">Email</label>
+                            </li>
+                            <li class="form-item text-center"> <!-- PAIS -->
+                                <select name="pais" id="pais" class="form-campo-select" required>
+                                    <option value="" disable hidden> </option>
+                                    <option value="AR">Argentina</option>
+                                    <option value="CL">Chile</option>
+                                    <option value="UY">Uruguay</option>
+                                    <option value="PY">Paraguay</option>
+                                    <option value="BO">Bolivia</option>
+                                    <option value="EC">Ecuador</option>
+                                    <option value="CO">Colombia</option>
+                                    <option value="MX">Mexico</option>
+                                    <option value="ES">España</option>
+                                    <option value=".">Otro  </option>
+                                </select>
+                                <label for="pais" class="form-label">Pais</label>
+                            </li>
+                            <li class="text-center"> <!-- OPINION -->
+                                <label for="info" class="form-label-opinion">Comentario</label>
+                                <div>
+                                    <textarea name="info" id="info" cols="30" rows="10" class="form-campo-opinion"></textarea>
+                                </div>
+                            </li>
+                            <li class="text-center"> <!-- BOTONES -->
+                                <input type="submit" value="Enviar" class="form-boton">
+                                <input type="reset" value="Borrar" class="form-boton">
+                            </li>
+                        </ul>
+                    </form>
+                </li>
+            </ul>
         </section>
+
+
+
     </main>
     <footer class="footer">
         <section class="footer-escritorio"> <!-- FOOTER PARA ESCRITORIO -->

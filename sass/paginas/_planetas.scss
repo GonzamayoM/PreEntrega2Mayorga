@@ -105,7 +105,7 @@
     font-size: 2.08rem;
     text-decoration: none;
     font-weight: 600;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.44);
     text-shadow: 0px 0px 8px black;
 }
 
@@ -137,6 +137,11 @@ $planetas-colores:(
         border-width: 0.2rem;
         border-style: solid;
     }
+
+    .indicePlanetasItem.#{$planeta} .indicePlaneta{
+        text-shadow: 1px 1px $border-color;
+    }
+
     .planeta-detallados-container.#{$planeta}{
         box-shadow: 0px 0px 50px $border-color;
     }

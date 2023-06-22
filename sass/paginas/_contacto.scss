@@ -1,6 +1,5 @@
 /* CONTACTOS */
 
-
 .contacto-main{
     background-color: #5F5B5B;
     height: 100%;
@@ -8,7 +7,7 @@
 }
 
 .contacto-h{
-    color: #72d2b5;
+    color: #2cfff8;
     text-shadow: 1px 1px 10px;
     top: 40%; 
 }
@@ -19,39 +18,133 @@
     justify-content: center;
 }
 
-.contacto-form-container{
+/* FORMULARIO */
+
+.contacto-container{
     margin-top: 10rem;
-    padding: 0 20rem;
+}
+
+.contacto-ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* IMAGEN */
+
+.contacto-antena-img{
+    filter: drop-shadow(10px 5px 10px white);
+}
+
+/* FORMULARIO */
+
+.contacto-form-container{
+    display: flex;
+    justify-content: center;
 }
 
 .contacto-form{
-    padding: 1rem;
-    background-color: #313133;
+    background-color: #393838;
+    box-shadow:
+        0px 0px 30px black,
+        0px 5px 10px rgb(39, 39, 39),
+        -25px 25px 1px rgb(20, 19, 20),
+        -50px 50px 1px rgb(184, 183, 184);
     border-radius: 1rem;
+    padding: 1rem;
+    width: 60rem;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+}
+
+.form-ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
 }
 
 .form-item {
     margin-bottom: 5rem;
+    width: 28rem;
 }
 
 /* FORMULARIO */
 
 .form-label{
-    font-size: 2rem;
+    position: relative;
+    width: 0px;
+    left: -24rem;
+    top: 0;
+    font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: rgb(240, 236, 255);
+    transition: 0.2s transform;
 }
 
 .form-campo{
-    font-size: 1.7rem;
-    background-color: #aaa;
-    border: 0.2rem inset gainsboro;
+    background-color: #393838;
+    border: none;
+    border-bottom: 0.2rem solid rgb(253, 91, 91);
     border-radius: 0.4rem;
-    margin-top: 0.2rem;
-    padding: 0rem 0.2rem;
+    font-size: 1.7rem;
+    color: white;
     height: 3.5rem;
-    width: 25rem;
+    width: 24rem;
+    padding: 0rem 0.2rem;
+    transition: border-bottom 0.5s;
 }
+
+/* ANIMACION */
+
+.form-campo:focus:not(select) + .form-label, .form-campo:not(:placeholder-shown):not(select) + .form-label{
+    transform: translateY(-3rem) scale(1.1);
+    transform-origin: left;
+}
+
+/* CAMPO CUANDO ESTA SELECCIONADO */
+
+.form-campo:focus{
+    outline: none;
+    border-bottom: 0.2rem solid rgb(99, 227, 172);
+    transition: 0.5s;
+}
+
+/* CAMPO CUANDO HAY ALGO ESCRITO */
+
+.form-campo:not(:placeholder-shown){
+    border-bottom: 0.2rem solid rgb(13, 167, 129);
+}
+
+/* PAIS */
+
+.form-campo-select{
+    @extend .form-campo;
+}
+
+.form-campo-select:not(:invalid) + .form-label{
+    transform: translateY(-3rem) scale(1.1);
+    transform-origin: left;
+}
+
+.form-campo-select:invalid{
+    border-bottom: 0.2rem solid rgb(253, 91, 91);
+}
+
+.form-campo-select:focus-visible{
+    border-bottom: 0.2rem solid rgb(99, 227, 172);
+}
+
+option {
+    background-color: #302e2e;
+    font-size: 1.7rem;
+}
+
+option:hover{
+    color: red;
+}
+
+/* OPINION */
 
 .form-label-opinion{
     font-size: 2.5rem;
@@ -59,49 +152,102 @@
 }
 
 .form-campo-opinion{
-    resize: none;
-    padding-top: 0.4rem;
-    padding-left: 0.4rem;
+    background-color: #302e2e;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1.7rem;
     margin-top: 0.2rem;
-    height: 16rem;
+    padding: 0.5rem;
+    height: 16rem; 
     width: 50rem;
+    resize: none;
 }
 
+/* BOTONES */
+
 .form-boton{
-    background-color: #67E88A;
-    border: 0.2rem outset lightgreen;
-    border-radius: 1rem;
+    background-color: #828181;
+    border: none;
+    border-radius: 0.7rem;
+    color: white;
     margin-top: 1rem;
     margin-left: 1rem;
     height: 3.5rem;
-    padding: 0 4rem;
+    padding: 0 3rem;
     font-size: 1.7rem;
 }
 
 .form-boton:hover{
-    background-color: #57af6c;
-    border: 0.2rem outset lightgreen;
+    transform: scale(1.1);
+    transition: transform 0.1s;
 }
 
-.form-boton:active{
+.form-boton:hover:nth-child(1){
     background-color: #82e99a;
     box-shadow: 0px 0px 10px #82e99a;
 }
 
-option {
-    font-size: 1.7rem;
+.form-boton:active:nth-child(1){
+    background-color: #a3f4b6;
+    box-shadow: 0px 0px 10px #a3f4b6;
 }
 
-@media screen and (max-width: 768px)/*  and (max-width: 1400px) */ {
-    .contacto-h{
-        width: 25rem;
+.form-boton:hover:nth-child(2){
+    background-color: #e98282;
+    box-shadow: 0px 0px 10px #e98282;
+}
+
+.form-boton:active:nth-child(2){
+    background-color: #f29b9b;
+    box-shadow: 0px 0px 10px #f29b9b;
+}
+
+
+@media screen and (min-width: 1025px) and (max-width: 1130px) {
+    .contacto-form{
+        width: 50rem;
     }
 
-    .contacto-form-container{
-        padding: 0 0rem;
+    .form-ul{
+        flex-direction: column;
+        align-items: center;
     }
 
     .form-campo-opinion{
-        width: 100%;
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .contacto-antena-img{
+        display: none;
     }
 } 
+
+@media screen and (max-width: 680px){
+    .contacto-form-container{
+        width: 100%;
+    }
+
+    .contacto-form{
+        margin-left: 0;
+        box-shadow: none;
+        box-shadow: 0px 0px 30px black;
+    }
+
+    .form-ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-campo-opinion{
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .form-campo-opinion{
+        width: 30rem;
+    }
+}

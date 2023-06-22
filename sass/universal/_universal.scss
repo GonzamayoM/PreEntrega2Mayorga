@@ -40,7 +40,20 @@ ul {
     margin-bottom: unset;
 }
 
+p{
+    margin-bottom: unset;
+}
+
+/* VARIABLES UNIVERSALES */
+
+$universium-first-color: #393838;
+$universium-second-color: #302e2e;
+
 /* UNIVERSAL */
+
+*::selection{
+    background-color: rgba(255, 255, 199, 0.574);
+}
 
 .universal-background-container{
     width: 100%;
@@ -72,7 +85,6 @@ ul {
     text-align: center;
     padding: 0rem 5%;
 }
-
 
 .universal-description-container{
     margin-top: 10rem;

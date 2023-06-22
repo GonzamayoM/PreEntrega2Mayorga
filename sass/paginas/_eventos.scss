@@ -59,7 +59,10 @@
 }
 
 .eventos-descripcion-p-container{
-    padding: 1rem 1rem 0 1rem;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    align-items: center;
+    height: 70%;
 }
 
 .eventos-h2{
@@ -73,7 +76,6 @@
 .eventos-p{
     color: rgb(255, 255, 255);
     font-size: 1.5rem;
-    margin-top: 0.5rem;
 }
 
 .eventos-img-container{
@@ -89,7 +91,7 @@
     border-radius: 1rem;
     height: 100%;
     max-height: 100%;
-    object-position: cover;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 768px){
