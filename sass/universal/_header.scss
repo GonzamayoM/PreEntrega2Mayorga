@@ -54,7 +54,7 @@ $height-navbar: 10.4rem;
     border-color: rgb(118, 17, 17)
 }
 
-.show{
+header .show{
     @extend .collapsing;
 }
 
@@ -143,7 +143,12 @@ $height-navbar: 10.4rem;
     }
 
     .navbar-container{
-        height: 100%;
+        height: calc($height-navbar * 0.6);
     }
 
+    .navbar-toggler-icon{
+        background-image: url(../img/header-footer/navbar-expand-icon.png);
+        width: 4rem;
+        height: 4rem;
+    }
 }

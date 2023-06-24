@@ -18,7 +18,7 @@
 .planetas-h{
     color: rgb(205, 228, 2);
     text-shadow: rgb(205, 228, 2) 1px 1px 10px;
-    top: 50%; 
+    margin-top: 25%; 
 }
 
 .planetas-background-image{
@@ -27,22 +27,18 @@
 
 /* PLANETAS INDICE Y DESCRIPCION */
 
-.planetas-indice-desc-container{
+.planetas-inicio-container{
     position: relative;
-    margin-top: 60rem;
-}
-
-.planetasInicioItem {
-    list-style: none;
+    margin-top: 20%;
 }
 
 /* PLANETAS ; DESCRIPCION */
 
-.planetas-description-item{
+.planetas-inicio-description-item{
     padding: 5rem 10rem;
 }
 
-.planetasdescriptionContainer{
+.planetas-description-container{
     background-color: #afa51939;
     border: 0.1rem outset #cac005;
     box-shadow: 
@@ -54,18 +50,16 @@
 
 /* INDICE */
 
-.planetasInicioUl{
+.planetas-inicio-ul{
     display: flex;
+    align-items: center;
 }
 
-.indiceContainer{
+.planetas-inicio-indice-item{
     background-image: url(../img/cohete.png);
-    background-size: 16rem;
-    background-position-x: center;
-    background-position-y: center;
-    margin-top: -19.2rem;
+    background-size: 100%;
     margin-left: 8rem;
-    padding-top: 8rem;
+    margin-top: 16rem;
     width: 16rem;
     height: 86.4rem;
     animation-name: despegue;
@@ -82,7 +76,7 @@
     }
 }
 
-.indicePlanetasOl{
+.planetas-indice-ol{
     background-color: rgba(255, 255, 255, 0.168);
     border-radius: 1.6rem;
     margin-top: 10.24rem;
@@ -92,14 +86,14 @@
     box-shadow:inset 0px 0px 10px white;
 }
 
-.indicePlanetasItem{
+.planetas-indice-item{
     border-radius: 1.6rem;
     text-align: center;
     list-style: none;
     margin: 2.4rem 0rem;
 }
 
-.indicePlaneta{
+.planetas-indice-a{
     font-family: 'Raleways' ;
     padding: 0.2rem;
     font-size: 2.08rem;
@@ -109,7 +103,7 @@
     text-shadow: 0px 0px 8px black;
 }
 
-.indicePlanetasItem:hover{
+.planetas-indice-item:hover{
     transform: scale(1.2);
     transition-duration: 0.2s;
     border-style:ridge;
@@ -138,16 +132,27 @@ $planetas-colores:(
         border-style: solid;
     }
 
-    .indicePlanetasItem.#{$planeta} .indicePlaneta{
+    .planetas-indice-item.#{$planeta} .planetas-indice-a{
         text-shadow: 1px 1px $border-color;
     }
 
     .planeta-detallados-container.#{$planeta}{
         box-shadow: 0px 0px 50px $border-color;
     }
+
+
+    .planeta-detallados-container.#{$planeta} .planetas-boton-leer-mas{
+        text-shadow: 1px 1px $border-color;
+        border: 1px solid $border-color;
+        border-radius: 1rem;
+    }
+
+    .modal-content.#{$planeta}{
+        box-shadow: 0px 0px 50px $border-color;
+    }
 }
 
-/* PLANETAS ; CONTENEDORES DE CADA PLANETA */
+/* PLANETAS ; CONTENEDORES DE CADA PLANETA DESKTOP */
 
 .planeta-detallados-container{
     margin-top: 12rem;
@@ -156,6 +161,24 @@ $planetas-colores:(
 
 .planetas-info-container{
     padding: 1.6rem;
+}
+
+/* PLANETAS ; CONTENEDORES DE CADA PLANETA MOBILE */
+
+.modal-content{
+    border-radius: 1rem;
+    backdrop-filter: blur(15px);
+}
+
+.planetas-boton-leer-mas{
+    background-color: rgba(0, 0, 0, 0.178);
+    border: none;
+    color: rgba(155, 155, 155, 0.462);
+    padding: 0.1rem 0.6rem;
+}
+
+.planetas-boton-leer-mas:hover{
+    box-shadow: 0px 0px 10px currentColor;
 }
 
 
@@ -181,31 +204,51 @@ $planetas-colores:(
         width: 53rem;
     }
 
-    .planetasInicioUl{
+    .planetas-inicio-container{
+        margin-top: 40%;
+    }
+
+    .planetas-inicio-ul{
         flex-direction: column-reverse;
     }
 
-    .indiceContainer{
+    .planetas-inicio-indice-item{
+        align-self: center;
         margin-top: 0rem;
         margin-left: 0rem;
     }
-
-    .planetas-indice-item{
-        align-self: center;
-    }
 } 
-
 
 @media screen and (max-width: 768px){
     .planetas-h{
         width: 25rem;
     }
 
-    .planetas-description-item{
+    .planetas-inicio-description-item{
         padding: 1rem;
     }
 
-    .planetasdescriptionContainer{
+    .planetas-description-container{
         padding: 1.8rem 2rem;
+    }
+}
+
+@media screen and (min-width: 576px){
+    .planeta-text-desktop{
+        display: block;
+    }
+
+    .planeta-text-mobile{
+        display: none;
+    }
+} 
+
+@media screen and (max-width: 576px){
+    .planeta-text-desktop{
+        display: none;
+    }
+    
+    .planeta-text-mobile{
+        display: block;
     }
 } 
