@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* RESET */
 * {
   padding: 0;
@@ -73,10 +74,10 @@ p {
 }
 
 .universal-h-start {
-  position: absolute;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 8rem;
   text-align: center;
+  position: absolute;
   padding: 0rem 5%;
 }
 
@@ -121,7 +122,7 @@ p {
   height: 10.4rem;
   width: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   backdrop-filter: blur(3px);
 }
 
@@ -140,16 +141,37 @@ p {
 }
 
 .navheader {
-  font-size: 4.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-decoration: none;
   color: white;
   height: 5.2rem;
   padding-left: 1rem;
   transition: text-shadow 5s;
 }
-
 .navheader:hover {
-  text-shadow: 1px 1px 8px white;
+  text-shadow: 0px 0px 8px white;
   transition: 1s;
+}
+.navheader::after {
+  content: url(../img/header-footer/home.png);
+  filter: grayscale(100%);
+  position: relative;
+  bottom: -0.5rem;
+  height: 5rem;
+  width: 5rem;
+}
+.navheader:hover::after {
+  filter: drop-shadow(0px 0px 8px #DE7A7A);
+}
+
+.navheader-in {
+  text-shadow: 0px 0px 20px white;
+  filter: grayscale(0%);
+}
+.navheader-in::after {
+  filter: drop-shadow(0px 0px 20px #DE7A7A);
 }
 
 .navbar-nav {
@@ -175,10 +197,9 @@ p {
   padding: 0rem 1rem;
   border-radius: 1.6rem;
 }
-
 .navitem:hover {
   background-color: #5F5B5B;
-  transition: 0.7s;
+  transition: 0.5s;
 }
 
 .navlink {
@@ -311,10 +332,11 @@ p {
 .footer-up-img {
   height: 4.5rem;
   width: 4rem;
+  transition-duration: 0.2s;
 }
 
 .footer-up-img:hover {
-  border: 0.1rem solid gray;
+  filter: drop-shadow(0px 0px 3px gray);
   border-radius: 1rem;
   transform: scale(1.5);
   transition-duration: 0.2s;
@@ -455,8 +477,1116 @@ p {
     width: 60%;
   }
 }
+.universium-main { /* MAIN */
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 16rem;
+  overflow: hidden;
+}
+
+/* UNIVERSIUM ; GENERAL */
+.universium-containers { /* CONTENEDORES */
+  margin-top: 20rem;
+}
+
+.universium-container-start { /* CONTENEDORES DE INICIO */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.universium-container-description { /* CONTENEDORES DE DESCRIPCION */
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  width: 100%;
+}
+
+.linea, .linea-contacto, .linea-eventos, .linea-observatorio, .linea-planetas, .linea-inicio { /* LINEA CON DEGRADADO */
+  border-radius: 1rem;
+  width: 0.5rem;
+  height: 35rem;
+  position: relative;
+}
+.linea::before, .linea-contacto::before, .linea-eventos::before, .linea-observatorio::before, .linea-planetas::before, .linea-inicio::before {
+  content: "";
+  position: absolute;
+  top: 98%;
+  left: -1.2rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.universium-h, .universium-h-contacto, .universium-h-eventos, .universium-h-observatorio, .universium-h-planetas, .universium-h-inicio { /* TITULOS */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+  margin-top: 5rem;
+  color: transparent;
+}
+
+.universium-subtitle { /* SUBTITULOS */
+  color: white;
+  text-align: center;
+}
+
+.universium-p { /* TEXTOS */
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+.universium-p + .universium-p { /* MARGIN DE LOS TEXTOS */
+  margin-top: 5rem;
+}
+
+.universium-buttom { /* BOTONES */
+  color: white;
+  font-size: 1.7rem;
+  text-decoration: none;
+  border-radius: 0.7rem;
+  padding: 0.8rem 2rem;
+  height: 3.5rem;
+  width: max-content;
+  margin-top: 5rem;
+}
+.universium-buttom:hover {
+  transform: scale(1.1);
+  transition: transform 0.1s;
+}
+
+/* UNIVERSIUM ; UNIVERSIUM */
+.universium-container-universium {
+  padding-top: 20rem;
+}
+.universium-container-universium div {
+  display: flex;
+  justify-content: center;
+}
+
+.universium-h-universium {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8rem;
+  background: linear-gradient(130deg, rgb(128, 128, 128) 0%, rgb(38, 38, 38) 70%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* UNIVERSIUM ; INICIO */
+.universium-h-inicio { /* TITULO */
+  background: linear-gradient(90deg, rgb(169, 126, 126) 0%, rgb(130, 54, 54) 98%);
+  -webkit-background-clip: text;
+}
+
+.linea-inicio { /* LINEA */
+  background: linear-gradient(-120deg, rgb(169, 126, 126) 0%, rgb(130, 54, 54) 98%);
+}
+.linea-inicio:before {
+  background-color: rgb(130, 54, 54);
+}
+
+.universium-container-inicio { /* CATEGORIA DE PLANETAS */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5rem;
+}
+.universium-container-inicio .universium-container-description {
+  width: 50%;
+  align-items: center;
+}
+.universium-container-inicio .universium-p {
+  width: 55rem;
+}
+.universium-container-inicio .universium-buttom { /* BOTON */
+  background-color: rgb(130, 54, 54);
+  box-shadow: 0px 0px 10px rgb(130, 54, 54);
+}
+.universium-container-inicio .universium-buttom:active {
+  background-color: rgb(183, 104, 104);
+}
+
+/* UNIVERSIUM ; INICIO ; COHETE */
+.cohete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.cohete-cuerpo {
+  height: 20rem;
+  width: 10rem;
+  background: linear-gradient(120deg, gray 0%, rgb(35, 35, 35) 98%);
+  border-radius: 100% 100% 25% 25%;
+  z-index: 1;
+}
+
+.cohete-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+}
+
+.cohete-pata {
+  position: relative;
+  top: -5.5rem;
+  height: 10rem;
+  width: 4rem;
+  background-color: rgb(111, 1, 1);
+  border-radius: 100% 100% 100% 60%;
+}
+.cohete-pata::before {
+  content: "";
+  position: absolute;
+  rotate: -5deg;
+  top: 7rem;
+  left: 0.5rem;
+  width: 3.5rem;
+  height: 10rem;
+  background-color: rgb(111, 1, 1);
+  border-radius: 10% 20% 0 100%;
+}
+.cohete-pata:last-child {
+  transform: scale(-1, 1);
+}
+
+.cohete-propulsor {
+  z-index: 1;
+  width: 5rem;
+  height: 1rem;
+  background-color: rgb(60, 60, 60);
+  border-radius: 0 0 100% 100%;
+  position: relative;
+  box-shadow: 0px 20px 15px rgb(255, 123, 0), 0px 25px 20px yellow;
+}
+.cohete-propulsor::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: -0.2rem;
+  width: 5.5rem;
+  height: 1.5rem;
+  background-color: rgb(40, 40, 40);
+  border-radius: 0 0 100% 100%;
+}
+
+/* UNIVERSIUM ; INICIO ; ANIMACION */
+.smokes {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 60%;
+}
+
+.smoke {
+  z-index: 0.1;
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  animation: smoke-out linear infinite;
+}
+
+/* DATOS DE CADA PLANETA */
+.smoke-type-1 {
+  scale: 0.5;
+  margin-left: -3.5rem;
+  animation-delay: 0.5s;
+  animation-duration: 4.4s;
+  background-color: #939393;
+  box-shadow: 0px 0px 10px #939393;
+}
+
+/* DATOS DE CADA PLANETA */
+.smoke-type-2 {
+  scale: 1;
+  margin-left: 1.1rem;
+  animation-delay: 0s;
+  animation-duration: 5s;
+  background-color: #5c5a5a;
+  box-shadow: 0px 0px 10px #5c5a5a;
+}
+
+/* DATOS DE CADA PLANETA */
+.smoke-type-3 {
+  scale: 1.4;
+  margin-left: 1.6rem;
+  animation-delay: 2.4s;
+  animation-duration: 6.5s;
+  background-color: #252525;
+  box-shadow: 0px 0px 10px #252525;
+}
+
+/* DATOS DE CADA PLANETA */
+.smoke-type-4 {
+  scale: 0.7;
+  margin-left: 0.1rem;
+  animation-delay: 1s;
+  animation-duration: 4.7s;
+  background-color: #6e6c6c;
+  box-shadow: 0px 0px 10px #6e6c6c;
+}
+
+/* DATOS DE CADA PLANETA */
+.smoke-type-5 {
+  scale: 1.2;
+  margin-left: -0.5rem;
+  animation-delay: 0.8s;
+  animation-duration: 6s;
+  background-color: #424141;
+  box-shadow: 0px 0px 10px #424141;
+}
+
+/* DATOS DE CADA PLANETA */
+.smoke-type-6 {
+  scale: 1.4;
+  margin-left: -1.6rem;
+  animation-delay: 3.5s;
+  animation-duration: 6.5s;
+  background-color: #252525;
+  box-shadow: 0px 0px 10px #252525;
+}
+
+/* DATOS DE CADA PLANETA */
+.smoke-type-7 {
+  scale: 0.7;
+  margin-left: 2.7rem;
+  animation-delay: 1.7s;
+  animation-duration: 4.7s;
+  background-color: #6e6c6c;
+  box-shadow: 0px 0px 10px #6e6c6c;
+}
+
+/* DATOS DE CADA PLANETA */
+.smoke-type-8 {
+  scale: 1.2;
+  margin-left: -2.2rem;
+  animation-delay: 1.9s;
+  animation-duration: 6s;
+  background-color: #424141;
+  box-shadow: 0px 0px 10px #424141;
+}
+
+@keyframes smoke-out { /* ANIMACION DE LA ORBITA */
+  100% {
+    transform: translateY(35rem) scale(0.5);
+    background-color: transparent;
+    box-shadow: 0px 0px 10px transparent;
+  }
+}
+/* UNIVERSIUM ; PLANETAS */
+.universium-h-planetas { /* TITULO */
+  background: linear-gradient(90deg, rgb(205, 228, 2) 0%, rgb(219, 121, 8) 98%);
+  -webkit-background-clip: text;
+}
+
+.linea-planetas { /* LINEA */
+  background: linear-gradient(-120deg, rgb(205, 228, 2) 0%, rgb(219, 121, 8) 98%);
+}
+.linea-planetas:before {
+  background-color: rgb(219, 121, 8);
+}
+
+.universium-container-planetas { /* CATEGORIA DE PLANETAS */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5rem;
+}
+.universium-container-planetas .universium-container-description {
+  align-items: center;
+}
+.universium-container-planetas .universium-buttom { /* BOTON */
+  background-color: rgb(219, 121, 8);
+  box-shadow: 0px 0px 10px rgb(219, 121, 8);
+}
+.universium-container-planetas .universium-buttom:active {
+  background-color: rgb(228, 179, 2);
+}
+
+/* UNIVERSIUM ; PLANETAS ; ANIMACION */
+.sistema-solar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 150%;
+  height: 64rem;
+}
+
+.sol {
+  background: radial-gradient(circle, rgb(240, 227, 20) 0%, rgb(250, 250, 151) 91%);
+  box-shadow: 0px 0px 20px rgb(250, 250, 151);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.sol::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 1000%;
+  width: 1000%;
+  background: radial-gradient(circle, rgba(238, 233, 19, 0.2) 2%, rgba(238, 233, 19, 0.09) 25%, rgba(213, 235, 0, 0.001) 75%);
+}
+
+.planeta {
+  position: absolute;
+  animation: orbita linear infinite;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.planeta, .luna {
+  border-style: solid;
+  border-color: rgb(253, 253, 253) transparent transparent transparent;
+  border-width: 0.1em 0.1em 0 0;
+  border-radius: 50%;
+}
+
+.planeta::before, .luna::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.luna {
+  animation: orbita 2.7s linear infinite;
+  position: absolute;
+  right: -1.5rem;
+  top: 0.4rem;
+}
+.luna::before {
+  background-color: white;
+}
+
+/* DATOS DE CADA PLANETA */
+.mercurio {
+  width: 8rem;
+  height: 8rem;
+  rotate: 180deg;
+}
+
+.mercurio::before {
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 1rem;
+  right: 0rem;
+}
+
+/* DATOS DE CADA PLANETA */
+.venus {
+  width: 12rem;
+  height: 12rem;
+  rotate: 0deg;
+}
+
+.venus::before {
+  width: 1.8rem;
+  height: 1.8rem;
+  top: 1.5rem;
+  right: 0.3rem;
+}
+
+/* DATOS DE CADA PLANETA */
+.tierra {
+  width: 19rem;
+  height: 19rem;
+  rotate: 100deg;
+}
+
+.tierra::before {
+  width: 3rem;
+  height: 3rem;
+  top: 2rem;
+  right: 0rem;
+}
+
+/* DATOS DE CADA PLANETA */
+.luna {
+  width: 6rem;
+  height: 6rem;
+  rotate: 220deg;
+}
+
+.luna::before {
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 0.4rem;
+  right: 0rem;
+}
+
+/* DATOS DE CADA PLANETA */
+.marte {
+  width: 27rem;
+  height: 27rem;
+  rotate: 250deg;
+}
+
+.marte::before {
+  width: 2rem;
+  height: 2rem;
+  top: 3.6rem;
+  right: 2.4rem;
+}
+
+/* DATOS DE CADA PLANETA */
+.jupiter {
+  width: 35rem;
+  height: 35rem;
+  rotate: 150deg;
+}
+
+.jupiter::before {
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 4.6rem;
+  right: 2.3rem;
+}
+
+/* DATOS DE CADA PLANETA */
+.saturno {
+  width: 43rem;
+  height: 43rem;
+  rotate: 35deg;
+}
+
+.saturno::before {
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 5.5rem;
+  right: 3.3rem;
+}
+
+/* DATOS DE CADA PLANETA */
+.urano {
+  width: 50rem;
+  height: 50rem;
+  rotate: 175deg;
+}
+
+.urano::before {
+  width: 2rem;
+  height: 2rem;
+  top: 7rem;
+  right: 5.6rem;
+}
+
+/* DATOS DE CADA PLANETA */
+.neptuno {
+  width: 55rem;
+  height: 55rem;
+  rotate: 300deg;
+}
+
+.neptuno::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 7.8rem;
+  right: 6.8rem;
+}
+
+/* DATOS DE CADA PLANETA */
+.pluton {
+  width: 59rem;
+  height: 59rem;
+  rotate: 10deg;
+}
+
+.pluton::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 8.5rem;
+  right: 7.5rem;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(0) {
+  animation-duration: 8s;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(1) {
+  animation-duration: 15s;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(2) {
+  animation-duration: 22s;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(3) {
+  animation-duration: 29s;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(4) {
+  animation-duration: 36s;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(5) {
+  animation-duration: 43s;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(6) {
+  animation-duration: 50s;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(7) {
+  animation-duration: 57s;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(8) {
+  animation-duration: 64s;
+}
+
+/* TIEMPO DE ORBITA */
+.planeta:nth-child(9) {
+  animation-duration: 71s;
+}
+
+@keyframes orbita { /* ANIMACION DE LA ORBITA */
+  from {
+    transform: rotate(-360deg);
+  }
+}
+/* UNIVERSIUM ; OBSERVATORIO */
+.linea-observatorio { /* LINEA */
+  background: linear-gradient(130deg, rgb(232, 181, 242) 0%, rgb(136, 86, 155) 98%);
+}
+.linea-observatorio:before {
+  background-color: rgb(136, 86, 155);
+}
+
+.universium-h-observatorio { /* TITULO */
+  background: linear-gradient(90deg, rgb(232, 181, 242) 0%, rgb(136, 86, 155) 98%);
+  -webkit-background-clip: text;
+}
+
+.universium-container-observatorio { /* CATEGORIA DE OBSERVATORIO */
+  overflow: hidden;
+  height: 57rem;
+  display: flex;
+  align-items: center;
+}
+.universium-container-observatorio .universium-p { /* TEXTO */
+  text-align: center;
+  width: 55rem;
+  padding: 0;
+}
+.universium-container-observatorio .universium-buttom { /* BOTON */
+  background-color: rgb(136, 86, 155);
+  box-shadow: 0px 0px 10px rgb(136, 86, 155);
+}
+.universium-container-observatorio .universium-buttom:active {
+  background-color: rgb(217, 144, 231);
+}
+.universium-container-observatorio .estrellas {
+  position: absolute;
+  height: 57rem;
+  overflow: hidden;
+}
+.universium-container-observatorio .universium-container-description { /* CONTENEDOR DE DESCRIPCION */
+  align-items: center;
+  position: relative;
+}
+
+/* UNIVERSIUM ; OBSERVATORIO ; TELESCOPIO */
+.telescopio {
+  margin-top: 15rem;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.palitos {
+  display: flex;
+  position: absolute;
+}
+
+.palito {
+  height: 10rem;
+  width: 0.3rem;
+  background-color: gray;
+}
+.palito:nth-of-type(1) {
+  rotate: 21deg;
+  margin-right: 1.5rem;
+}
+.palito:nth-of-type(3) {
+  rotate: -21deg;
+  margin-left: 1.5rem;
+}
+
+.borde {
+  position: relative;
+  rotate: 15deg;
+  width: 10rem;
+  height: 1rem;
+  top: -5.7rem;
+  left: -0.5rem;
+  background-color: rgb(53, 53, 53);
+  border-radius: 1rem;
+}
+.borde::before {
+  content: "";
+  background-color: rgb(30, 30, 30);
+  border-radius: 1rem;
+  position: absolute;
+  top: -0.5rem;
+  left: -3.5rem;
+  width: 15rem;
+  height: 1rem;
+}
+
+.palo-vision {
+  position: absolute;
+  display: flex;
+  rotate: 15deg;
+  margin-top: -14rem;
+  margin-left: -1rem;
+}
+
+.vision {
+  height: 1.5rem;
+  width: 7rem;
+  background: linear-gradient(90deg, rgb(147, 147, 147) 12%, rgb(49, 45, 45) 15%);
+}
+.vision:last-child {
+  border-radius: 0 1rem 1rem 0;
+}
+.vision:first-child {
+  border-radius: 1rem 0 0 1rem;
+}
+
+/* UNIVERSIUM ; OBSERVATORIO ; ANIMACION */
+.espacio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.estrella {
+  background-color: rgb(231, 175, 247);
+  box-shadow: 0px 0px 20px rgb(231, 175, 247);
+  border-radius: 40%;
+  width: 1rem;
+  height: 1rem;
+  transform: scale(0);
+  animation: estrellitas linear infinite;
+}
+
+/* DATOS DE CADA ESTRELLA */
+.estrella-type-1 {
+  margin: 5rem 3rem 0 3rem;
+  animation-delay: 0;
+  animation-duration: 5s;
+}
+
+/* DATOS DE CADA ESTRELLA */
+.estrella-type-2 {
+  margin: 7rem 6rem 0 6rem;
+  animation-delay: 7s;
+  animation-duration: 3s;
+}
+
+/* DATOS DE CADA ESTRELLA */
+.estrella-type-3 {
+  margin: 3rem 4rem 0 4rem;
+  animation-delay: 5s;
+  animation-duration: 6s;
+}
+
+/* DATOS DE CADA ESTRELLA */
+.estrella-type-4 {
+  margin: 10rem 7rem 0 7rem;
+  animation-delay: 8s;
+  animation-duration: 4s;
+}
+
+/* DATOS DE CADA ESTRELLA */
+.estrella-type-5 {
+  margin: 15rem 5rem 0 5rem;
+  animation-delay: 3s;
+  animation-duration: 5s;
+}
+
+/* DATOS DE CADA ESTRELLA */
+.estrella-type-6 {
+  margin: 12rem 6rem 0 6rem;
+  animation-delay: 1s;
+  animation-duration: 4s;
+}
+
+/* DATOS DE CADA ESTRELLA */
+.estrella-type-7 {
+  margin: 18rem 2rem 0 2rem;
+  animation-delay: 4s;
+  animation-duration: 7s;
+}
+
+@keyframes estrellitas { /* ANIMACION */
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(0.6) rotate(360deg);
+  }
+  76% {
+    transform: scale(0);
+  }
+}
+/* UNIVERSIUM ; EVENTOS */
+.linea-eventos { /* LINEA */
+  background: linear-gradient(130deg, rgb(216, 79, 125) 0%, rgb(177, 3, 61) 98%);
+}
+.linea-eventos:before {
+  background-color: rgb(177, 3, 61);
+}
+
+.universium-h-eventos { /* TITULO */
+  background: linear-gradient(130deg, rgb(216, 79, 125) 0%, rgb(177, 3, 61) 98%);
+  -webkit-background-clip: text;
+}
+
+.universium-container-eventos { /* CATEGORIA DE EVENTOS */
+  display: flex;
+  justify-content: space-evenly;
+}
+.universium-container-eventos .universium-container-description {
+  align-items: center;
+}
+.universium-container-eventos .universium-p {
+  text-align: center;
+  margin-top: 10rem;
+  width: 55rem;
+  padding: 0;
+}
+.universium-container-eventos .universium-buttom { /* BOTON */
+  background-color: rgb(177, 3, 61);
+  box-shadow: 0px 0px 10px rgb(177, 3, 61);
+}
+.universium-container-eventos .universium-buttom:active {
+  background-color: rgb(203, 51, 102);
+}
+
+/* UNIVERSIUM ; EVENTOS ; ANIMACION */
+.asteroides {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60rem;
+}
+
+.ul-asteroides {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.ul-asteroides:first-child { /* PRIMER CUMULO DE ASTEROIDES */
+  margin-left: 40rem;
+}
+.ul-asteroides:last-child { /* SEGUNDO CUMULO DE ASTEROIDES */
+  margin-left: 70rem;
+}
+
+.asteroide { /* ASTEROIDE */
+  background: linear-gradient(90deg, rgb(209, 94, 31) 0%, rgb(0, 0, 0) 85%);
+  border-radius: 50% 90% 90% 50%;
+  box-shadow: 0px 0px 50px white;
+  position: relative;
+  list-style: none;
+  margin-top: 1rem;
+  height: 2rem;
+  width: 22rem;
+  rotate: -35deg;
+  animation: asteroide linear infinite;
+  top: 0;
+  left: 0;
+}
+.asteroide::before { /* RASTRO BLANCO */
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 45rem;
+  left: 22rem;
+  top: 0.5rem;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.432) 0%, rgba(255, 255, 255, 0.464) 15%, rgba(255, 255, 255, 0.141) 50%, transparent 100%);
+}
+.asteroide::after { /* ASTEROIDE */
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  left: -1rem;
+  top: -2rem;
+  background: linear-gradient(28deg, rgb(51, 51, 51) 0%, rgb(22, 22, 22) 0%, rgb(0, 0, 0) 100%, rgb(38, 38, 38) 100%);
+  animation: orbita linear infinite 2s;
+}
+
+/* DATOS DE CADA ASTEROIDE */
+.asteroide-type-1 {
+  animation-duration: 5s;
+  animation-delay: 2s;
+  scale: 0.5;
+}
+
+/* DATOS DE CADA ASTEROIDE */
+.asteroide-type-2 {
+  animation-duration: 8s;
+  animation-delay: 3s;
+  scale: 0.3;
+}
+
+/* DATOS DE CADA ASTEROIDE */
+.asteroide-type-3 {
+  animation-duration: 7s;
+  animation-delay: 1s;
+  scale: 0.5;
+}
+
+/* DATOS DE CADA ASTEROIDE */
+.asteroide-type-4 {
+  animation-duration: 6s;
+  animation-delay: 4s;
+  scale: 0.3;
+}
+
+/* DATOS DE CADA ASTEROIDE */
+.asteroide-type-5 {
+  animation-duration: 4s;
+  animation-delay: 7s;
+  scale: 0.2;
+}
+
+/* DATOS DE CADA ASTEROIDE */
+.asteroide-type-6 {
+  animation-duration: 6s;
+  animation-delay: 5s;
+  scale: 0.5;
+}
+
+/* DATOS DE CADA ASTEROIDE */
+.asteroide-type-7 {
+  animation-duration: 4s;
+  animation-delay: 6s;
+  scale: 0.4;
+}
+
+/* DATOS DE CADA ASTEROIDE */
+.asteroide-type-8 {
+  animation-duration: 5s;
+  animation-delay: 3s;
+  scale: 0.4;
+}
+
+@keyframes asteroide { /* ANIMACION */
+  95% {
+    box-shadow: 0px 0px 100px rgb(255, 64, 0);
+  }
+  90% {
+    box-shadow: 0px 0px 150px rgb(255, 64, 0);
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    position: relative;
+    top: 50rem;
+    left: -70rem;
+    opacity: 0;
+  }
+}
+/* UNIVERSIUM ; CONTACTO */
+.universium-h-contacto { /* TITULO */
+  background: linear-gradient(90deg, rgb(99, 227, 172) 0%, rgb(71, 141, 211) 98%);
+  -webkit-background-clip: text;
+}
+
+.linea-contacto { /* LINEA */
+  background: linear-gradient(-120deg, rgb(99, 227, 172) 0%, rgb(71, 141, 211) 98%);
+}
+.linea-contacto:before {
+  background-color: rgb(71, 141, 211);
+}
+
+.universium-container-contacto { /* CATEGORIA DE CONTACTO */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+.universium-container-contacto .universium-container-description {
+  width: 50%;
+  align-items: center;
+}
+.universium-container-contacto .universium-p {
+  width: 55rem;
+  text-align: center;
+}
+.universium-container-contacto .universium-buttom { /* BOTON */
+  background-color: rgb(71, 141, 211);
+  box-shadow: 0px 0px 10px rgb(71, 141, 211);
+}
+.universium-container-contacto .universium-buttom:active {
+  background-color: rgb(99, 195, 227);
+}
+
+/* UNIVERSIUM ; CONTACTO ; SATELITE */
+.señal { /* CONTENEDOR DE LA ANIMACION */
+  margin-top: 10rem;
+  margin-left: -6.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  rotate: -15deg;
+}
+.señal div {
+  position: absolute;
+  rotate: 45deg;
+  border-style: solid;
+  border-width: 1rem;
+  border-color: gray transparent transparent transparent;
+  border-radius: 50%;
+  animation-name: sending;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+.señal-punto { /* PUNTO */
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50% 50% 0 0;
+}
+
+.señal-raya-1 { /* PRIMERA RAYA */
+  height: 6rem;
+  width: 6rem;
+  animation-delay: 1s;
+}
+
+.señal-raya-2 { /* SEGUNDA RAYA */
+  height: 11rem;
+  width: 11rem;
+  animation-delay: 2s;
+}
+
+.señal-raya-3 { /* TERCERA RAYA */
+  height: 16rem;
+  width: 16rem;
+  animation-delay: 3s;
+}
+
+/* UNIVERSIUM ; CONTACTO ; ANIMACION */
+@keyframes sending { /* ANIMACION */
+  from {
+    border-color: aqua transparent transparent transparent;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .universium-container-planetas {
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  .universium-container-planetas .universium-planetas-texts {
+    display: flex;
+    justify-content: space-between;
+  }
+  .universium-p {
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 0 1rem;
+  }
+  .universium-p + .universium-p {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .universium-container-inicio {
+    flex-direction: column;
+  }
+  .universium-container-eventos {
+    flex-direction: column;
+  }
+  .ul-asteroides {
+    margin-top: -20rem;
+  }
+  .ul-asteroides:first-child { /* PRIMER CUMULO DE ASTEROIDES */
+    margin-left: 90rem;
+  }
+  .ul-asteroides:last-child { /* SEGUNDO CUMULO DE ASTEROIDES */
+    margin-left: 130rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .universium-container-universium .universium-h-universium {
+    font-size: 6rem;
+  }
+  .universium-container-universium .universium-subtitle {
+    font-size: 1.5rem;
+  }
+  .universium-planetas-texts {
+    flex-direction: column;
+  }
+  .universium-p {
+    text-align: center;
+  }
+  .universium-p + .universium-p {
+    margin-top: 5rem;
+  }
+}
+@media screen and (max-width: 670px) {
+  .universium-h, .universium-h-inicio, .universium-h-planetas, .universium-h-observatorio, .universium-h-eventos, .universium-h-contacto {
+    font-size: 3.5rem;
+  }
+  .sistema-solar {
+    transform: scale(0.8);
+  }
+  .universium-container-inicio .universium-p, .universium-container-eventos .universium-p, .universium-container-observatorio .universium-p, .universium-container-contacto .universium-p {
+    width: unset;
+  }
+  .universium-container-inicio .universium-container-description, .universium-container-contacto .universium-container-description {
+    width: unset;
+  }
+}
+@media screen and (max-width: 540px) {
+  .sistema-solar {
+    transform: scale(0.7);
+  }
+}
+@media screen and (max-width: 470px) {
+  .universium-container-universium .universium-h-universium {
+    font-size: 4rem;
+  }
+  .universium-container-universium .universium-subtitle {
+    font-size: 1.2rem;
+  }
+  .universium-container-planetas {
+    margin-top: 0;
+  }
+  .sistema-solar {
+    transform: scale(0.5);
+    width: 200%;
+    height: 60rem;
+  }
+}
 /* INICIO */
-.iniciomain {
+.inicio-main {
   background-color: #5F5B5B;
   height: 100%;
   padding-bottom: 8rem;
@@ -473,8 +1603,8 @@ p {
 }
 
 .inicio-h {
-  color: gray;
-  text-shadow: gray 1px 1px 10px;
+  color: rgb(169, 126, 126);
+  text-shadow: rgb(169, 126, 126) 1px 1px 10px;
   top: 30%;
 }
 
@@ -617,229 +1747,301 @@ p {
 }
 
 /* PLANETAS ; COLORES */
-.color-mercurio {
+.planetas-main .color-mercurio { /* COLORES DE CADA PLANETA */
   background-color: rgba(117, 69, 69, 0.4470588235);
   border-color: #742626;
   border-width: 0.2rem;
   border-style: solid;
 }
 
-.planetas-indice-item.color-mercurio .planetas-indice-a {
+.planetas-indice-item.color-mercurio .planetas-indice-a { /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
   text-shadow: 1px 1px #742626;
 }
 
-.planeta-detallados-container.color-mercurio {
+.planeta-detallados-container.color-mercurio { /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #742626;
 }
 
-.planeta-detallados-container.color-mercurio .planetas-boton-leer-mas {
+.modal-content.color-mercurio { /* COLOR DE LOS MODALES DA CADA PLANETA */
+  box-shadow: 0px 0px 50px #742626;
+}
+
+.planeta-detallados-container.color-mercurio .planetas-boton-leer-mas { /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
   text-shadow: 1px 1px #742626;
   border: 1px solid #742626;
   border-radius: 1rem;
 }
 
-.modal-content.color-mercurio {
-  box-shadow: 0px 0px 50px #742626;
+.color-mercurio::before { /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+  background-color: rgba(117, 69, 69, 0.4470588235);
+  border-color: #742626;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 0px 50px #742626, 0px 0px 20px #742626;
 }
 
-.color-venus {
+.planetas-main .color-venus { /* COLORES DE CADA PLANETA */
   background-color: rgba(255, 130, 81, 0.431372549);
   border-color: #ff6624;
   border-width: 0.2rem;
   border-style: solid;
 }
 
-.planetas-indice-item.color-venus .planetas-indice-a {
+.planetas-indice-item.color-venus .planetas-indice-a { /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
   text-shadow: 1px 1px #ff6624;
 }
 
-.planeta-detallados-container.color-venus {
+.planeta-detallados-container.color-venus { /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #ff6624;
 }
 
-.planeta-detallados-container.color-venus .planetas-boton-leer-mas {
+.modal-content.color-venus { /* COLOR DE LOS MODALES DA CADA PLANETA */
+  box-shadow: 0px 0px 50px #ff6624;
+}
+
+.planeta-detallados-container.color-venus .planetas-boton-leer-mas { /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
   text-shadow: 1px 1px #ff6624;
   border: 1px solid #ff6624;
   border-radius: 1rem;
 }
 
-.modal-content.color-venus {
-  box-shadow: 0px 0px 50px #ff6624;
+.color-venus::before { /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+  background-color: rgba(255, 130, 81, 0.431372549);
+  border-color: #ff6624;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 0px 50px #ff6624, 0px 0px 20px #ff6624;
 }
 
-.color-tierra {
+.planetas-main .color-tierra { /* COLORES DE CADA PLANETA */
   background-color: rgba(61, 139, 247, 0.4078431373);
   border-color: #72bb53;
   border-width: 0.2rem;
   border-style: solid;
 }
 
-.planetas-indice-item.color-tierra .planetas-indice-a {
+.planetas-indice-item.color-tierra .planetas-indice-a { /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
   text-shadow: 1px 1px #72bb53;
 }
 
-.planeta-detallados-container.color-tierra {
+.planeta-detallados-container.color-tierra { /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #72bb53;
 }
 
-.planeta-detallados-container.color-tierra .planetas-boton-leer-mas {
+.modal-content.color-tierra { /* COLOR DE LOS MODALES DA CADA PLANETA */
+  box-shadow: 0px 0px 50px #72bb53;
+}
+
+.planeta-detallados-container.color-tierra .planetas-boton-leer-mas { /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
   text-shadow: 1px 1px #72bb53;
   border: 1px solid #72bb53;
   border-radius: 1rem;
 }
 
-.modal-content.color-tierra {
-  box-shadow: 0px 0px 50px #72bb53;
+.color-tierra::before { /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+  background-color: rgba(61, 139, 247, 0.4078431373);
+  border-color: #72bb53;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 0px 50px #72bb53, 0px 0px 20px #72bb53;
 }
 
-.color-marte {
+.planetas-main .color-marte { /* COLORES DE CADA PLANETA */
   background-color: rgba(198, 100, 61, 0.4274509804);
   border-color: #aa532e;
   border-width: 0.2rem;
   border-style: solid;
 }
 
-.planetas-indice-item.color-marte .planetas-indice-a {
+.planetas-indice-item.color-marte .planetas-indice-a { /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
   text-shadow: 1px 1px #aa532e;
 }
 
-.planeta-detallados-container.color-marte {
+.planeta-detallados-container.color-marte { /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #aa532e;
 }
 
-.planeta-detallados-container.color-marte .planetas-boton-leer-mas {
+.modal-content.color-marte { /* COLOR DE LOS MODALES DA CADA PLANETA */
+  box-shadow: 0px 0px 50px #aa532e;
+}
+
+.planeta-detallados-container.color-marte .planetas-boton-leer-mas { /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
   text-shadow: 1px 1px #aa532e;
   border: 1px solid #aa532e;
   border-radius: 1rem;
 }
 
-.modal-content.color-marte {
-  box-shadow: 0px 0px 50px #aa532e;
+.color-marte::before { /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+  background-color: rgba(198, 100, 61, 0.4274509804);
+  border-color: #aa532e;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 0px 50px #aa532e, 0px 0px 20px #aa532e;
 }
 
-.color-jupiter {
+.planetas-main .color-jupiter { /* COLORES DE CADA PLANETA */
   background-color: rgba(224, 180, 127, 0.3921568627);
   border-color: #b09250;
   border-width: 0.2rem;
   border-style: solid;
 }
 
-.planetas-indice-item.color-jupiter .planetas-indice-a {
+.planetas-indice-item.color-jupiter .planetas-indice-a { /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
   text-shadow: 1px 1px #b09250;
 }
 
-.planeta-detallados-container.color-jupiter {
+.planeta-detallados-container.color-jupiter { /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #b09250;
 }
 
-.planeta-detallados-container.color-jupiter .planetas-boton-leer-mas {
+.modal-content.color-jupiter { /* COLOR DE LOS MODALES DA CADA PLANETA */
+  box-shadow: 0px 0px 50px #b09250;
+}
+
+.planeta-detallados-container.color-jupiter .planetas-boton-leer-mas { /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
   text-shadow: 1px 1px #b09250;
   border: 1px solid #b09250;
   border-radius: 1rem;
 }
 
-.modal-content.color-jupiter {
-  box-shadow: 0px 0px 50px #b09250;
+.color-jupiter::before { /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+  background-color: rgba(224, 180, 127, 0.3921568627);
+  border-color: #b09250;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 0px 50px #b09250, 0px 0px 20px #b09250;
 }
 
-.color-saturno {
+.planetas-main .color-saturno { /* COLORES DE CADA PLANETA */
   background-color: rgba(227, 197, 115, 0.4156862745);
   border-color: #d4b952;
   border-width: 0.2rem;
   border-style: solid;
 }
 
-.planetas-indice-item.color-saturno .planetas-indice-a {
+.planetas-indice-item.color-saturno .planetas-indice-a { /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
   text-shadow: 1px 1px #d4b952;
 }
 
-.planeta-detallados-container.color-saturno {
+.planeta-detallados-container.color-saturno { /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #d4b952;
 }
 
-.planeta-detallados-container.color-saturno .planetas-boton-leer-mas {
+.modal-content.color-saturno { /* COLOR DE LOS MODALES DA CADA PLANETA */
+  box-shadow: 0px 0px 50px #d4b952;
+}
+
+.planeta-detallados-container.color-saturno .planetas-boton-leer-mas { /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
   text-shadow: 1px 1px #d4b952;
   border: 1px solid #d4b952;
   border-radius: 1rem;
 }
 
-.modal-content.color-saturno {
-  box-shadow: 0px 0px 50px #d4b952;
+.color-saturno::before { /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+  background-color: rgba(227, 197, 115, 0.4156862745);
+  border-color: #d4b952;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 0px 50px #d4b952, 0px 0px 20px #d4b952;
 }
 
-.color-urano {
+.planetas-main .color-urano { /* COLORES DE CADA PLANETA */
   background-color: rgba(142, 170, 210, 0.4078431373);
   border-color: #6b8689;
   border-width: 0.2rem;
   border-style: solid;
 }
 
-.planetas-indice-item.color-urano .planetas-indice-a {
+.planetas-indice-item.color-urano .planetas-indice-a { /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
   text-shadow: 1px 1px #6b8689;
 }
 
-.planeta-detallados-container.color-urano {
+.planeta-detallados-container.color-urano { /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #6b8689;
 }
 
-.planeta-detallados-container.color-urano .planetas-boton-leer-mas {
+.modal-content.color-urano { /* COLOR DE LOS MODALES DA CADA PLANETA */
+  box-shadow: 0px 0px 50px #6b8689;
+}
+
+.planeta-detallados-container.color-urano .planetas-boton-leer-mas { /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
   text-shadow: 1px 1px #6b8689;
   border: 1px solid #6b8689;
   border-radius: 1rem;
 }
 
-.modal-content.color-urano {
-  box-shadow: 0px 0px 50px #6b8689;
+.color-urano::before { /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+  background-color: rgba(142, 170, 210, 0.4078431373);
+  border-color: #6b8689;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 0px 50px #6b8689, 0px 0px 20px #6b8689;
 }
 
-.color-neptuno {
+.planetas-main .color-neptuno { /* COLORES DE CADA PLANETA */
   background-color: rgba(90, 108, 207, 0.3921568627);
   border-color: #163d8a;
   border-width: 0.2rem;
   border-style: solid;
 }
 
-.planetas-indice-item.color-neptuno .planetas-indice-a {
+.planetas-indice-item.color-neptuno .planetas-indice-a { /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
   text-shadow: 1px 1px #163d8a;
 }
 
-.planeta-detallados-container.color-neptuno {
+.planeta-detallados-container.color-neptuno { /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #163d8a;
 }
 
-.planeta-detallados-container.color-neptuno .planetas-boton-leer-mas {
+.modal-content.color-neptuno { /* COLOR DE LOS MODALES DA CADA PLANETA */
+  box-shadow: 0px 0px 50px #163d8a;
+}
+
+.planeta-detallados-container.color-neptuno .planetas-boton-leer-mas { /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
   text-shadow: 1px 1px #163d8a;
   border: 1px solid #163d8a;
   border-radius: 1rem;
 }
 
-.modal-content.color-neptuno {
-  box-shadow: 0px 0px 50px #163d8a;
+.color-neptuno::before { /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+  background-color: rgba(90, 108, 207, 0.3921568627);
+  border-color: #163d8a;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 0px 50px #163d8a, 0px 0px 20px #163d8a;
 }
 
-.color-pluton {
+.planetas-main .color-pluton { /* COLORES DE CADA PLANETA */
   background-color: rgba(253, 253, 253, 0.4196078431);
   border-color: #cee8f7;
   border-width: 0.2rem;
   border-style: solid;
 }
 
-.planetas-indice-item.color-pluton .planetas-indice-a {
+.planetas-indice-item.color-pluton .planetas-indice-a { /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
   text-shadow: 1px 1px #cee8f7;
 }
 
-.planeta-detallados-container.color-pluton {
+.planeta-detallados-container.color-pluton { /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #cee8f7;
 }
 
-.planeta-detallados-container.color-pluton .planetas-boton-leer-mas {
+.modal-content.color-pluton { /* COLOR DE LOS MODALES DA CADA PLANETA */
+  box-shadow: 0px 0px 50px #cee8f7;
+}
+
+.planeta-detallados-container.color-pluton .planetas-boton-leer-mas { /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
   text-shadow: 1px 1px #cee8f7;
   border: 1px solid #cee8f7;
   border-radius: 1rem;
 }
 
-.modal-content.color-pluton {
-  box-shadow: 0px 0px 50px #cee8f7;
+.color-pluton::before { /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+  background-color: rgba(253, 253, 253, 0.4196078431);
+  border-color: #cee8f7;
+  border-width: 0.2rem;
+  border-style: solid;
+  box-shadow: 0px 0px 50px #cee8f7, 0px 0px 20px #cee8f7;
 }
 
 /* PLANETAS ; CONTENEDORES DE CADA PLANETA DESKTOP */
@@ -1004,7 +2206,6 @@ object-position: center; */
   border-radius: 1.5rem;
   transition: scale 0.5s;
 }
-
 .galeria-card:hover {
   background-color: #1e1e1f;
   scale: 120%;
@@ -1050,8 +2251,8 @@ object-position: center; */
 }
 
 .eventos-h {
-  color: #e86794;
-  text-shadow: #e86794 1px 1px 10px;
+  color: #d84f7d;
+  text-shadow: #d84f7d 1px 1px 10px;
   top: 40%;
 }
 
@@ -1159,7 +2360,7 @@ object-position: center; */
 @media screen and (max-width: 400px) {
   .eventos-descripcion-container {
     width: 25rem;
-    height: 20rem;
+    height: 25rem;
   }
   .eventos-img-container {
     width: 30rem;
@@ -1281,11 +2482,9 @@ object-position: center; */
   transform: translateY(-3rem) scale(1.1);
   transform-origin: left;
 }
-
 .form-campo-select:invalid {
   border-bottom: 0.2rem solid rgb(253, 91, 91);
 }
-
 .form-campo-select:focus-visible {
   border-bottom: 0.2rem solid rgb(99, 227, 172);
 }
@@ -1293,10 +2492,6 @@ object-position: center; */
 option {
   background-color: #302e2e;
   font-size: 1.7rem;
-}
-
-option:hover {
-  color: red;
 }
 
 /* OPINION */
@@ -1319,7 +2514,7 @@ option:hover {
 }
 
 /* BOTONES */
-.form-boton {
+.form-boton { /* BOTONES */
   background-color: #828181;
   border: none;
   border-radius: 0.7rem;
@@ -1330,28 +2525,23 @@ option:hover {
   padding: 0 3rem;
   font-size: 1.7rem;
 }
-
 .form-boton:hover {
   transform: scale(1.1);
   transition: transform 0.1s;
 }
-
-.form-boton:hover:nth-child(1) {
+.form-boton:hover:nth-child(1) { /* BOTON DE ENVIAR */
   background-color: #82e99a;
   box-shadow: 0px 0px 10px #82e99a;
 }
-
-.form-boton:active:nth-child(1) {
+.form-boton:active:nth-child(1) { /* BOTON DE ENVIAR */
   background-color: #a3f4b6;
   box-shadow: 0px 0px 10px #a3f4b6;
 }
-
-.form-boton:hover:nth-child(2) {
+.form-boton:hover:nth-child(2) { /* BOTON DE BORRAR */
   background-color: #e98282;
   box-shadow: 0px 0px 10px #e98282;
 }
-
-.form-boton:active:nth-child(2) {
+.form-boton:active:nth-child(2) { /* BOTON DE BORRAR */
   background-color: #f29b9b;
   box-shadow: 0px 0px 10px #f29b9b;
 }
@@ -1396,166 +2586,15 @@ option:hover {
   }
 }
 .pruebas-main {
-  height: 100rem;
+  height: 100%;
   background-color: gray;
   padding-top: 20rem;
   overflow: hidden;
 }
 
-.pruebaflex {
-  padding-top: 20rem;
-  display: flex;
-  justify-content: space-around;
-}
-
-.pruebaul {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-}
-
-.sistema-solar {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100rem;
+.rocket-pruebas {
   background-color: black;
-  overflow-y: hidden;
-}
-
-.sol {
-  background: radial-gradient(circle, rgb(240, 227, 20) 0%, rgb(250, 250, 151) 91%);
-  box-shadow: 0px 0px 100px rgb(250, 250, 151);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.mercurio {
-  left: -8rem;
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
-.venus {
-  left: 11rem;
-  width: 1.8rem;
-  height: 1.8rem;
-}
-
-.tierra {
-  left: -17rem;
-  width: 1.9rem;
-  height: 1.9rem;
-  animation: orbita 15s linear infinite;
-}
-
-.luna {
-  background-color: whitesmoke;
-  left: 3.5rem;
-  width: 1rem;
-  height: 1rem;
-}
-
-.marte {
-  left: 24rem;
-  width: 2rem;
-  height: 2rem;
-}
-
-.jupiter {
-  box-shadow: 0px 0px 10px;
-  left: -29rem;
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.saturno {
-  left: 35rem;
-  width: 3.5rem;
-  height: 3.5rem;
-}
-
-.urano {
-  left: -40rem;
-  width: 2rem;
-  height: 2rem;
-}
-
-.neptuno {
-  left: 43rem;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.pluton {
-  left: -45rem;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.planeta {
-  position: absolute; /* 
-background-color: green; */
-  animation: orbita linear infinite;
-}
-
-.planeta div {
-  position: relative;
-  top: 0rem;
-  border-radius: 50%;
-}
-
-.planeta:nth-child(0) {
-  animation-duration: 8s;
-}
-
-.planeta:nth-child(1) {
-  animation-duration: 13s;
-}
-
-.planeta:nth-child(2) {
-  animation-duration: 18s;
-}
-
-.planeta:nth-child(3) {
-  animation-duration: 23s;
-}
-
-.planeta:nth-child(4) {
-  animation-duration: 28s;
-}
-
-.planeta:nth-child(5) {
-  animation-duration: 33s;
-}
-
-.planeta:nth-child(6) {
-  animation-duration: 38s;
-}
-
-.planeta:nth-child(7) {
-  animation-duration: 43s;
-}
-
-.planeta:nth-child(8) {
-  animation-duration: 48s;
-}
-
-.planeta:nth-child(9) {
-  animation-duration: 53s;
-}
-
-@keyframes orbita {
-  from {
-    transform: rotate(360deg);
-  }
+  height: 100rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */

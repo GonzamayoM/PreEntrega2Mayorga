@@ -59,11 +59,11 @@ $galeria-cards:(
     border: 1px solid;
     border-radius: 1.5rem;
     transition: scale 0.5s;
-}
 
-.galeria-card:hover{
-    background-color: #1e1e1f;
-    scale: 120%;
+    &:hover{
+        background-color: #1e1e1f;
+        scale: 120%;
+    }
 }
 
 /* GALERIA TUTLOS */

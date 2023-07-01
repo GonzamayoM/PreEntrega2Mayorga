@@ -16,8 +16,8 @@
 }
 
 .planetas-h{
-    color: rgb(205, 228, 2);
-    text-shadow: rgb(205, 228, 2) 1px 1px 10px;
+    color: rgba(205,228,2,1);
+    text-shadow: rgba(205,228,2,1) 1px 1px 10px;
     margin-top: 25%; 
 }
 
@@ -125,30 +125,37 @@ $planetas-colores:(
 );
 
 @each $planeta, $background-color, $border-color in $planetas-colores{
-    .#{$planeta}{
+    .planetas-main .#{$planeta}{ /* COLORES DE CADA PLANETA */
         background-color: $background-color;
         border-color: $border-color;
         border-width: 0.2rem;
         border-style: solid;
     }
 
-    .planetas-indice-item.#{$planeta} .planetas-indice-a{
+    .planetas-indice-item.#{$planeta} .planetas-indice-a{ /* EFECTO DE COLOR DE LOS TEXTOS DE CADA PLANETA EN INDICE */
         text-shadow: 1px 1px $border-color;
     }
 
-    .planeta-detallados-container.#{$planeta}{
+    .planeta-detallados-container.#{$planeta}{ /* SOMBRA DE LOS CONTENEDORES DE CADA PLANETA */
         box-shadow: 0px 0px 50px $border-color;
     }
 
+    .modal-content.#{$planeta}{ /* COLOR DE LOS MODALES DA CADA PLANETA */
+        box-shadow: 0px 0px 50px $border-color;
+    }
 
-    .planeta-detallados-container.#{$planeta} .planetas-boton-leer-mas{
+    .planeta-detallados-container.#{$planeta} .planetas-boton-leer-mas{ /* COLOR DEL BOTON DE LEER MAS DE CADA PLANETA */
         text-shadow: 1px 1px $border-color;
         border: 1px solid $border-color;
         border-radius: 1rem;
     }
 
-    .modal-content.#{$planeta}{
-        box-shadow: 0px 0px 50px $border-color;
+    .#{$planeta}::before{ /* COLOR DE LOS PLANETAS EN EL SISTEMA SOLAR */
+        background-color: $background-color;
+        border-color: $border-color;
+        border-width: 0.2rem;
+        border-style: solid;
+        box-shadow: 0px 0px 50px $border-color, 0px 0px 20px $border-color;
     }
 }
 

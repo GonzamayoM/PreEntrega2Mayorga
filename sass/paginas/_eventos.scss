@@ -9,8 +9,8 @@
 }
 
 .eventos-h{
-    color: #e86794;
-    text-shadow: #e86794 1px 1px 10px;
+    color: #d84f7d;
+    text-shadow: #d84f7d/* #e86794 */ 1px 1px 10px;
     top: 40%; 
 }
 
@@ -125,7 +125,7 @@
 @media screen and (max-width: 400px){
     .eventos-descripcion-container{
         width: 25rem;
-        height: 20rem;
+        height: 25rem;
     }
     
     .eventos-img-container{

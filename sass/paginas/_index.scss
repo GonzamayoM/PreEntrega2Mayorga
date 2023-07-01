@@ -1,66 +1,962 @@
-/* INICIO */
-
-.iniciomain{
-    background-color: #5F5B5B;
+.universium-main{ /* MAIN */
+    background-color: black;
     height: 100%;
-    padding-bottom: 8rem;
+    width: 100%;
+    padding-bottom: 16rem;
     overflow: hidden;
 }
 
-.inicio-container{
-    background: rgb(43,41,45);
-    background: linear-gradient(129deg, rgba(43,41,45,1) 0%, rgba(23,22,24,1) 23%, rgba(56,56,56,1) 51%, rgba(54,52,52,1) 55%, rgba(34,34,34,1) 66%, rgba(51,51,51,1) 100%);
+/* UNIVERSIUM ; GENERAL */
+
+.universium-containers{ /* CONTENEDORES */
+    margin-top: 20rem;
+}
+
+.universium-container-start{ /* CONTENEDORES DE INICIO */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.universium-container-description{ /* CONTENEDORES DE DESCRIPCION */
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    width: 100%;
+}
+
+.linea{ /* LINEA CON DEGRADADO */
     border-radius: 1rem;
-    padding: 2.5rem;
+    width: 0.5rem;
+    height: 35rem;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 98%;
+        left: -1.2rem;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+    }
+}
+
+.universium-h{ /* TITULOS */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5rem;
+    margin-top: 5rem;
+    color: transparent;
+}
+
+.universium-subtitle{ /* SUBTITULOS */
+    color: white;
+    text-align: center;
+}
+
+.universium-p{ /* TEXTOS */
+    font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+.universium-p + .universium-p{ /* MARGIN DE LOS TEXTOS */
+    margin-top: 5rem;
+}
+
+.universium-buttom{ /* BOTONES */
+    color: white;
+    font-size: 1.7rem;
+    text-decoration: none;
+    border-radius: 0.7rem;
+    padding: 0.8rem 2rem;
+    height: 3.5rem;
+    width: max-content;
+    margin-top: 5rem;
+
+    &:hover{
+        transform: scale(1.1);
+        transition: transform 0.1s;
+    }
+}
+
+/* UNIVERSIUM ; UNIVERSIUM */
+
+.universium-container-universium{
+    padding-top: 20rem;
+    
+    & div{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.universium-h-universium{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8rem;
+    background: linear-gradient(130deg, rgba(128,128,128,1) 0%, rgba(38,38,38,1) 70%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* UNIVERSIUM ; INICIO */
+
+.universium-h-inicio{ /* TITULO */
+    @extend .universium-h;
+    background: linear-gradient(90deg, rgb(169, 126, 126) 0%, rgb(130, 54, 54) 98%);
+    -webkit-background-clip: text;
+}
+
+.linea-inicio{ /* LINEA */
+    @extend .linea;
+    background: linear-gradient(-120deg, rgb(169, 126, 126) 0%, rgb(130, 54, 54) 98%);
+
+    
+    &:before{
+        background-color: rgb(130, 54, 54);
+    }
+}
+
+.universium-container-inicio{ /* CATEGORIA DE PLANETAS */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+
+    & .universium-container-description{
+        width: 50%;
+        align-items: center;
+    }
+
+    & .universium-p{
+        width: 55rem;
+    }
+
+    & .universium-buttom{ /* BOTON */
+        background-color: rgb(130, 54, 54);
+        box-shadow: 0px 0px 10px rgb(130, 54, 54);
+
+        &:active{
+            background-color: rgb(183, 104, 104);
+        }
+}
+
+}
+
+/* UNIVERSIUM ; INICIO ; COHETE */
+
+.cohete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+
+.cohete-cuerpo{
+    height: 20rem;
+    width: 10rem;
+    background: linear-gradient(120deg, gray 0%, rgb(35, 35, 35) 98%);
+    border-radius: 100% 100% 25% 25%;
+    z-index: 1;
+}
+
+.cohete-bottom{
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+}
+
+.cohete-pata{
+    position: relative;
+    top: -5.5rem;
+    height: 10rem;
+    width: 4rem;
+    background-color: rgb(111, 1, 1);
+    border-radius: 100% 100% 100% 60%;
+
+    &::before{
+        content: '';
+        position: absolute;
+        rotate: -5deg;
+        top: 7rem;
+        left: 0.5rem;
+        width: 3.5rem;
+        height: 10rem;
+        background-color: rgb(111, 1, 1);
+        border-radius: 10% 20% 0 100%;
+    }
+
+    &:last-child{
+        transform: scale(-1, 1);
+    }
+
+}
+
+.cohete-propulsor{
+    z-index: 1;
+    width: 5rem;
+    height: 1rem;
+    background-color: rgb(60, 60, 60);
+    border-radius: 0 0 100% 100%; 
+    position: relative; 
+    box-shadow:
+        0px 20px 15px rgb(255, 123, 0),
+        0px 25px 20px yellow;
+
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 1rem;
+        left: -0.2rem;
+        width: 5.5rem;
+        height: 1.5rem;
+        background-color: rgb(40, 40, 40);
+        border-radius: 0 0 100% 100%;
+    }
+}
+
+/* UNIVERSIUM ; INICIO ; ANIMACION */
+
+.smokes{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 60%;
+}
+
+.smoke{
+    z-index: 0.1;
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    animation: smoke-out linear infinite;
+}
+
+$smoke-types:( /* DATOS DE CADA PLANETA */
+    "smoke-type-1" 0.5 -3.5rem 0.5s 4.4s #939393,
+    "smoke-type-2" 1 1.1rem 0s 5s #5c5a5a,
+    "smoke-type-3" 1.4 1.6rem 2.4s 6.5s #252525,
+    "smoke-type-4" 0.7 0.1rem 1s 4.7s #6e6c6c,
+    "smoke-type-5" 1.2 -0.5rem 0.8s 6s #424141,
+    "smoke-type-6" 1.4 -1.6rem 3.5s 6.5s #252525,
+    "smoke-type-7" 0.7 2.7rem 1.7s 4.7s #6e6c6c,
+    "smoke-type-8" 1.2 -2.2rem 1.9s 6s #424141
+);
+
+@each $smoke-type, $size, $position, $delay, $duration, $start-color in $smoke-types{ /* DATOS DE CADA PLANETA */
+    .#{$smoke-type}{ 
+        scale: $size;
+        margin-left: $position;
+        animation-delay: $delay;
+        animation-duration: $duration;
+        background-color: $start-color;
+        box-shadow: 0px 0px 10px $start-color;
+    }
+}
+
+@keyframes smoke-out { /* ANIMACION DE LA ORBITA */
+    0%{
+    }
+    100%{
+        transform: translateY(35rem) scale(0.5);
+        background-color: transparent;
+        box-shadow: 0px 0px 10px transparent
+    }
+}
+
+/* UNIVERSIUM ; PLANETAS */
+
+.universium-h-planetas{ /* TITULO */
+    @extend .universium-h;
+    background: linear-gradient(90deg, rgb(205,228,2) 0%, rgb(219, 121, 8) 98%);
+    -webkit-background-clip: text;
+}
+
+.linea-planetas{ /* LINEA */
+    @extend .linea;
+    background: linear-gradient(-120deg, rgb(205,228,2) 0%, rgb(219, 121, 8) 98%);
+
+    
+    &:before{
+        background-color: rgb(219, 121, 8);
+    }
+}
+
+.universium-container-planetas{ /* CATEGORIA DE PLANETAS */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+
+    & .universium-container-description{
+        align-items: center;
+    }
+
+    
+    & .universium-buttom{ /* BOTON */
+        background-color: rgb(219, 121, 8);
+        box-shadow: 0px 0px 10px rgb(219, 121, 8);
+
+        &:active{
+            background-color: rgb(228, 179, 2);
+        }
+}
+
+}
+
+/* UNIVERSIUM ; PLANETAS ; ANIMACION */
+
+.sistema-solar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 150%;
+    height: 64rem;
+}
+
+.sol{
+    background: radial-gradient(circle, rgb(240,227,20) 0%, rgb(250,250,151) 91%);
+    box-shadow: 0px 0px 20px rgb(250,250,151);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+    &::before{
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        height: 1000%;
+        width: 1000%;
+        background: radial-gradient(circle, rgba(238,233,19,0.2) 2%, rgba(238,233,19,0.09) 25%, rgba(213,235,0,0.001) 75%);
+    }
+}
+
+.planeta{
+    position: absolute;
+    animation: orbita linear infinite;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.planeta, .luna{
+    border-style: solid;
+    border-color: rgb(253, 253, 253) transparent transparent transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+
+.planeta::before, .luna::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.luna{
+    animation: orbita 2.7s linear infinite;
+    position: absolute;
+    right: -1.5rem;
+    top: 0.4rem;
+
+    &::before{
+        background-color: white;
+    }
+}
+
+$planetas-info:( /* DATOS DE CADA PLANETA */
+    "mercurio" 8rem 180deg 1.2rem 1rem 0rem,
+    "venus" 12rem 0deg 1.8rem 1.5rem 0.3rem,
+    "tierra" 19rem 100deg 3rem 2rem 0rem,
+    "luna" 6rem 220deg 1.2rem 0.4rem 0rem,
+    "marte" 27rem 250deg 2rem 3.6rem 2.4rem,
+    "jupiter" 35rem 150deg 3.5rem 4.6rem 2.3rem,
+    "saturno" 43rem 35deg 3.5rem 5.5rem 3.3rem,
+    "urano" 50rem 175deg 2rem 7rem 5.6rem,
+    "neptuno" 55rem 300deg 1.5rem 7.8rem 6.8rem,
+    "pluton" 59rem 10deg 1.5rem 8.5rem 7.5rem
+);
+
+@each $planeta-info, $distance, $rotacion, $size-planet, $top, $right in $planetas-info{ /* DATOS DE CADA PLANETA */
+    .#{$planeta-info}{ 
+        width: $distance;
+        height: $distance;
+        rotate: $rotacion;
+    }
+
+    .#{$planeta-info}::before{
+        width: $size-planet;
+        height: $size-planet;
+        top: $top;
+        right: $right;
+    }
+}
+
+@for $planeta from 0 through 9 { /* TIEMPO DE ORBITA */
+    .planeta:nth-child(#{$planeta}){
+        animation-duration: 7s * $planeta + 8;
+    }
+}
+
+@keyframes orbita { /* ANIMACION DE LA ORBITA */
+    from{
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+/* UNIVERSIUM ; OBSERVATORIO */
+
+.linea-observatorio{ /* LINEA */
+    @extend .linea;
+    background: linear-gradient(130deg, rgb(232,181,242) 0%, rgb(136, 86, 155) 98%);
+    
+    &:before{
+        background-color: rgb(136, 86, 155);
+    }
+}
+
+.universium-h-observatorio{ /* TITULO */
+    @extend .universium-h;
+    background: linear-gradient(90deg, rgb(232,181,242) 0%, rgb(136, 86, 155) 98%);
+    -webkit-background-clip: text;
+}
+
+.universium-container-observatorio{ /* CATEGORIA DE OBSERVATORIO */
+    overflow: hidden;
+    height: 57rem;
+    display: flex;
+    align-items: center;
+
+    & .universium-p{ /* TEXTO */
+        text-align: center;
+        width: 55rem;
+        padding: 0;
+    }
+    
+    & .universium-buttom{ /* BOTON */
+        background-color: rgb(136, 86, 155);
+        box-shadow: 0px 0px 10px rgb(136, 86, 155);
+    
+        &:active{
+            background-color: rgb(217, 144, 231);
+        }
+    }
+
+    & .estrellas{
+        position: absolute;
+        height: 57rem;
+        overflow: hidden;
+    }
+    
+    & .universium-container-description{ /* CONTENEDOR DE DESCRIPCION */
+        align-items: center;
+        position: relative;
+    }
+    
+}
+
+/* UNIVERSIUM ; OBSERVATORIO ; TELESCOPIO */
+
+
+.telescopio{
+    margin-top: 15rem;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.palitos{
+    display: flex;
+    position: absolute;
+}
+
+.palito{
+    height: 10rem;
+    width: 0.3rem;
+    background-color: gray;
+
+    &:nth-of-type(1){
+        rotate: 21deg;
+        margin-right: 1.5rem;
+    }
+    
+    &:nth-of-type(3){
+        rotate: -21deg;
+        margin-left: 1.5rem;
+    }
+}
+
+.borde{
+    position: relative;
+    rotate: 15deg;
+    width: 10rem;
+    height: 1rem;
+    top: -5.7rem;
+    left: -0.5rem;
+    background-color: rgb(53, 53, 53);
+    border-radius: 1rem;
+
+    &::before{
+        content: '';
+        background-color: rgb(30, 30, 30);
+        border-radius: 1rem;
+        position: absolute;
+        top: -0.5rem;
+        left: -3.5rem;
+        width: 15rem;
+        height: 1rem;
+    }
+}
+
+.palo-vision{
+    position: absolute;
+    display: flex;
+    rotate: 15deg;
+    margin-top: -14rem;
+    margin-left: -1rem;
+}
+
+.vision{
+    height: 1.5rem;
+    width: 7rem;
+    background: linear-gradient(90deg, rgba(147,147,147,1) 12%, rgb(49, 45, 45) 15%);
+
+    
+    &:last-child{
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    &:first-child{
+        border-radius: 1rem 0 0 1rem;
+    }
+}
+
+/* UNIVERSIUM ; OBSERVATORIO ; ANIMACION */
+
+.espacio{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.estrella{
+    background-color: rgb(231, 175, 247);
+    box-shadow: 0px 0px 20px rgb(231, 175, 247);
+    border-radius: 40%;
+    width: 1rem;
+    height: 1rem;
+    transform: scale(0);
+    animation: estrellitas linear infinite;
+}
+
+
+$estrellas-info:( /* TIPO DE ESTRELLAS */
+    "estrella-type-1" 5rem 3rem 0 5s,
+    "estrella-type-2" 7rem 6rem 7s 3s,
+    "estrella-type-3" 3rem 4rem 5s 6s,
+    "estrella-type-4" 10rem 7rem 8s 4s,
+    "estrella-type-5" 15rem 5rem 3s 5s,
+    "estrella-type-6" 12rem 6rem 1s 4s,
+    "estrella-type-7" 18rem 2rem 4s 7s,
+);
+
+@each $estrella-type, $margin-top, $margin-right-left, $delay, $duration in $estrellas-info{ /* DATOS DE CADA ESTRELLA */
+    .#{$estrella-type}{ 
+        margin: $margin-top $margin-right-left 0 $margin-right-left;
+        animation-delay: $delay;
+        animation-duration: $duration;
+    }
+}
+
+
+@keyframes estrellitas { /* ANIMACION */
+    0%{
+        transform: scale(0);
+    }
+
+    75%{
+        transform: scale(0.6) rotate(360deg);
+    }
+
+    76%{
+        transform: scale(0);
+    }
+}
+
+/* UNIVERSIUM ; EVENTOS */
+
+.linea-eventos{ /* LINEA */
+    @extend .linea;
+    background: linear-gradient(130deg, rgb(216, 79, 125) 0%, rgb(177, 3, 61) 98%);
+
+    &:before{
+        background-color: rgb(177, 3, 61);
+    }
+}
+
+.universium-h-eventos{ /* TITULO */
+    @extend .universium-h;
+    background: linear-gradient(130deg, rgb(216, 79, 125) 0%, rgb(177, 3, 61) 98%);
+    -webkit-background-clip: text;
+}
+
+.universium-container-eventos{ /* CATEGORIA DE EVENTOS */
+    display: flex;
+    justify-content: space-evenly;
+    
+    & .universium-container-description{
+        align-items: center;
+    }
+
+    & .universium-p{
+        text-align: center;
+        margin-top: 10rem;
+        width: 55rem;
+        padding: 0;
+    }
+
+    & .universium-buttom{ /* BOTON */
+        background-color: rgb(177, 3, 61);
+        box-shadow: 0px 0px 10px rgb(177, 3, 61);
+    
+        &:active{
+            background-color: rgb(203, 51, 102);
+        }
+    }
+}
+
+
+/* UNIVERSIUM ; EVENTOS ; ANIMACION */
+
+
+.asteroides{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60rem;
+}
+
+.ul-asteroides{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child{ /* PRIMER CUMULO DE ASTEROIDES */
+        margin-left: 40rem;
+    }
+
+    &:last-child{ /* SEGUNDO CUMULO DE ASTEROIDES */
+        margin-left: 70rem;
+    }
+}
+
+.asteroide{ /* ASTEROIDE */
+    background: linear-gradient(90deg, rgba(209,94,31,1) 0%, rgba(0,0,0,1) 85%);
+    border-radius: 50% 90% 90% 50%;
+    box-shadow: 0px 0px 50px white;
+    position: relative;
+    list-style: none;
+    margin-top: 1rem;
+    height: 2rem;
+    width: 22rem;
+    rotate: -35deg;
+    animation: asteroide linear infinite;
+    top: 0;
+    left: 0;
+
+    
+    &::before{ /* RASTRO BLANCO */
+        content: '';
+        position: absolute;
+        height: 1rem;
+        width: 45rem;
+        left: 22rem;
+        top: 0.5rem;
+        border-radius: 50%;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.432) 0%, rgba(255, 255, 255, 0.464) 15%, rgba(255, 255, 255, 0.141) 50%, transparent 100%);
+    }
+
+    &::after{ /* ASTEROIDE */
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        height: 6rem;
+        width: 6rem;
+        left: -1rem;
+        top: -2rem;
+        background: linear-gradient(28deg, rgba(51,51,51,1) 0%, rgba(22,22,22,1) 0%, rgba(0,0,0,1) 100%, rgba(38,38,38,1) 100%);
+        animation: orbita linear infinite 2s;
+    }
+}
+
+$asteroide-types:( /* TIPOS DE ASTEROIDES */
+    "asteroide-type-1" 5s 2s 0.5,
+    "asteroide-type-2" 8s 3s 0.3,
+    "asteroide-type-3" 7s 1s 0.5,
+    "asteroide-type-4" 6s 4s 0.3,
+    "asteroide-type-5" 4s 7s 0.2,
+    "asteroide-type-6" 6s 5s 0.5,
+    "asteroide-type-7" 4s 6s 0.4,
+    "asteroide-type-8" 5s 3s 0.4,
+);
+
+@each $asteroide-type, $duration, $delay, $scale in $asteroide-types{ /* DATOS DE CADA ASTEROIDE */
+    .#{$asteroide-type}{ 
+        animation-duration: $duration;
+        animation-delay: $delay;
+        scale: $scale;
+    }
+}
+
+@keyframes asteroide{ /* ANIMACION */
+    0%{
+    }
+
+    95%{
+        box-shadow: 0px 0px 100px rgb(255, 64, 0);
+    }
+
+    90%{
+        box-shadow: 0px 0px 150px rgb(255, 64, 0);
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    100%{
+        position: relative;
+        top: 50rem;
+        left: -70rem;  
+        opacity: 0; 
+    }
+}
+
+/* UNIVERSIUM ; CONTACTO */
+
+.universium-h-contacto{ /* TITULO */
+    @extend .universium-h;
+    background: linear-gradient(90deg, rgb(99, 227, 172) 0%, rgb(71, 141, 211) 98%);
+    -webkit-background-clip: text;
+}
+
+.linea-contacto{ /* LINEA */
+    @extend .linea;
+    background: linear-gradient(-120deg, rgb(99, 227, 172) 0%, rgb(71, 141, 211) 98%);
+
+    
+    &:before{
+        background-color: rgb(71, 141, 211);
+    }
+}
+
+.universium-container-contacto{ /* CATEGORIA DE CONTACTO */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+
+    & .universium-container-description{
+        width: 50%;
+        align-items: center;
+    }
+
+    & .universium-p{
+        width: 55rem;
+        text-align: center;
+    }
+
+    & .universium-buttom{ /* BOTON */
+        background-color: rgb(71, 141, 211);
+        box-shadow: 0px 0px 10px rgb(71, 141, 211);
+
+        &:active{
+            background-color: rgb(99, 195, 227);
+        }
+}
+
+}
+
+/* UNIVERSIUM ; CONTACTO ; SATELITE */
+
+.señal{ /* CONTENEDOR DE LA ANIMACION */
     margin-top: 10rem;
-    box-shadow: 0px 0px 30px black;
+    margin-left: -6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    rotate: -15deg;
+
+    & div{
+        position: absolute;
+        rotate: 45deg;
+        border-style: solid;
+        border-width: 1rem;
+        border-color: gray transparent transparent transparent;
+        border-radius: 50%;
+        animation-name: sending;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+    }
 }
 
-.inicio-h{
-    color: gray;
-    text-shadow: gray 1px 1px 10px;
-    top: 30%; 
+.señal-punto{ /* PUNTO */
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50% 50% 0 0 ;
 }
 
-/* MAIN ; IMAGEN DEL INICIO Y SEPARACION*/
-
-.inicio-background{
-    background:
-        linear-gradient(0deg,#5F5B5B, 7%, transparent, 15%, transparent),
-        url(../img/fondos/inicio-background.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 106.9rem;
-    width: 100%;
+.señal-raya-1{ /* PRIMERA RAYA */
+    height: 6rem;
+    width: 6rem;
+    animation-delay: 1s;
 }
 
-/* MAIN; INICIO: BIGBANG */
-
-.bigbangtextContainer{
-    height: 100%;
-    width: 88rem;
+.señal-raya-2{ /* SEGUNDA RAYA */
+    height: 11rem;
+    width: 11rem;
+    animation-delay: 2s;
 }
 
-.bigbang-img{
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
+.señal-raya-3{ /* TERCERA RAYA */
+    height: 16rem;
+    width: 16rem;
+    animation-delay: 3s;
 }
 
-/* INICIO ; SISTEMA SOLAR */
+/* UNIVERSIUM ; CONTACTO ; ANIMACION */
 
-.sistema-solar-img{
-    width: 100%;
-    height: 100%;
+@keyframes sending{ /* ANIMACION */
+    from{
+        border-color: aqua transparent transparent transparent;
+    }
 }
 
 
-@media screen and (max-width: 768px){
-    .inicio-h{
-        width: 30rem;
+@media screen and (max-width: 1200px){
+    .universium-container-planetas{
+        flex-direction: column;
+        margin-top: 5rem;
+
+        & .universium-planetas-texts{
+            display: flex;
+            justify-content: space-between;
+        }
+
     }
 
-    .inicio-background{
-        height: 25rem;
+    .universium-p{
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 0 1rem;
     }
-} 
+
+    .universium-p + .universium-p{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .universium-container-inicio{
+        flex-direction: column;
+    }
+
+    .universium-container-eventos{
+        flex-direction: column;
+    }
+
+    .ul-asteroides{
+        margin-top: -20rem;
+
+        &:first-child{ /* PRIMER CUMULO DE ASTEROIDES */
+            margin-left: 90rem;
+        }
+    
+        &:last-child{ /* SEGUNDO CUMULO DE ASTEROIDES */
+            margin-left: 130rem;
+        }
+    }
+}
+
+@media screen and (max-width: 760px){
+    .universium-container-universium{
+        & .universium-h-universium{
+            font-size: 6rem;
+        }
+
+        & .universium-subtitle{
+            font-size: 1.5rem;
+        }
+    }
+
+    .universium-planetas-texts{
+        flex-direction: column;
+    }
+
+    .universium-p{
+        text-align: center;
+    }
+
+    .universium-p + .universium-p{
+        margin-top: 5rem;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .universium-h{
+        font-size: 3.5rem;
+    }
+
+    .sistema-solar{
+        transform: scale(0.8);
+    }
+
+    .universium-container-inicio, .universium-container-eventos, .universium-container-observatorio, .universium-container-contacto{
+        & .universium-p{
+            width: unset;
+        }
+    }
+
+    .universium-container-inicio, .universium-container-contacto{
+        & .universium-container-description{
+            width: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 540px){
+    .sistema-solar{
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 470px){
+    .universium-container-universium{
+        & .universium-h-universium{
+            font-size: 4rem;
+        }
+
+        & .universium-subtitle{
+            font-size: 1.2rem;
+        }
+    }
+    .universium-container-planetas{
+        margin-top: 0;
+    }
+
+    .sistema-solar{
+        transform: scale(0.5);
+        width: 200%;
+        height: 60rem;
+    }
+}
+

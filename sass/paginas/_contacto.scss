@@ -120,28 +120,24 @@
 
 .form-campo-select{
     @extend .form-campo;
-}
+    
+    &:not(:invalid) + .form-label{
+        transform: translateY(-3rem) scale(1.1);
+        transform-origin: left;
+    }
 
-.form-campo-select:not(:invalid) + .form-label{
-    transform: translateY(-3rem) scale(1.1);
-    transform-origin: left;
-}
+    &:invalid{
+        border-bottom: 0.2rem solid rgb(253, 91, 91);
+    }
 
-.form-campo-select:invalid{
-    border-bottom: 0.2rem solid rgb(253, 91, 91);
-}
-
-.form-campo-select:focus-visible{
-    border-bottom: 0.2rem solid rgb(99, 227, 172);
+    &:focus-visible{
+        border-bottom: 0.2rem solid rgb(99, 227, 172);
+    }
 }
 
 option {
     background-color: #302e2e;
     font-size: 1.7rem;
-}
-
-option:hover{
-    color: red;
 }
 
 /* OPINION */
@@ -164,9 +160,9 @@ option:hover{
     resize: none;
 }
 
-/* BOTONES */
+/* BOTONES */ 
 
-.form-boton{
+.form-boton{ /* BOTONES */
     background-color: #828181;
     border: none;
     border-radius: 0.7rem;
@@ -176,31 +172,32 @@ option:hover{
     height: 3.5rem;
     padding: 0 3rem;
     font-size: 1.7rem;
-}
 
-.form-boton:hover{
-    transform: scale(1.1);
-    transition: transform 0.1s;
-}
-
-.form-boton:hover:nth-child(1){
-    background-color: #82e99a;
-    box-shadow: 0px 0px 10px #82e99a;
-}
-
-.form-boton:active:nth-child(1){
-    background-color: #a3f4b6;
-    box-shadow: 0px 0px 10px #a3f4b6;
-}
-
-.form-boton:hover:nth-child(2){
-    background-color: #e98282;
-    box-shadow: 0px 0px 10px #e98282;
-}
-
-.form-boton:active:nth-child(2){
-    background-color: #f29b9b;
-    box-shadow: 0px 0px 10px #f29b9b;
+    &:hover{
+        transform: scale(1.1);
+        transition: transform 0.1s;
+    }
+    
+    &:hover:nth-child(1){ /* BOTON DE ENVIAR */
+        background-color: #82e99a;
+        box-shadow: 0px 0px 10px #82e99a;
+    }
+    
+    &:active:nth-child(1){ /* BOTON DE ENVIAR */
+        background-color: #a3f4b6;
+        box-shadow: 0px 0px 10px #a3f4b6;
+    }
+    
+    &:hover:nth-child(2){ /* BOTON DE BORRAR */
+        background-color: #e98282;
+        box-shadow: 0px 0px 10px #e98282;
+    }
+    
+    &:active:nth-child(2){ /* BOTON DE BORRAR */
+        background-color: #f29b9b;
+        box-shadow: 0px 0px 10px #f29b9b;
+    }
+    
 }
 
 

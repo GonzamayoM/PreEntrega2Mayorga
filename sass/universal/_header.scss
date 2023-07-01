@@ -5,7 +5,7 @@ $height-navbar: 10.4rem;
     height: $height-navbar;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     backdrop-filter: blur(3px);
 }
 
@@ -24,16 +24,41 @@ $height-navbar: 10.4rem;
 }
 
 .navheader{
-    font-size: 4.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-decoration: none;
     color: white;
     height: calc($height-navbar / 2);
     padding-left: 1rem;
     transition: text-shadow 5s;
+
+    &:hover{
+        text-shadow: 0px 0px 8px white;
+        transition: 1s;
+    }
+
+    &::after{
+        content: url(../img/header-footer/home.png);
+        filter: grayscale(100%);
+        position: relative;
+        bottom: -0.5rem;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    &:hover::after{
+        filter: drop-shadow(0px 0px 8px #DE7A7A);
+    }
 }
 
-.navheader:hover{
-    text-shadow: 1px 1px 8px white;
-    transition: 1s;
+.navheader-in{
+    text-shadow: 0px 0px 20px white;
+    filter: grayscale(0%);
+
+    &::after{
+        filter: drop-shadow(0px 0px 20px #DE7A7A);
+    }
 }
 
 .navbar-nav{
@@ -62,11 +87,11 @@ header .show{
     width: max-content;
     padding: 0rem 1rem;
     border-radius: 1.6rem;
-}
 
-.navitem:hover{
-    background-color: #5F5B5B;
-    transition: 0.7s;
+    &:hover{
+        background-color: #5F5B5B;
+        transition: 0.5s;
+    }
 }
 
 .navlink{
