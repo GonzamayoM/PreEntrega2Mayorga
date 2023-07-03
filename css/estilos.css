@@ -2311,6 +2311,7 @@ header .show { /* NAVBAR ABIERTA */ }
   .eventos-item {
     height: 60rem;
     align-items: flex-end;
+    margin-right: 1rem;
   }
 }
 @media screen and (max-width: 400px) {
