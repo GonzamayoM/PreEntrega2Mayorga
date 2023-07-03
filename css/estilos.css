@@ -576,7 +576,7 @@ header .show { /* NAVBAR ABIERTA */ }
 }
 
 .linea-inicio { /* LINEA */
-  background: linear-gradient(90deg, #dcffe7 0%, #97ffb8 98%);
+  background: linear-gradient(-120deg, #dcffe7 0%, #97ffb8 98%);
 }
 .linea-inicio:before {
   background-color: #97ffb8;

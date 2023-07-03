@@ -111,7 +111,7 @@
 
 .linea-inicio{ /* LINEA */
     @extend .linea;
-    background: linear-gradient(90deg, #dcffe7 0%, #97ffb8 98%);
+    background: linear-gradient(-120deg, #dcffe7 0%, #97ffb8 98%);
 
     
     &:before{
