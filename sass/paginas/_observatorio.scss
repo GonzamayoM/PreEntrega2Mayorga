@@ -1,60 +1,30 @@
 /* OBSERVATORIO */
 
-/* OBSERVATORIO COLORES */
-$galeria-cards:(
-    color-andromeda: white,
-    color-planeta-de-diamante: #b5f1f7,
-    color-quasar: #f7b5f6,
-    color-uy-scuty: rgb(165, 39, 17),
-    color-psr: rgb(1, 0, 34),
-    color-nebulosa-cangrejo: rgb(219, 199, 101),
-    color-messier: rgb(24, 14, 0),
-    color-nube-smith: rgb(96, 18, 41)
-);
-
-@each $galeria-cards-colors, $color in $galeria-cards {
-    .#{$galeria-cards-colors}{
-        color: $color;
-        border-color: $color;
-    }
-}
-
-/* OBSERVATORIO INICIO */
-
-.obsmain{
-    background-color: #5F5B5B;
-    height: 100%;
-    padding-bottom: 10rem;
-    overflow: hidden;
-}
-
-.observatorio-h{
+.observatorio-h{ /* TITULO */
     color: rgb(232, 181, 242);
     text-shadow: rgb(232, 181, 242) 1px 1px 10px;
     top: 40%; 
 }
 
+/* OBSERVATORIO ; TITULO Y DESCRIPCION*/
 
-/* TITULO Y DESCRIPCION*/
-
-.observatorio-description-h{
+.observatorio-description-h{ /* TITULO DE LA DESCRIPCION */
     color: rgb(248, 181, 254);
     font-size: 5rem;
     margin-bottom: 1.5rem;
 }
 
+/* OBSERVATORIO ; GALERIA */
 
-/* GALERIA */
-
-.observatorio-galeria{
+.observatorio-galeria{ /* GALERIA */
     margin-top: 5rem;
 }
 
-.galeria-item{
+.galeria-item{ /* ITEM DE LA GALERIA */
     padding: 0 4rem 4rem 4rem;
 }
 
-.galeria-card{
+.galeria-card{ /* CARDS */
     background-color: #313133;
     border: 1px solid;
     border-radius: 1.5rem;
@@ -66,9 +36,7 @@ $galeria-cards:(
     }
 }
 
-/* GALERIA TUTLOS */
-
-.galeria-h-container{
+.galeria-h-container{ /* CONTENEDOR DE LOS TITULOS */
     background-color: #3f3f40;
     height: 5rem;
     border-radius: 1.5rem;
@@ -76,20 +44,39 @@ $galeria-cards:(
     margin-bottom: 1rem;
 }
 
-.galeria-h{
+.galeria-h{ /* TITULO */
     font-size: clamp(1.5rem, 3vw, 1.9rem);
 }
 
-/* GALERIA IMAGENES */
-
-.galeria-img-container{
+.galeria-img-container{ /* CONTENEDOR DE LAS IMAGENES */
     padding: 1rem;
 }
 
-.galeria-img{
+.galeria-img{ /* IMAGEN */
     border-radius: 1.5rem;
 }
 
+/* OBSERVATORIO ; COLORES */
+
+$galeria-cards:( /* COLORES */
+    color-andromeda: white,
+    color-planeta-de-diamante: #b5f1f7,
+    color-quasar: #f7b5f6,
+    color-uy-scuty: rgb(165, 39, 17),
+    color-psr: rgb(1, 0, 34),
+    color-nebulosa-cangrejo: rgb(219, 199, 101),
+    color-messier: rgb(24, 14, 0),
+    color-nube-smith: rgb(96, 18, 41)
+);
+
+@each $galeria-cards-colors, $color in $galeria-cards { /* COLOR DE LAS CARDS */
+    .#{$galeria-cards-colors}{
+        color: $color;
+        border-color: $color;
+    }
+}
+
+/* OBSERVATORIO ; MEDIA QUERYS */
 
 @media screen and (max-width: 768px){
     .observatorio-description-h{

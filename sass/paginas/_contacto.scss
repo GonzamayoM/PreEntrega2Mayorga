@@ -1,49 +1,33 @@
-/* CONTACTOS */
+/* CONTACTO */
 
-.contacto-main{
-    background-color: #5F5B5B;
-    height: 100%;
-    padding-bottom: 5rem;
-}
-
-.contacto-h{
-    color: #2cfff8;
-    text-shadow: 1px 1px 10px;
+.contacto-h{ /* TITULO */
+    color: #2c6bff;
+    text-shadow: #2c6bff 1px 1px 10px;
     top: 40%; 
 }
 
-.contacto-h-container{
-    padding-top: 15rem;
-    display: flex;
-    justify-content: center;
-}
+/* CONTACTO ; FORMULARIO */
 
-/* FORMULARIO */
-
-.contacto-container{
+.contacto-container{ /* CONTENEDOR */
     margin-top: 10rem;
 }
 
-.contacto-ul{
+.contacto-ul{ /* UL */
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-/* IMAGEN */
-
-.contacto-antena-img{
+.contacto-antena-img{ /* IMAGEN DE LA ANTENA */
     filter: drop-shadow(10px 5px 10px white);
 }
 
-/* FORMULARIO */
-
-.contacto-form-container{
+.contacto-form-container{ /* CONTENEDOR DEL FORMULARIO */
     display: flex;
     justify-content: center;
 }
 
-.contacto-form{
+.contacto-form{ /* FORMULARIO */
     background-color: #393838;
     box-shadow:
         0px 0px 30px black,
@@ -57,21 +41,19 @@
     margin-bottom: 5rem;
 }
 
-.form-ul{
+.form-ul{ /* UL */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 2rem;
 }
 
-.form-item {
+.form-item { /* ITEM DE CADA CAMPO */
     margin-bottom: 5rem;
     width: 28rem;
 }
 
-/* FORMULARIO */
-
-.form-label{
+.form-label{ /* TITULO */
     position: relative;
     width: 0px;
     left: -24rem;
@@ -82,7 +64,7 @@
     transition: 0.2s transform;
 }
 
-.form-campo{
+.form-campo{ /* CAMPO */
     background-color: #393838;
     border: none;
     border-bottom: 0.2rem solid rgb(253, 91, 91);
@@ -93,32 +75,27 @@
     width: 24rem;
     padding: 0rem 0.2rem;
     transition: border-bottom 0.5s;
+
+    &:focus:not(select) + .form-label, &:not(:placeholder-shown):not(select) + .form-label{ /* ANIMACION CUANDO DEL TITULO CUANDO ALGUIEN SELECCIONA EL CAMPO O HAY ALGO ESCRITO */
+        transform: translateY(-3rem) scale(1.1);
+        transform-origin: left;
+    }
+
+    &:focus{ /* CAMPO CUANDO ESTA SELECCIONADO */
+        outline: none;
+        border-bottom: 0.2rem solid rgb(99, 227, 172);
+        transition: 0.5s;
+    }
+
+    &:not(:placeholder-shown){ /* CAMPO CUANDO HAY ALGO ESCRITO */
+        border-bottom: 0.2rem solid rgb(13, 167, 129);
+    }
 }
 
-/* ANIMACION */
 
-.form-campo:focus:not(select) + .form-label, .form-campo:not(:placeholder-shown):not(select) + .form-label{
-    transform: translateY(-3rem) scale(1.1);
-    transform-origin: left;
-}
+/* CONTACTO ; FORMULARIO ; PAIS */
 
-/* CAMPO CUANDO ESTA SELECCIONADO */
-
-.form-campo:focus{
-    outline: none;
-    border-bottom: 0.2rem solid rgb(99, 227, 172);
-    transition: 0.5s;
-}
-
-/* CAMPO CUANDO HAY ALGO ESCRITO */
-
-.form-campo:not(:placeholder-shown){
-    border-bottom: 0.2rem solid rgb(13, 167, 129);
-}
-
-/* PAIS */
-
-.form-campo-select{
+.form-campo-select{ /* CAMPO */
     @extend .form-campo;
     
     &:not(:invalid) + .form-label{
@@ -135,19 +112,19 @@
     }
 }
 
-option {
+option{ /* OPCIONES */
     background-color: #302e2e;
     font-size: 1.7rem;
 }
 
-/* OPINION */
+/* CONTACTO ; FORMULARIO ; OPINION */
 
-.form-label-opinion{
+.form-label-opinion{ /* TITULO */
     font-size: 2.5rem;
     color: white;
 }
 
-.form-campo-opinion{
+.form-campo-opinion{ /* CAMPO */
     background-color: #302e2e;
     border: none;
     border-radius: 1rem;
@@ -160,7 +137,7 @@ option {
     resize: none;
 }
 
-/* BOTONES */ 
+/* CONTACTO ; FORMULARIO ; BOTONES */ 
 
 .form-boton{ /* BOTONES */
     background-color: #828181;
@@ -200,6 +177,7 @@ option {
     
 }
 
+/* CONTACTO ; MEDIA QUERYS */
 
 @media screen and (min-width: 1025px) and (max-width: 1130px) {
     .contacto-form{

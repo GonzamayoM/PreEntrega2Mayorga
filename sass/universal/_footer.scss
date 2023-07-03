@@ -1,116 +1,111 @@
 /* FOOTER */
 
-.footer{
+.footer{ /* FOOTER */
     background-color: #393838;
     height: 100%;
     width: 100%;
     padding: 3rem 0;
 }
 
-.footer-ul{
+.footer-ul{ /* LISTA */
     display: flex;
     justify-content: space-evenly;
 }
 
-.footer-item{
+.footer-item{ /* SECCIONES DEL FOOTER */
     height: 9rem;
     background-color: #302e2e;
     border-radius: 1rem;
     padding: 0.5rem;
 }
 
-.footer-item-decoration{
+.footer-item-decoration{ /* RAYA LATERAL DE ALGUNAS SECCIONES */
     border-left: 0.1rem solid gray;
 }
 
-
 /* FOOTER ; SOBRE NOSOTROS*/
 
-.footer-item-sobrenosotros{
+.footer-item-sobre-nosotros{ /* SECCION */
     width: 30rem;
 }
 
-.footer-sobrenosotros-h{
+.footer-sobre-nosotros-h{ /* TITULO */
     font-size: 2rem;
     color: #989494;
 }
 
-.footer-sobrenosotros-p{
+.footer-sobre-nosotros-p{ /* TEXTO */
     font-size: 1.3rem;
     color: #d3d3d3;
 }
 
-.footer-sobrenosotros-mini-p{
-    font-size: 1rem;
-}
-
 /* FOOTER ; SUBIR A ARRIBA */
 
-.footer-item-up{
+.footer-item-up{ /* SECCION */
     width: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.footer-up-img{
+.footer-up-img{ /* FLECHA */
     height: 4.5rem;
     width: 4rem;
     transition-duration: 0.2s;
+
+    &:hover{ /* HOVER */
+        filter: drop-shadow(0px 0px 3px gray);
+        border-radius: 1rem;
+        transform: scale(1.5);
+        transition-duration: 0.2s;
+    }
 }
 
-.footer-up-img:hover{
-    filter: drop-shadow(0px 0px 3px gray);
-    border-radius: 1rem;
-    transform: scale(1.5);
-    transition-duration: 0.2s;
-}
+/* FOOTER ; LOGO */
 
-/* FOOTER; LOGO */
-
-.footer-item-logo{
+.footer-item-logo{ /* SECCION */
     width: 40.8rem;
 }
 
-.footer-logo-h{
+.footer-logo-h{ /* TITULO */
     color: white;
     font-size: 3.5rem;
 }
 
-.footer-logo-img{
+.footer-logo-img{ /* LOGO */
     height: 50%;
-    width: 55%;
+    width: 22rem;
 }
 
-/* FOOTER ; DERECHOS */
+/* FOOTER ; DESARROLLADOR Y DERECHOS */
 
-.footer-item-derechos{
+.footer-item-derechos{ /* SECCION */
     width: 20rem;
     overflow: hidden;
     padding-left: 0.8rem;
 }
 
-.footer-derechos-div{
+.footer-derechos-div{ /* SECCION DE DERECHOS */
     height: 50%;
 }
 
-.footer-derechos-h{
+.footer-derechos-h{ /* TITULO */
     font-size: 1.5rem;
     color: #989494;
 }
 
-.footer-derechos-p{
+.footer-derechos-p{ /* TEXTO */
     font-size: 1rem;
     color: white;
 }
 
 /* FOOTER ; REDES SOCIALES */
 
-.footer-item-redes-sociales{
+.footer-item-redes-sociales{ /* SECCION */
     width: 13rem;
 }
 
-.footer-redes-sociales-ul{
+.footer-redes-sociales-ul{ /* REDES */
     width: 100%;
     height: 100%;
     display: flex;
@@ -119,26 +114,28 @@
     overflow: hidden;
 }
 
-.footer-redes-sociales-item{
+.footer-redes-sociales-item{ /* ITEMS DE LA REDES SOCIALES*/
     list-style: none;
     width: 3rem;
 }
 
-.footer-redes-sociales-icon{
+.footer-redes-sociales-icon{ /* ICONOS DE LA RED SOCIAL */
     height: 3.5rem;
     width: 3.5rem;
+
+    &:hover{ /* HOVER */
+        filter:brightness(80%);
+    }
 }
 
-.footer-redes-sociales-icon:hover{
-    filter:brightness(80%);
-}
+/* FOOTER ; MEDIA QUERYS */
 
 @media screen and (max-width: 1200px) {
     .footer-ul{
         flex-wrap: wrap;
     }
 
-    .footer-item-sobrenosotros{
+    .footer-item-sobre-nosotros{
         order: 3;
         margin-top: 2rem;
     }
@@ -185,12 +182,6 @@
         width: 20.8rem;
     }
 
-    .footer-logo-img{
-        height: 50%;
-        width: 40%;
-        resize: auto;
-    }
-
     .footer-celular-item-redes-sociales{
         display: flex;
         justify-content: center;
@@ -212,12 +203,5 @@
 
     .footer-celular{
         display: none;
-    }
-}
-
-@media screen and (max-width: 576px){
-    .footer-logo-img{
-        height: 50%;
-        width: 60%;
     }
 }

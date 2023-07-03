@@ -1,44 +1,47 @@
 /* PLANETAS */
 
-/* PLANETAS INICIO */
-
-.planetas-main{
-    background-color: black;
+.planetas-main{ /* MAIN */
     height: 100%;
-    width: 100%;
-    padding-bottom: 16rem;
     overflow: hidden;
+    background-color: black;
+    padding-bottom: 16rem;
 }
 
-.planetas-h-container{
+.planetas-h-container{ /* CONTENEDOR DEL TITULO */
     display: flex;
     justify-content: center;
 }
 
-.planetas-h{
-    color: rgba(205,228,2,1);
-    text-shadow: rgba(205,228,2,1) 1px 1px 10px;
+.planetas-h{ /* TITULO */
+    color: rgb(205,228,2);
+    text-shadow: rgb(205,228,2) 1px 1px 10px;
     margin-top: 25%; 
 }
 
-.planetas-background-image{
+.planetas-background-image{ /* BACKGROUND */
     position: absolute;
 }
 
 /* PLANETAS INDICE Y DESCRIPCION */
 
-.planetas-inicio-container{
+.planetas-inicio-container{ /* CONTENEDOR */
     position: relative;
     margin-top: 20%;
 }
 
+.planetas-inicio-ul{ /* UL */
+    display: flex;
+    align-items: center;
+}
+
+
 /* PLANETAS ; DESCRIPCION */
 
-.planetas-inicio-description-item{
+.planetas-inicio-description-item{ /* ITEM DE DESCRIPCION */
     padding: 5rem 10rem;
 }
 
-.planetas-description-container{
+.planetas-description-container{ /* CONTENEDOR DE DESCRIPCION */
     background-color: #afa51939;
     border: 0.1rem outset #cac005;
     box-shadow: 
@@ -48,14 +51,9 @@
     padding: 3.2rem 4.8rem;
 }
 
-/* INDICE */
+/* PLANETAS ; INDICE */
 
-.planetas-inicio-ul{
-    display: flex;
-    align-items: center;
-}
-
-.planetas-inicio-indice-item{
+.planetas-inicio-indice-item{  /* ITEM DE INDICE */
     background-image: url(../img/cohete.png);
     background-size: 100%;
     margin-left: 8rem;
@@ -76,7 +74,7 @@
     }
 }
 
-.planetas-indice-ol{
+.planetas-indice-ol{ /* INDICE */
     background-color: rgba(255, 255, 255, 0.168);
     border-radius: 1.6rem;
     margin-top: 10.24rem;
@@ -86,33 +84,33 @@
     box-shadow:inset 0px 0px 10px white;
 }
 
-.planetas-indice-item{
+.planetas-indice-item{ /* ITEMS DEL INDICE */
     border-radius: 1.6rem;
     text-align: center;
     list-style: none;
     margin: 2.4rem 0rem;
+
+    &:hover{ /* HOVER DE LOS ITEMS */
+        transform: scale(1.2);
+        transition-duration: 0.2s;
+        border-style:ridge;
+        border-width: 0.32rem;
+    }
 }
 
-.planetas-indice-a{
-    font-family: 'Raleways' ;
-    padding: 0.2rem;
+.planetas-indice-a{ /* LINKS DEL INDICE */
+    font-family: 'Raleways';
     font-size: 2.08rem;
-    text-decoration: none;
     font-weight: 600;
+    text-decoration: none;
     color: rgba(255, 255, 255, 0.44);
     text-shadow: 0px 0px 8px black;
-}
-
-.planetas-indice-item:hover{
-    transform: scale(1.2);
-    transition-duration: 0.2s;
-    border-style:ridge;
-    border-width: 0.32rem;
+    padding: 0.2rem;
 }
 
 /* PLANETAS ; COLORES */
 
-$planetas-colores:(
+$planetas-colores:( /* COLORES */
     "color-mercurio" #75454572 #742626,
     "color-venus" #ff82516e #ff6624,
     "color-tierra" #3d8bf768 #72bb53,
@@ -124,7 +122,7 @@ $planetas-colores:(
     "color-pluton" #fdfdfd6b #cee8f7
 );
 
-@each $planeta, $background-color, $border-color in $planetas-colores{
+@each $planeta, $background-color, $border-color in $planetas-colores{ /* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
     .planetas-main .#{$planeta}{ /* COLORES DE CADA PLANETA */
         background-color: $background-color;
         border-color: $border-color;
@@ -140,7 +138,7 @@ $planetas-colores:(
         box-shadow: 0px 0px 50px $border-color;
     }
 
-    .modal-content.#{$planeta}{ /* COLOR DE LOS MODALES DA CADA PLANETA */
+    .modal-content.#{$planeta}{ /* COLOR DE LOS MODALES DE CADA PLANETA */
         box-shadow: 0px 0px 50px $border-color;
     }
 
@@ -161,56 +159,49 @@ $planetas-colores:(
 
 /* PLANETAS ; CONTENEDORES DE CADA PLANETA DESKTOP */
 
-.planeta-detallados-container{
+.planeta-detallados-container{ /* CONTENEDOR DE CADA PLANETA */
     margin-top: 12rem;
     border-radius: 1.6rem;
 }
 
-.planetas-info-container{
+.planetas-info-container{ /* CONTENEDOR DE LA INFORMACION DE LOS PLANETAS */
     padding: 1.6rem;
 }
 
 /* PLANETAS ; CONTENEDORES DE CADA PLANETA MOBILE */
 
-.modal-content{
+.modal-content{ /* CONTENEDOR DE LOS MODALES */
     border-radius: 1rem;
     backdrop-filter: blur(15px);
 }
 
-.planetas-boton-leer-mas{
+.planetas-boton-leer-mas{ /* BOTON DE LEER MAS */
     background-color: rgba(0, 0, 0, 0.178);
     border: none;
     color: rgba(155, 155, 155, 0.462);
     padding: 0.1rem 0.6rem;
-}
 
-.planetas-boton-leer-mas:hover{
-    box-shadow: 0px 0px 10px currentColor;
+    &:hover{ /* HOVER DEL BOTOM */
+        box-shadow: 0px 0px 10px currentColor;
+    }
 }
-
 
 /* PLANETAS ; IMAGENES DE CADA PLANETA */
 
-.planetas-icon-container{
+.planetas-icon-container{ /* CONTENEDOR DE LA IMAGEN DE LOS PLANETAS */
     padding: 1rem;
 }
 
-.planetas-icon-img{
+.planetas-icon-img{ /* IMAGEN DEL PLANETA */
     width: 100%;
     height: 100%;
     font-size: 1.7rem;
-    color: white;/* 
-    object-fit: cover;
-    object-position: center; */
+    color: white;
 }
 
-
+/* PLANETAS ; MEDIA QUERYS */
 
 @media screen and (max-width: 1200px){
-    .planetas-h{
-        width: 53rem;
-    }
-
     .planetas-inicio-container{
         margin-top: 40%;
     }
@@ -227,10 +218,6 @@ $planetas-colores:(
 } 
 
 @media screen and (max-width: 768px){
-    .planetas-h{
-        width: 25rem;
-    }
-
     .planetas-inicio-description-item{
         padding: 1rem;
     }

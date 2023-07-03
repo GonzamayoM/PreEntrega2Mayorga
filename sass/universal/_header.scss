@@ -1,7 +1,7 @@
 /* HEADER */
 $height-navbar: 10.4rem;
 
-.header{
+.header{ /* HEADER */
     height: $height-navbar;
     width: 100%;
     position: fixed;
@@ -9,7 +9,7 @@ $height-navbar: 10.4rem;
     backdrop-filter: blur(3px);
 }
 
-.navbar{
+.navbar{ /* CONFIGURACION DE LA NAVBAR */
     background-image: url(../img/header-footer/header.png);
     background-size: 100%;
     opacity: 85%;
@@ -17,13 +17,13 @@ $height-navbar: 10.4rem;
     width: 100%;
 }
 
-.navbar-container{
+.navbar-container{ /* CONTENEDOR DE LA NAVBAR */
     height: $height-navbar;
     display: flex;
     justify-content: space-around;
 }
 
-.navheader{
+.navheader{ /* TITULO UNIVERSIUM */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 4.5rem;
     font-weight: 600;
@@ -52,7 +52,7 @@ $height-navbar: 10.4rem;
     }
 }
 
-.navheader-in{
+.navheader-in{ /* TITULO DE UNIVERSIUM EN INDEX */
     text-shadow: 0px 0px 20px white;
     filter: grayscale(0%);
 
@@ -61,16 +61,16 @@ $height-navbar: 10.4rem;
     }
 }
 
-.navbar-nav{
+.navbar-nav{ /* UL DE LAS PAGINAS */
     width: 100%;
     gap: 2rem;
 }
 
-.navbar-collapse{
+.navbar-collapse{ /* DATOS DE LA NAVBAR */
     flex-grow: unset;
 }
 
-.collapsing{
+.collapsing{ /* NAVBAR ABRIENDOSE */
     background-image: url(../img/header-footer/header.png);
     background-size: 100%;
     padding: 1rem 0 0.5rem 0.5rem;
@@ -79,11 +79,11 @@ $height-navbar: 10.4rem;
     border-color: rgb(118, 17, 17)
 }
 
-header .show{
+header .show{ /* NAVBAR ABIERTA */
     @extend .collapsing;
 }
 
-.navitem{
+.navitem{ /* ITEM DE CADA PAGINA */
     width: max-content;
     padding: 0rem 1rem;
     border-radius: 1.6rem;
@@ -94,49 +94,51 @@ header .show{
     }
 }
 
-.navlink{
+.navlink{ /* LINK DE CADA PAGINA */
     font-size: 2.4rem;
     text-decoration: none;
     color: #D6D1D1;
 }
 
-.navlink-actual{
+.navlink-actual{ /* LINK DE LA PAGINA CUANDO ESTA EN ELLA */
     text-decoration: underline;
     color: #DE7A7A;
     text-shadow: 1px 1px 6px;
 }
 
-/* ICONOS */
+/* HEADER ; ICONOS */
 
-@mixin nav-icon-size($height, $width){
+@mixin nav-icon-size($height, $width){ /* VARIABLES DE LOS ICONOS */
     height: $height;
     width: $width;
 }
 
-.nav-icon{
+.nav-icon{ /* ICONO DE INICIO, EVENTO Y CONTACTO */
     @include nav-icon-size(2.5rem, 2.5rem);
     margin-bottom: -0.5rem;
     margin-right: 0.5rem;
 }
 
-.nav-icon-planetas{
+.nav-icon-planetas{ /* ICONO DE PLANETAS */
     @include nav-icon-size(2rem, 3.5rem);
     margin-bottom: -0.2rem;
 }
 
-.nav-icon-observatorio{
+.nav-icon-observatorio{ /* ICONO DE OBSERVATORIO */
     @include nav-icon-size(2.5rem, 2rem);
 }
 
-.nav-icon-actual{
+.nav-icon-actual{ /* ICONO CUANDO ESTA EN SU RESPECTIVA PAGINA */
     filter: drop-shadow(1px 1px 6px white);
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon{ /* ICONO PARA ABRIR LA NAVBAR EN RESPONSIVE */
     background-image: url(../img/header-footer/navbar-expand-icon.png);
     width: 6rem;
     height: 6rem;
 }
+
+/* HEADER ; MEDIA QUERYS */
 
 @media screen and (max-width: 1400px){
     .navlink{

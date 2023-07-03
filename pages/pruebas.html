@@ -12,33 +12,33 @@
         <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <header class="header" id="header">
-        <nav class="navbar navbar-expand-lg"> <!-- NAVEGADOR -->
+    <header class="header">
+        <nav class="navbar navbar-expand-xl"> <!-- NAVEGADOR -->
             <div class="navbar-container container-fluid">
-                <h1 class="navheader">UNIVERSIUM</h1> 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a href="../index.html" class="navheader">UNIVERSIUM</a> <!-- BOTON UNIVERSIUM -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!-- BOTON DE LA NAVBAR RESPONSIVE -->
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="collapse navbar-collapse" id="navbarNav"> <!-- PAGINAS -->
                     <ul class="navbar-nav">
                         <li class="navitem"> 
-                            <img src="../img/header-footer/inicioicon.png" alt="" class="navicons-1">
-                            <a href="../index.html" class="navlink">INICIO</a>
+                            <img src="../img/header-footer/inicioicon.png" alt="" class="nav-icon">
+                            <a href="./inicio.html" class="navlink">INICIO</a>
                         </li>
                         <li class="navitem"> <!-- ACTUAL -->
-                            <img src="../img/header-footer/planetasicon.png" alt="" class="naviconplanetas nav-icon-actual">
-                            <a href="" class="navlink navlink-actual" aria-current="page" >PLANETAS</a>
+                            <img src="../img/header-footer/planetasicon.png" alt="" class="nav-icon nav-icon-planetas nav-icon-actual">
+                            <a href="" class="navlink navlink-actual" aria-current="page" >PRUEBAS</a>
                         </li>
                         <li class="navitem">
-                            <img src="../img/header-footer/observatorioicon.png" alt="" class="naviconobservatorio">
+                            <img src="../img/header-footer/observatorioicon.png" alt="" class="nav-icon nav-icon-observatorio">
                             <a href="./observatorio.html" class="navlink">OBSERVATORIO</a>
                         </li>
                         <li class="navitem">
-                            <img src="../img/header-footer/comollegaricon.png" alt="" class="navicons-1">
+                            <img src="../img/header-footer/comollegaricon.png" alt="" class="nav-icon">
                             <a href="./eventos.html" class="navlink">EVENTOS</a>
                         </li>
                         <li class="navitem">
-                            <img src="../img/header-footer/contactoicon.png" alt="" class="navicons-1">
+                            <img src="../img/header-footer/contactoicon.png" alt="" class="nav-icon">
                             <a href="./contacto.html" class="navlink">CONTACTO</a>
                         </li>
                     </ul>
@@ -47,83 +47,6 @@
         </nav>
     </header>
     <main class="pruebas-main">
-        <section class="rocket-pruebas">
-            <div class="cohete"> <!-- ANIMACION -->
-                <div class="cohete-cuerpo">
-                </div>
-                <div class="cohete-bottom">
-                    <div class="cohete-pata"></div>
-                    <div class="cohete-propulsor"></div>
-                    <div class="cohete-pata"></div>
-                </div>
-                <ul class="smokes">
-                    <li class="smoke smoke-type-1"></li>
-                    <li class="smoke smoke-type-2"></li>
-                    <li class="smoke smoke-type-3"></li>
-                    <li class="smoke smoke-type-4"></li>
-                    <li class="smoke smoke-type-5"></li>
-                    <li class="smoke smoke-type-6"></li>
-                    <li class="smoke smoke-type-7"></li>
-                    <li class="smoke smoke-type-8"></li>
-                </ul>
-            </div>
-        </section>
-        <section class="telescopio">
-            <article class="palitos">
-                <div class="palito"></div>
-                <div class="palito"></div>
-                <div class="palito"></div>
-            </article>
-            <article>
-                <div class="borde"></div>
-            </article>
-            <article class="palo-vision">
-                <div class="vision"></div>
-                <div class="vision"></div>
-                <div class="vision"></div>
-            </article>
-        </section>
-        <section class="sistema-solar">
-            <ol class="sol">
-                <li class="planeta mercurio color-mercurio"></li>
-                <li class="planeta venus color-venus"></li>
-                <li class="planeta tierra color-tierra">
-                    <div class="luna"></div>
-                </li>
-                <li class="planeta marte color-marte"></li>
-                <li class="planeta jupiter color-jupiter"></li>
-                <li class="planeta saturno color-saturno"></li>
-                <li class="planeta urano color-urano"></li>
-                <li class="planeta neptuno color-neptuno"></li>
-                <li class="planeta pluton color-pluton">
-                    
-                </li>
-            </ol>
-        </section>
-        <section class="estrellas">
-            <ul class="noche">
-                <li class="estrella estrella-type-1"></li>
-                <li class="estrella estrella-type-5"></li>
-                <li class="estrella estrella-type-2"></li>
-                <li class="estrella estrella-type-3"></li>
-                <li class="estrella estrella-type-6"></li>
-                <li class="estrella estrella-type-7"></li>
-                <li class="estrella estrella-type-4"></li>
-                <li class="estrella estrella-type-1"></li>
-                <li class="estrella estrella-type-5"></li>
-                <li class="estrella estrella-type-2"></li>
-                <li class="estrella estrella-type-3"></li>
-            </ul>
-        </section>
-        <section class="asteroides">
-            <ul class="ul-asteroides">
-                <li class="asteroide asteroide-type-1"></li>
-                <li class="asteroide asteroide-type-4"></li>
-                <li class="asteroide asteroide-type-3"></li>
-                <li class="asteroide asteroide-type-2"></li>
-                <li class="asteroide asteroide-type-5"></li>
-            </ul>
-        </section>
     </main>
 
     <!-- BOOSTRAP SCRIPT -->

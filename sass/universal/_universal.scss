@@ -1,22 +1,10 @@
 /* RESET */
 
-*{
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 62.5%;
-    scroll-margin-top: 15rem;
-}
-
-.box-sizing-reset{
-    box-sizing: unset;
-}
-
 img{
     vertical-align: unset;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     margin-top: unset; 
     margin-bottom: unset;
     font-weight: bold;
@@ -28,6 +16,10 @@ ol, ul {
     padding-left: unset;
 }
 
+ul {
+    margin-bottom: unset;
+}
+
 body {
     line-height: unset;
 }
@@ -36,49 +28,56 @@ body {
     --bs-navbar-padding-y: 0;
 }
 
-ul {
-    margin-bottom: unset;
-}
-
 p{
     margin-bottom: unset;
 }
 
-/* VARIABLES UNIVERSALES */
-
-$universium-first-color: #393838;
-$universium-second-color: #302e2e;
-
 /* UNIVERSAL */
 
-*::selection{
-    background-color: rgba(255, 255, 199, 0.574);
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+    scroll-margin-top: 15rem;
+    list-style: none;
+
+    &::selection{ /* FONDO AL SELECCIONAR */
+        background-color: rgba(255, 255, 199, 0.574);
+    }
 }
 
-.universal-background-container{
+.universal-main{ /* MAIN UNIVERSAL */
+    background-color: #5F5B5B;
+    height: 100%;
+    padding-bottom: 10rem;
+    overflow: hidden;
+}
+
+.universal-background-container{ /* CONTENEDOR DEL BACKGROUND UNIVERSAL */
     width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(to top,#5F5B5B, 7%, transparent, 15%, transparent);
+    }
 }
 
-.universal-background-container::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    background-image: linear-gradient(to top,#5F5B5B, 7%, transparent, 15%, transparent);
-}
-
-.universal-background-image{
+.universal-background-image{ /* IMAGEN DE FONDO UNIVERSAL */
     width: 100%;
     pointer-events: none;
     user-select: none;
 }
 
-.universal-h-start{
+.universal-h-start{ /* TITULO INICIAL UNIVERSAL */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 8rem;
     text-align: center;
@@ -86,35 +85,36 @@ $universium-second-color: #302e2e;
     padding: 0rem 5%;
 }
 
-.universal-description-container{
+.universal-description-container{ /* CONTENEDOR UNIVERSAL DE DESCRIPCION */
     margin-top: 10rem;
     padding: 2rem;
 }
 
-.universal-p{
-    font-family: 'Raleway';
+.universal-p{ /* TEXTO UNIVERSAL */
+    font-family:'';
     font-size: 1.7rem;
     color: white;
     margin-bottom: 1rem;
 }
 
-.universal-p-variante{
+.universal-p-variante{ /* TEXTO VARIADO UNIVERSAL */
     font-size: 2rem;
 }
 
-.universal-h{
+.universal-h{ /* TITULO UNIVERSAL */
     color: white;
     font-size: 3.2rem;
     margin-bottom: 0.6rem;
     text-shadow: black 6px 5px 9px;
 }
 
+/* UNIVERSAL ; MEDIA QUERYS */
+
 @media screen and (max-width: 1200px){
     .universal-h-start{
         font-size: 6rem;
     }
 }
-
 
 @media screen and (max-width: 768px){
     .universal-h-start{

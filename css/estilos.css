@@ -1,22 +1,10 @@
 @charset "UTF-8";
 /* RESET */
-* {
-  padding: 0;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 62.5%;
-  scroll-margin-top: 15rem;
-}
-
-.box-sizing-reset {
-  box-sizing: unset;
-}
-
 img {
   vertical-align: unset;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: unset;
   margin-bottom: unset;
   font-weight: bold;
@@ -28,6 +16,10 @@ ol, ul {
   padding-left: unset;
 }
 
+ul {
+  margin-bottom: unset;
+}
+
 body {
   line-height: unset;
 }
@@ -36,27 +28,36 @@ body {
   --bs-navbar-padding-y: 0;
 }
 
-ul {
-  margin-bottom: unset;
-}
-
 p {
   margin-bottom: unset;
 }
 
-/* VARIABLES UNIVERSALES */
 /* UNIVERSAL */
-*::selection {
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  scroll-margin-top: 15rem;
+  list-style: none;
+}
+*::selection { /* FONDO AL SELECCIONAR */
   background-color: rgba(255, 255, 199, 0.574);
 }
 
-.universal-background-container {
+.universal-main { /* MAIN UNIVERSAL */
+  background-color: #5F5B5B;
+  height: 100%;
+  padding-bottom: 10rem;
+  overflow: hidden;
+}
+
+.universal-background-container { /* CONTENEDOR DEL BACKGROUND UNIVERSAL */
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
 }
-
 .universal-background-container::after {
   content: "";
   width: 100%;
@@ -67,13 +68,13 @@ p {
   background-image: linear-gradient(to top, #5F5B5B, 7%, transparent, 15%, transparent);
 }
 
-.universal-background-image {
+.universal-background-image { /* IMAGEN DE FONDO UNIVERSAL */
   width: 100%;
   pointer-events: none;
   user-select: none;
 }
 
-.universal-h-start {
+.universal-h-start { /* TITULO INICIAL UNIVERSAL */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 8rem;
   text-align: center;
@@ -81,29 +82,30 @@ p {
   padding: 0rem 5%;
 }
 
-.universal-description-container {
+.universal-description-container { /* CONTENEDOR UNIVERSAL DE DESCRIPCION */
   margin-top: 10rem;
   padding: 2rem;
 }
 
-.universal-p {
-  font-family: "Raleway";
+.universal-p { /* TEXTO UNIVERSAL */
+  font-family: "";
   font-size: 1.7rem;
   color: white;
   margin-bottom: 1rem;
 }
 
-.universal-p-variante {
+.universal-p-variante { /* TEXTO VARIADO UNIVERSAL */
   font-size: 2rem;
 }
 
-.universal-h {
+.universal-h { /* TITULO UNIVERSAL */
   color: white;
   font-size: 3.2rem;
   margin-bottom: 0.6rem;
   text-shadow: black 6px 5px 9px;
 }
 
+/* UNIVERSAL ; MEDIA QUERYS */
 @media screen and (max-width: 1200px) {
   .universal-h-start {
     font-size: 6rem;
@@ -118,7 +120,7 @@ p {
   }
 }
 /* HEADER */
-.header {
+.header { /* HEADER */
   height: 10.4rem;
   width: 100%;
   position: fixed;
@@ -126,7 +128,7 @@ p {
   backdrop-filter: blur(3px);
 }
 
-.navbar {
+.navbar { /* CONFIGURACION DE LA NAVBAR */
   background-image: url(../img/header-footer/header.png);
   background-size: 100%;
   opacity: 85%;
@@ -134,13 +136,13 @@ p {
   width: 100%;
 }
 
-.navbar-container {
+.navbar-container { /* CONTENEDOR DE LA NAVBAR */
   height: 10.4rem;
   display: flex;
   justify-content: space-around;
 }
 
-.navheader {
+.navheader { /* TITULO UNIVERSIUM */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 4.5rem;
   font-weight: 600;
@@ -166,7 +168,7 @@ p {
   filter: drop-shadow(0px 0px 8px #DE7A7A);
 }
 
-.navheader-in {
+.navheader-in { /* TITULO DE UNIVERSIUM EN INDEX */
   text-shadow: 0px 0px 20px white;
   filter: grayscale(0%);
 }
@@ -174,16 +176,16 @@ p {
   filter: drop-shadow(0px 0px 20px #DE7A7A);
 }
 
-.navbar-nav {
+.navbar-nav { /* UL DE LAS PAGINAS */
   width: 100%;
   gap: 2rem;
 }
 
-.navbar-collapse {
+.navbar-collapse { /* DATOS DE LA NAVBAR */
   flex-grow: unset;
 }
 
-.collapsing, header .show {
+.collapsing, header .show { /* NAVBAR ABRIENDOSE */
   background-image: url(../img/header-footer/header.png);
   background-size: 100%;
   padding: 1rem 0 0.5rem 0.5rem;
@@ -192,7 +194,9 @@ p {
   border-color: rgb(118, 17, 17);
 }
 
-.navitem {
+header .show { /* NAVBAR ABIERTA */ }
+
+.navitem { /* ITEM DE CADA PAGINA */
   width: max-content;
   padding: 0rem 1rem;
   border-radius: 1.6rem;
@@ -202,60 +206,67 @@ p {
   transition: 0.5s;
 }
 
-.navlink {
+.navlink { /* LINK DE CADA PAGINA */
   font-size: 2.4rem;
   text-decoration: none;
   color: #D6D1D1;
 }
 
-.navlink-actual {
+.navlink-actual { /* LINK DE LA PAGINA CUANDO ESTA EN ELLA */
   text-decoration: underline;
   color: #DE7A7A;
   text-shadow: 1px 1px 6px;
 }
 
-/* ICONOS */
-.nav-icon {
+/* HEADER ; ICONOS */
+.nav-icon { /* ICONO DE INICIO, EVENTO Y CONTACTO */
+  /* VARIABLES DE LOS ICONOS */
   height: 2.5rem;
   width: 2.5rem;
   margin-bottom: -0.5rem;
   margin-right: 0.5rem;
 }
 
-.nav-icon-planetas {
+.nav-icon-planetas { /* ICONO DE PLANETAS */
+  /* VARIABLES DE LOS ICONOS */
   height: 2rem;
   width: 3.5rem;
   margin-bottom: -0.2rem;
 }
 
-.nav-icon-observatorio {
+.nav-icon-observatorio { /* ICONO DE OBSERVATORIO */
+  /* VARIABLES DE LOS ICONOS */
   height: 2.5rem;
   width: 2rem;
 }
 
-.nav-icon-actual {
+.nav-icon-actual { /* ICONO CUANDO ESTA EN SU RESPECTIVA PAGINA */
   filter: drop-shadow(1px 1px 6px white);
 }
 
-.navbar-toggler-icon {
+.navbar-toggler-icon { /* ICONO PARA ABRIR LA NAVBAR EN RESPONSIVE */
   background-image: url(../img/header-footer/navbar-expand-icon.png);
   width: 6rem;
   height: 6rem;
 }
 
+/* HEADER ; MEDIA QUERYS */
 @media screen and (max-width: 1400px) {
   .navlink {
     font-size: 2rem;
   }
   .nav-icon {
+    /* VARIABLES DE LOS ICONOS */
     height: 2.2rem;
     width: 2.2rem;
   }
   .nav-icon-planetas {
+    /* VARIABLES DE LOS ICONOS */
     height: 1.7rem;
     width: 3rem;
   }
   .nav-icon-observatorio {
+    /* VARIABLES DE LOS ICONOS */
     height: 2.2rem;
     width: 1.7rem;
   }
@@ -279,111 +290,106 @@ p {
   }
 }
 /* FOOTER */
-.footer {
+.footer { /* FOOTER */
   background-color: #393838;
   height: 100%;
   width: 100%;
   padding: 3rem 0;
 }
 
-.footer-ul {
+.footer-ul { /* LISTA */
   display: flex;
   justify-content: space-evenly;
 }
 
-.footer-item {
+.footer-item { /* SECCIONES DEL FOOTER */
   height: 9rem;
   background-color: #302e2e;
   border-radius: 1rem;
   padding: 0.5rem;
 }
 
-.footer-item-decoration {
+.footer-item-decoration { /* RAYA LATERAL DE ALGUNAS SECCIONES */
   border-left: 0.1rem solid gray;
 }
 
 /* FOOTER ; SOBRE NOSOTROS*/
-.footer-item-sobrenosotros {
+.footer-item-sobre-nosotros { /* SECCION */
   width: 30rem;
 }
 
-.footer-sobrenosotros-h {
+.footer-sobre-nosotros-h { /* TITULO */
   font-size: 2rem;
   color: #989494;
 }
 
-.footer-sobrenosotros-p {
+.footer-sobre-nosotros-p { /* TEXTO */
   font-size: 1.3rem;
   color: #d3d3d3;
 }
 
-.footer-sobrenosotros-mini-p {
-  font-size: 1rem;
-}
-
 /* FOOTER ; SUBIR A ARRIBA */
-.footer-item-up {
+.footer-item-up { /* SECCION */
   width: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footer-up-img {
+.footer-up-img { /* FLECHA */
   height: 4.5rem;
   width: 4rem;
   transition-duration: 0.2s;
 }
-
-.footer-up-img:hover {
+.footer-up-img:hover { /* HOVER */
   filter: drop-shadow(0px 0px 3px gray);
   border-radius: 1rem;
   transform: scale(1.5);
   transition-duration: 0.2s;
 }
 
-/* FOOTER; LOGO */
-.footer-item-logo {
+/* FOOTER ; LOGO */
+.footer-item-logo { /* SECCION */
   width: 40.8rem;
 }
 
-.footer-logo-h {
+.footer-logo-h { /* TITULO */
   color: white;
   font-size: 3.5rem;
 }
 
-.footer-logo-img {
+.footer-logo-img { /* LOGO */
   height: 50%;
-  width: 55%;
+  width: 22rem;
 }
 
-/* FOOTER ; DERECHOS */
-.footer-item-derechos {
+/* FOOTER ; DESARROLLADOR Y DERECHOS */
+.footer-item-derechos { /* SECCION */
   width: 20rem;
   overflow: hidden;
   padding-left: 0.8rem;
 }
 
-.footer-derechos-div {
+.footer-derechos-div { /* SECCION DE DERECHOS */
   height: 50%;
 }
 
-.footer-derechos-h {
+.footer-derechos-h { /* TITULO */
   font-size: 1.5rem;
   color: #989494;
 }
 
-.footer-derechos-p {
+.footer-derechos-p { /* TEXTO */
   font-size: 1rem;
   color: white;
 }
 
 /* FOOTER ; REDES SOCIALES */
-.footer-item-redes-sociales {
+.footer-item-redes-sociales { /* SECCION */
   width: 13rem;
 }
 
-.footer-redes-sociales-ul {
+.footer-redes-sociales-ul { /* REDES */
   width: 100%;
   height: 100%;
   display: flex;
@@ -392,25 +398,25 @@ p {
   overflow: hidden;
 }
 
-.footer-redes-sociales-item {
+.footer-redes-sociales-item { /* ITEMS DE LA REDES SOCIALES*/
   list-style: none;
   width: 3rem;
 }
 
-.footer-redes-sociales-icon {
+.footer-redes-sociales-icon { /* ICONOS DE LA RED SOCIAL */
   height: 3.5rem;
   width: 3.5rem;
 }
-
-.footer-redes-sociales-icon:hover {
+.footer-redes-sociales-icon:hover { /* HOVER */
   filter: brightness(80%);
 }
 
+/* FOOTER ; MEDIA QUERYS */
 @media screen and (max-width: 1200px) {
   .footer-ul {
     flex-wrap: wrap;
   }
-  .footer-item-sobrenosotros {
+  .footer-item-sobre-nosotros {
     order: 3;
     margin-top: 2rem;
   }
@@ -447,11 +453,6 @@ p {
   .footer-item-logo {
     width: 20.8rem;
   }
-  .footer-logo-img {
-    height: 50%;
-    width: 40%;
-    resize: auto;
-  }
   .footer-celular-item-redes-sociales {
     display: flex;
     justify-content: center;
@@ -471,12 +472,7 @@ p {
     display: none;
   }
 }
-@media screen and (max-width: 576px) {
-  .footer-logo-img {
-    height: 50%;
-    width: 60%;
-  }
-}
+/* UNIVERSIUM */
 .universium-main { /* MAIN */
   background-color: black;
   height: 100%;
@@ -575,15 +571,15 @@ p {
 
 /* UNIVERSIUM ; INICIO */
 .universium-h-inicio { /* TITULO */
-  background: linear-gradient(90deg, rgb(169, 126, 126) 0%, rgb(130, 54, 54) 98%);
+  background: linear-gradient(90deg, #dcffe7 0%, #97ffb8 98%);
   -webkit-background-clip: text;
 }
 
 .linea-inicio { /* LINEA */
-  background: linear-gradient(-120deg, rgb(169, 126, 126) 0%, rgb(130, 54, 54) 98%);
+  background: linear-gradient(90deg, #dcffe7 0%, #97ffb8 98%);
 }
 .linea-inicio:before {
-  background-color: rgb(130, 54, 54);
+  background-color: #97ffb8;
 }
 
 .universium-container-inicio { /* CATEGORIA DE PLANETAS */
@@ -600,22 +596,22 @@ p {
   width: 55rem;
 }
 .universium-container-inicio .universium-buttom { /* BOTON */
-  background-color: rgb(130, 54, 54);
-  box-shadow: 0px 0px 10px rgb(130, 54, 54);
+  background-color: #7dc494;
+  box-shadow: 0px 0px 10px #aadbba;
 }
 .universium-container-inicio .universium-buttom:active {
-  background-color: rgb(183, 104, 104);
+  background-color: #a0d4b1;
 }
 
 /* UNIVERSIUM ; INICIO ; COHETE */
-.cohete {
+.cohete { /* CONTENEDOR DEL COHETE */
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
 
-.cohete-cuerpo {
+.cohete-cuerpo { /* CUERPO DEL COHETE */
   height: 20rem;
   width: 10rem;
   background: linear-gradient(120deg, gray 0%, rgb(35, 35, 35) 98%);
@@ -623,13 +619,13 @@ p {
   z-index: 1;
 }
 
-.cohete-bottom {
+.cohete-bottom { /* PARTE INFERIOR DEL COHETE */
   display: flex;
   justify-content: space-between;
   width: 15rem;
 }
 
-.cohete-pata {
+.cohete-pata { /* PATAS DEL COHETE */
   position: relative;
   top: -5.5rem;
   height: 10rem;
@@ -652,7 +648,7 @@ p {
   transform: scale(-1, 1);
 }
 
-.cohete-propulsor {
+.cohete-propulsor { /* PROPULSOR */
   z-index: 1;
   width: 5rem;
   height: 1rem;
@@ -673,15 +669,14 @@ p {
 }
 
 /* UNIVERSIUM ; INICIO ; ANIMACION */
-.smokes {
+.smokes { /* CONTENEDOR DE LOS HUMOS */
   display: flex;
   justify-content: center;
   position: absolute;
   top: 60%;
 }
 
-.smoke {
-  z-index: 0.1;
+.smoke { /* HUMO */
   position: absolute;
   width: 3.5rem;
   height: 3.5rem;
@@ -689,7 +684,7 @@ p {
   animation: smoke-out linear infinite;
 }
 
-/* DATOS DE CADA PLANETA */
+/* DATOS DE CADA HUMO */
 .smoke-type-1 {
   scale: 0.5;
   margin-left: -3.5rem;
@@ -699,7 +694,7 @@ p {
   box-shadow: 0px 0px 10px #939393;
 }
 
-/* DATOS DE CADA PLANETA */
+/* DATOS DE CADA HUMO */
 .smoke-type-2 {
   scale: 1;
   margin-left: 1.1rem;
@@ -709,7 +704,7 @@ p {
   box-shadow: 0px 0px 10px #5c5a5a;
 }
 
-/* DATOS DE CADA PLANETA */
+/* DATOS DE CADA HUMO */
 .smoke-type-3 {
   scale: 1.4;
   margin-left: 1.6rem;
@@ -719,7 +714,7 @@ p {
   box-shadow: 0px 0px 10px #252525;
 }
 
-/* DATOS DE CADA PLANETA */
+/* DATOS DE CADA HUMO */
 .smoke-type-4 {
   scale: 0.7;
   margin-left: 0.1rem;
@@ -729,7 +724,7 @@ p {
   box-shadow: 0px 0px 10px #6e6c6c;
 }
 
-/* DATOS DE CADA PLANETA */
+/* DATOS DE CADA HUMO */
 .smoke-type-5 {
   scale: 1.2;
   margin-left: -0.5rem;
@@ -739,7 +734,7 @@ p {
   box-shadow: 0px 0px 10px #424141;
 }
 
-/* DATOS DE CADA PLANETA */
+/* DATOS DE CADA HUMO */
 .smoke-type-6 {
   scale: 1.4;
   margin-left: -1.6rem;
@@ -749,7 +744,7 @@ p {
   box-shadow: 0px 0px 10px #252525;
 }
 
-/* DATOS DE CADA PLANETA */
+/* DATOS DE CADA HUMO */
 .smoke-type-7 {
   scale: 0.7;
   margin-left: 2.7rem;
@@ -759,7 +754,7 @@ p {
   box-shadow: 0px 0px 10px #6e6c6c;
 }
 
-/* DATOS DE CADA PLANETA */
+/* DATOS DE CADA HUMO */
 .smoke-type-8 {
   scale: 1.2;
   margin-left: -2.2rem;
@@ -769,7 +764,7 @@ p {
   box-shadow: 0px 0px 10px #424141;
 }
 
-@keyframes smoke-out { /* ANIMACION DE LA ORBITA */
+@keyframes smoke-out { /* ANIMACION DE LOS HUMOS */
   100% {
     transform: translateY(35rem) scale(0.5);
     background-color: transparent;
@@ -808,7 +803,7 @@ p {
 }
 
 /* UNIVERSIUM ; PLANETAS ; ANIMACION */
-.sistema-solar {
+.sistema-solar { /* CONTENEDOR */
   position: relative;
   display: flex;
   justify-content: center;
@@ -818,7 +813,7 @@ p {
   height: 64rem;
 }
 
-.sol {
+.sol { /* SOL */
   background: radial-gradient(circle, rgb(240, 227, 20) 0%, rgb(250, 250, 151) 91%);
   box-shadow: 0px 0px 20px rgb(250, 250, 151);
   display: flex;
@@ -838,33 +833,31 @@ p {
   background: radial-gradient(circle, rgba(238, 233, 19, 0.2) 2%, rgba(238, 233, 19, 0.09) 25%, rgba(213, 235, 0, 0.001) 75%);
 }
 
-.planeta {
+.planeta { /* CONFIGURACION DE LOS PLANETAS */
   position: absolute;
   animation: orbita linear infinite;
-  display: flex;
-  justify-content: flex-end;
 }
 
-.planeta, .luna {
+.planeta, .luna { /* RASTRO DE LOS PLANETAS Y DE LA LUNA */
   border-style: solid;
   border-color: rgb(253, 253, 253) transparent transparent transparent;
   border-width: 0.1em 0.1em 0 0;
   border-radius: 50%;
 }
 
-.planeta::before, .luna::before {
+.planeta::before, .luna::before { /* FORMA DE LOS PLANETAS Y DE LA LUNA */
   content: "";
   position: absolute;
   border-radius: 50%;
 }
 
-.luna {
+.luna { /* DATOS DE LA LUNA */
   animation: orbita 2.7s linear infinite;
   position: absolute;
   right: -1.5rem;
   top: 0.4rem;
 }
-.luna::before {
+.luna::before { /* COLOR DE LA LUNA */
   background-color: white;
 }
 
@@ -1105,7 +1098,7 @@ p {
 }
 
 /* UNIVERSIUM ; OBSERVATORIO ; TELESCOPIO */
-.telescopio {
+.telescopio { /* CONTENEDOR */
   margin-top: 15rem;
   position: relative;
   justify-content: center;
@@ -1113,12 +1106,12 @@ p {
   align-items: center;
 }
 
-.palitos {
+.palitos { /* CONTENEDOR DE LOS PALOS */
   display: flex;
   position: absolute;
 }
 
-.palito {
+.palito { /* PALOS */
   height: 10rem;
   width: 0.3rem;
   background-color: gray;
@@ -1132,7 +1125,7 @@ p {
   margin-left: 1.5rem;
 }
 
-.borde {
+.borde { /* PARTE DE ABAJO DEL TELESCOPIO */
   position: relative;
   rotate: 15deg;
   width: 10rem;
@@ -1153,7 +1146,7 @@ p {
   height: 1rem;
 }
 
-.palo-vision {
+.palo-vision { /* PALO DE VISION */
   position: absolute;
   display: flex;
   rotate: 15deg;
@@ -1161,7 +1154,7 @@ p {
   margin-left: -1rem;
 }
 
-.vision {
+.vision { /* VISION */
   height: 1.5rem;
   width: 7rem;
   background: linear-gradient(90deg, rgb(147, 147, 147) 12%, rgb(49, 45, 45) 15%);
@@ -1174,12 +1167,12 @@ p {
 }
 
 /* UNIVERSIUM ; OBSERVATORIO ; ANIMACION */
-.espacio {
+.espacio { /* CONTENEDOR */
   display: flex;
   flex-wrap: wrap;
 }
 
-.estrella {
+.estrella { /* DATO DE LA ESTRELLA */
   background-color: rgb(231, 175, 247);
   box-shadow: 0px 0px 20px rgb(231, 175, 247);
   border-radius: 40%;
@@ -1251,14 +1244,14 @@ p {
 }
 /* UNIVERSIUM ; EVENTOS */
 .linea-eventos { /* LINEA */
-  background: linear-gradient(130deg, rgb(216, 79, 125) 0%, rgb(177, 3, 61) 98%);
+  background: linear-gradient(130deg, #d84f4f 0%, #ff0022 98%);
 }
 .linea-eventos:before {
-  background-color: rgb(177, 3, 61);
+  background-color: #ff0022;
 }
 
 .universium-h-eventos { /* TITULO */
-  background: linear-gradient(130deg, rgb(216, 79, 125) 0%, rgb(177, 3, 61) 98%);
+  background: linear-gradient(130deg, #d84f4f 0%, #ff0022 98%);
   -webkit-background-clip: text;
 }
 
@@ -1276,15 +1269,15 @@ p {
   padding: 0;
 }
 .universium-container-eventos .universium-buttom { /* BOTON */
-  background-color: rgb(177, 3, 61);
-  box-shadow: 0px 0px 10px rgb(177, 3, 61);
+  background-color: #ff0022;
+  box-shadow: 0px 0px 10px #ff0022;
 }
 .universium-container-eventos .universium-buttom:active {
-  background-color: rgb(203, 51, 102);
+  background-color: #ec465c;
 }
 
 /* UNIVERSIUM ; EVENTOS ; ANIMACION */
-.asteroides {
+.asteroides { /* CONTENEDOR */
   position: relative;
   display: flex;
   justify-content: center;
@@ -1292,7 +1285,7 @@ p {
   height: 60rem;
 }
 
-.ul-asteroides {
+.ul-asteroides { /* LISTA DE ASTEROIDES */
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -1414,12 +1407,12 @@ p {
 }
 /* UNIVERSIUM ; CONTACTO */
 .universium-h-contacto { /* TITULO */
-  background: linear-gradient(90deg, rgb(99, 227, 172) 0%, rgb(71, 141, 211) 98%);
+  background: linear-gradient(90deg, #2c6bff 0%, rgb(71, 141, 211) 98%);
   -webkit-background-clip: text;
 }
 
 .linea-contacto { /* LINEA */
-  background: linear-gradient(-120deg, rgb(99, 227, 172) 0%, rgb(71, 141, 211) 98%);
+  background: linear-gradient(-120deg, #2c6bff 0%, rgb(71, 141, 211) 98%);
 }
 .linea-contacto:before {
   background-color: rgb(71, 141, 211);
@@ -1498,6 +1491,7 @@ p {
     border-color: aqua transparent transparent transparent;
   }
 }
+/* UNIVERSIUM ; MEDIA QUERYS */
 @media screen and (max-width: 1200px) {
   .universium-container-planetas {
     flex-direction: column;
@@ -1586,14 +1580,20 @@ p {
   }
 }
 /* INICIO */
-.inicio-main {
-  background-color: #5F5B5B;
-  height: 100%;
-  padding-bottom: 8rem;
-  overflow: hidden;
+.inicio-h { /* TITULO */
+  color: #dcffe7;
+  text-shadow: #dcffe7 1px 1px 10px;
+  top: 30%;
 }
 
-.inicio-container {
+.inicio-p { /* TEXTOS */
+  font-family: "Raleway";
+  font-size: 1.7rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.inicio-container { /* CONTENEDORES */
   background: rgb(43, 41, 45);
   background: linear-gradient(129deg, rgb(43, 41, 45) 0%, rgb(23, 22, 24) 23%, rgb(56, 56, 56) 51%, rgb(54, 52, 52) 55%, rgb(34, 34, 34) 66%, rgb(51, 51, 51) 100%);
   border-radius: 1rem;
@@ -1602,14 +1602,7 @@ p {
   box-shadow: 0px 0px 30px black;
 }
 
-.inicio-h {
-  color: rgb(169, 126, 126);
-  text-shadow: rgb(169, 126, 126) 1px 1px 10px;
-  top: 30%;
-}
-
-/* MAIN ; IMAGEN DEL INICIO Y SEPARACION*/
-.inicio-background {
+.inicio-background { /* BACKGROUND */
   background: linear-gradient(0deg, #5F5B5B, 7%, transparent, 15%, transparent), url(../img/fondos/inicio-background.png);
   background-size: 100%;
   background-repeat: no-repeat;
@@ -1617,69 +1610,53 @@ p {
   width: 100%;
 }
 
-/* MAIN; INICIO: BIGBANG */
-.bigbangtextContainer {
-  height: 100%;
-  width: 88rem;
-}
-
-.bigbang-img {
+.inicio-img { /* IMAGEN DE LOS CONTENEDORES */
   width: 100%;
   height: 100%;
-  border-radius: 2rem;
+  border-radius: 3rem;
+  object-fit: cover;
 }
 
-/* INICIO ; SISTEMA SOLAR */
-.sistema-solar-img {
-  width: 100%;
-  height: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .inicio-h {
-    width: 30rem;
-  }
-  .inicio-background {
-    height: 25rem;
-  }
-}
 /* PLANETAS */
-/* PLANETAS INICIO */
-.planetas-main {
-  background-color: black;
+.planetas-main { /* MAIN */
   height: 100%;
-  width: 100%;
-  padding-bottom: 16rem;
   overflow: hidden;
+  background-color: black;
+  padding-bottom: 16rem;
 }
 
-.planetas-h-container {
+.planetas-h-container { /* CONTENEDOR DEL TITULO */
   display: flex;
   justify-content: center;
 }
 
-.planetas-h {
+.planetas-h { /* TITULO */
   color: rgb(205, 228, 2);
   text-shadow: rgb(205, 228, 2) 1px 1px 10px;
   margin-top: 25%;
 }
 
-.planetas-background-image {
+.planetas-background-image { /* BACKGROUND */
   position: absolute;
 }
 
 /* PLANETAS INDICE Y DESCRIPCION */
-.planetas-inicio-container {
+.planetas-inicio-container { /* CONTENEDOR */
   position: relative;
   margin-top: 20%;
 }
 
+.planetas-inicio-ul { /* UL */
+  display: flex;
+  align-items: center;
+}
+
 /* PLANETAS ; DESCRIPCION */
-.planetas-inicio-description-item {
+.planetas-inicio-description-item { /* ITEM DE DESCRIPCION */
   padding: 5rem 10rem;
 }
 
-.planetas-description-container {
+.planetas-description-container { /* CONTENEDOR DE DESCRIPCION */
   background-color: rgba(175, 165, 25, 0.2235294118);
   border: 0.1rem outset #cac005;
   box-shadow: inset 0px 0px 10px #cac005, 0px 0px 10px #cac005;
@@ -1687,13 +1664,8 @@ p {
   padding: 3.2rem 4.8rem;
 }
 
-/* INDICE */
-.planetas-inicio-ul {
-  display: flex;
-  align-items: center;
-}
-
-.planetas-inicio-indice-item {
+/* PLANETAS ; INDICE */
+.planetas-inicio-indice-item { /* ITEM DE INDICE */
   background-image: url(../img/cohete.png);
   background-size: 100%;
   margin-left: 8rem;
@@ -1712,7 +1684,7 @@ p {
     transform: translateY(0px);
   }
 }
-.planetas-indice-ol {
+.planetas-indice-ol { /* INDICE */
   background-color: rgba(255, 255, 255, 0.168);
   border-radius: 1.6rem;
   margin-top: 10.24rem;
@@ -1722,31 +1694,31 @@ p {
   box-shadow: inset 0px 0px 10px white;
 }
 
-.planetas-indice-item {
+.planetas-indice-item { /* ITEMS DEL INDICE */
   border-radius: 1.6rem;
   text-align: center;
   list-style: none;
   margin: 2.4rem 0rem;
 }
-
-.planetas-indice-a {
-  font-family: "Raleways";
-  padding: 0.2rem;
-  font-size: 2.08rem;
-  text-decoration: none;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.44);
-  text-shadow: 0px 0px 8px black;
-}
-
-.planetas-indice-item:hover {
+.planetas-indice-item:hover { /* HOVER DE LOS ITEMS */
   transform: scale(1.2);
   transition-duration: 0.2s;
   border-style: ridge;
   border-width: 0.32rem;
 }
 
+.planetas-indice-a { /* LINKS DEL INDICE */
+  font-family: "Raleways";
+  font-size: 2.08rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.44);
+  text-shadow: 0px 0px 8px black;
+  padding: 0.2rem;
+}
+
 /* PLANETAS ; COLORES */
+/* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
 .planetas-main .color-mercurio { /* COLORES DE CADA PLANETA */
   background-color: rgba(117, 69, 69, 0.4470588235);
   border-color: #742626;
@@ -1762,7 +1734,7 @@ p {
   box-shadow: 0px 0px 50px #742626;
 }
 
-.modal-content.color-mercurio { /* COLOR DE LOS MODALES DA CADA PLANETA */
+.modal-content.color-mercurio { /* COLOR DE LOS MODALES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #742626;
 }
 
@@ -1780,6 +1752,7 @@ p {
   box-shadow: 0px 0px 50px #742626, 0px 0px 20px #742626;
 }
 
+/* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
 .planetas-main .color-venus { /* COLORES DE CADA PLANETA */
   background-color: rgba(255, 130, 81, 0.431372549);
   border-color: #ff6624;
@@ -1795,7 +1768,7 @@ p {
   box-shadow: 0px 0px 50px #ff6624;
 }
 
-.modal-content.color-venus { /* COLOR DE LOS MODALES DA CADA PLANETA */
+.modal-content.color-venus { /* COLOR DE LOS MODALES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #ff6624;
 }
 
@@ -1813,6 +1786,7 @@ p {
   box-shadow: 0px 0px 50px #ff6624, 0px 0px 20px #ff6624;
 }
 
+/* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
 .planetas-main .color-tierra { /* COLORES DE CADA PLANETA */
   background-color: rgba(61, 139, 247, 0.4078431373);
   border-color: #72bb53;
@@ -1828,7 +1802,7 @@ p {
   box-shadow: 0px 0px 50px #72bb53;
 }
 
-.modal-content.color-tierra { /* COLOR DE LOS MODALES DA CADA PLANETA */
+.modal-content.color-tierra { /* COLOR DE LOS MODALES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #72bb53;
 }
 
@@ -1846,6 +1820,7 @@ p {
   box-shadow: 0px 0px 50px #72bb53, 0px 0px 20px #72bb53;
 }
 
+/* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
 .planetas-main .color-marte { /* COLORES DE CADA PLANETA */
   background-color: rgba(198, 100, 61, 0.4274509804);
   border-color: #aa532e;
@@ -1861,7 +1836,7 @@ p {
   box-shadow: 0px 0px 50px #aa532e;
 }
 
-.modal-content.color-marte { /* COLOR DE LOS MODALES DA CADA PLANETA */
+.modal-content.color-marte { /* COLOR DE LOS MODALES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #aa532e;
 }
 
@@ -1879,6 +1854,7 @@ p {
   box-shadow: 0px 0px 50px #aa532e, 0px 0px 20px #aa532e;
 }
 
+/* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
 .planetas-main .color-jupiter { /* COLORES DE CADA PLANETA */
   background-color: rgba(224, 180, 127, 0.3921568627);
   border-color: #b09250;
@@ -1894,7 +1870,7 @@ p {
   box-shadow: 0px 0px 50px #b09250;
 }
 
-.modal-content.color-jupiter { /* COLOR DE LOS MODALES DA CADA PLANETA */
+.modal-content.color-jupiter { /* COLOR DE LOS MODALES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #b09250;
 }
 
@@ -1912,6 +1888,7 @@ p {
   box-shadow: 0px 0px 50px #b09250, 0px 0px 20px #b09250;
 }
 
+/* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
 .planetas-main .color-saturno { /* COLORES DE CADA PLANETA */
   background-color: rgba(227, 197, 115, 0.4156862745);
   border-color: #d4b952;
@@ -1927,7 +1904,7 @@ p {
   box-shadow: 0px 0px 50px #d4b952;
 }
 
-.modal-content.color-saturno { /* COLOR DE LOS MODALES DA CADA PLANETA */
+.modal-content.color-saturno { /* COLOR DE LOS MODALES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #d4b952;
 }
 
@@ -1945,6 +1922,7 @@ p {
   box-shadow: 0px 0px 50px #d4b952, 0px 0px 20px #d4b952;
 }
 
+/* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
 .planetas-main .color-urano { /* COLORES DE CADA PLANETA */
   background-color: rgba(142, 170, 210, 0.4078431373);
   border-color: #6b8689;
@@ -1960,7 +1938,7 @@ p {
   box-shadow: 0px 0px 50px #6b8689;
 }
 
-.modal-content.color-urano { /* COLOR DE LOS MODALES DA CADA PLANETA */
+.modal-content.color-urano { /* COLOR DE LOS MODALES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #6b8689;
 }
 
@@ -1978,6 +1956,7 @@ p {
   box-shadow: 0px 0px 50px #6b8689, 0px 0px 20px #6b8689;
 }
 
+/* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
 .planetas-main .color-neptuno { /* COLORES DE CADA PLANETA */
   background-color: rgba(90, 108, 207, 0.3921568627);
   border-color: #163d8a;
@@ -1993,7 +1972,7 @@ p {
   box-shadow: 0px 0px 50px #163d8a;
 }
 
-.modal-content.color-neptuno { /* COLOR DE LOS MODALES DA CADA PLANETA */
+.modal-content.color-neptuno { /* COLOR DE LOS MODALES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #163d8a;
 }
 
@@ -2011,6 +1990,7 @@ p {
   box-shadow: 0px 0px 50px #163d8a, 0px 0px 20px #163d8a;
 }
 
+/* COLORES DE CADA ELEMENTO RESPECTIVO AL PLANETA */
 .planetas-main .color-pluton { /* COLORES DE CADA PLANETA */
   background-color: rgba(253, 253, 253, 0.4196078431);
   border-color: #cee8f7;
@@ -2026,7 +2006,7 @@ p {
   box-shadow: 0px 0px 50px #cee8f7;
 }
 
-.modal-content.color-pluton { /* COLOR DE LOS MODALES DA CADA PLANETA */
+.modal-content.color-pluton { /* COLOR DE LOS MODALES DE CADA PLANETA */
   box-shadow: 0px 0px 50px #cee8f7;
 }
 
@@ -2045,50 +2025,45 @@ p {
 }
 
 /* PLANETAS ; CONTENEDORES DE CADA PLANETA DESKTOP */
-.planeta-detallados-container {
+.planeta-detallados-container { /* CONTENEDOR DE CADA PLANETA */
   margin-top: 12rem;
   border-radius: 1.6rem;
 }
 
-.planetas-info-container {
+.planetas-info-container { /* CONTENEDOR DE LA INFORMACION DE LOS PLANETAS */
   padding: 1.6rem;
 }
 
 /* PLANETAS ; CONTENEDORES DE CADA PLANETA MOBILE */
-.modal-content {
+.modal-content { /* CONTENEDOR DE LOS MODALES */
   border-radius: 1rem;
   backdrop-filter: blur(15px);
 }
 
-.planetas-boton-leer-mas {
+.planetas-boton-leer-mas { /* BOTON DE LEER MAS */
   background-color: rgba(0, 0, 0, 0.178);
   border: none;
   color: rgba(155, 155, 155, 0.462);
   padding: 0.1rem 0.6rem;
 }
-
-.planetas-boton-leer-mas:hover {
+.planetas-boton-leer-mas:hover { /* HOVER DEL BOTOM */
   box-shadow: 0px 0px 10px currentColor;
 }
 
 /* PLANETAS ; IMAGENES DE CADA PLANETA */
-.planetas-icon-container {
+.planetas-icon-container { /* CONTENEDOR DE LA IMAGEN DE LOS PLANETAS */
   padding: 1rem;
 }
 
-.planetas-icon-img {
+.planetas-icon-img { /* IMAGEN DEL PLANETA */
   width: 100%;
   height: 100%;
   font-size: 1.7rem;
-  color: white; /* 
-object-fit: cover;
-object-position: center; */
+  color: white;
 }
 
+/* PLANETAS ; MEDIA QUERYS */
 @media screen and (max-width: 1200px) {
-  .planetas-h {
-    width: 53rem;
-  }
   .planetas-inicio-container {
     margin-top: 40%;
   }
@@ -2102,9 +2077,6 @@ object-position: center; */
   }
 }
 @media screen and (max-width: 768px) {
-  .planetas-h {
-    width: 25rem;
-  }
   .planetas-inicio-description-item {
     padding: 1rem;
   }
@@ -2129,78 +2101,29 @@ object-position: center; */
   }
 }
 /* OBSERVATORIO */
-/* OBSERVATORIO COLORES */
-.color-andromeda {
-  color: white;
-  border-color: white;
-}
-
-.color-planeta-de-diamante {
-  color: #b5f1f7;
-  border-color: #b5f1f7;
-}
-
-.color-quasar {
-  color: #f7b5f6;
-  border-color: #f7b5f6;
-}
-
-.color-uy-scuty {
-  color: rgb(165, 39, 17);
-  border-color: rgb(165, 39, 17);
-}
-
-.color-psr {
-  color: rgb(1, 0, 34);
-  border-color: rgb(1, 0, 34);
-}
-
-.color-nebulosa-cangrejo {
-  color: rgb(219, 199, 101);
-  border-color: rgb(219, 199, 101);
-}
-
-.color-messier {
-  color: rgb(24, 14, 0);
-  border-color: rgb(24, 14, 0);
-}
-
-.color-nube-smith {
-  color: rgb(96, 18, 41);
-  border-color: rgb(96, 18, 41);
-}
-
-/* OBSERVATORIO INICIO */
-.obsmain {
-  background-color: #5F5B5B;
-  height: 100%;
-  padding-bottom: 10rem;
-  overflow: hidden;
-}
-
-.observatorio-h {
+.observatorio-h { /* TITULO */
   color: rgb(232, 181, 242);
   text-shadow: rgb(232, 181, 242) 1px 1px 10px;
   top: 40%;
 }
 
-/* TITULO Y DESCRIPCION*/
-.observatorio-description-h {
+/* OBSERVATORIO ; TITULO Y DESCRIPCION*/
+.observatorio-description-h { /* TITULO DE LA DESCRIPCION */
   color: rgb(248, 181, 254);
   font-size: 5rem;
   margin-bottom: 1.5rem;
 }
 
-/* GALERIA */
-.observatorio-galeria {
+/* OBSERVATORIO ; GALERIA */
+.observatorio-galeria { /* GALERIA */
   margin-top: 5rem;
 }
 
-.galeria-item {
+.galeria-item { /* ITEM DE LA GALERIA */
   padding: 0 4rem 4rem 4rem;
 }
 
-.galeria-card {
+.galeria-card { /* CARDS */
   background-color: #313133;
   border: 1px solid;
   border-radius: 1.5rem;
@@ -2211,8 +2134,7 @@ object-position: center; */
   scale: 120%;
 }
 
-/* GALERIA TUTLOS */
-.galeria-h-container {
+.galeria-h-container { /* CONTENEDOR DE LOS TITULOS */
   background-color: #3f3f40;
   height: 5rem;
   border-radius: 1.5rem;
@@ -2220,19 +2142,68 @@ object-position: center; */
   margin-bottom: 1rem;
 }
 
-.galeria-h {
+.galeria-h { /* TITULO */
   font-size: clamp(1.5rem, 3vw, 1.9rem);
 }
 
-/* GALERIA IMAGENES */
-.galeria-img-container {
+.galeria-img-container { /* CONTENEDOR DE LAS IMAGENES */
   padding: 1rem;
 }
 
-.galeria-img {
+.galeria-img { /* IMAGEN */
   border-radius: 1.5rem;
 }
 
+/* OBSERVATORIO ; COLORES */
+/* COLOR DE LAS CARDS */
+.color-andromeda {
+  color: white;
+  border-color: white;
+}
+
+/* COLOR DE LAS CARDS */
+.color-planeta-de-diamante {
+  color: #b5f1f7;
+  border-color: #b5f1f7;
+}
+
+/* COLOR DE LAS CARDS */
+.color-quasar {
+  color: #f7b5f6;
+  border-color: #f7b5f6;
+}
+
+/* COLOR DE LAS CARDS */
+.color-uy-scuty {
+  color: rgb(165, 39, 17);
+  border-color: rgb(165, 39, 17);
+}
+
+/* COLOR DE LAS CARDS */
+.color-psr {
+  color: rgb(1, 0, 34);
+  border-color: rgb(1, 0, 34);
+}
+
+/* COLOR DE LAS CARDS */
+.color-nebulosa-cangrejo {
+  color: rgb(219, 199, 101);
+  border-color: rgb(219, 199, 101);
+}
+
+/* COLOR DE LAS CARDS */
+.color-messier {
+  color: rgb(24, 14, 0);
+  border-color: rgb(24, 14, 0);
+}
+
+/* COLOR DE LAS CARDS */
+.color-nube-smith {
+  color: rgb(96, 18, 41);
+  border-color: rgb(96, 18, 41);
+}
+
+/* OBSERVATORIO ; MEDIA QUERYS */
 @media screen and (max-width: 768px) {
   .observatorio-description-h {
     font-size: 3rem;
@@ -2243,46 +2214,33 @@ object-position: center; */
   }
 }
 /* EVENTOS */
-/* EVENTOS INICIO */
-.eventos-main {
-  background-color: #5F5B5B;
-  height: 100%;
-  padding-bottom: 5rem;
-}
-
-.eventos-h {
-  color: #d84f7d;
-  text-shadow: #d84f7d 1px 1px 10px;
+.eventos-h { /* TITULO */
+  color: #d84f4f;
+  text-shadow: #d84f4f 1px 1px 10px;
   top: 40%;
 }
 
-.eventos-h-container {
-  padding-top: 15rem;
-  display: flex;
-  justify-content: center;
-}
-
-/* EVENTOS LISTA DE EVENTOS */
-.eventos-container {
+/* EVENTOS ; LISTA DE EVENTOS */
+.eventos-container { /* CONTENEDOR */
   margin-top: 10rem;
 }
 
-.eventos-ul {
+.eventos-ul { /* LINEA */
   background-image: url(../img/linea-eventos.png);
   background-repeat: repeat-y;
   background-position: center;
   height: 100% rem;
 }
 
-.eventos-item {
+.eventos-item { /* ITEM DE CADA EVENTO */
   margin-bottom: 10rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-/* CONTENEDOR */
-.eventos-descripcion-container {
+/* EVENTOS ; CONTENEDOR */
+.eventos-descripcion-container { /* CONTENEDOR DE DESCRIPCION */
   width: 30rem;
   height: 20rem;
   background-color: rgba(58, 56, 56, 0.404);
@@ -2291,34 +2249,34 @@ object-position: center; */
   margin: 0rem 2.5rem;
 }
 
-.eventos-descripcion-h-container {
+.eventos-descripcion-h-container { /* CONTENEDOR DEL TITULO DE DESCRIPCION */
   border-radius: 0.5rem 0.5rem 0 0;
   background-color: rgba(58, 56, 56, 0.758);
   border-bottom: 1px solid gray;
   padding: 0.5rem 0 0.5rem 1rem;
 }
 
-.eventos-descripcion-p-container {
+.eventos-descripcion-p-container { /* CONTENEDOR DEL TEXTO */
   padding: 0 1rem 0 1rem;
   display: flex;
   align-items: center;
   height: 70%;
 }
 
-.eventos-h2 {
+.eventos-h2 { /* PRIMER TITULO */
   color: rgb(237, 194, 194);
 }
 
-.eventos-h3 {
+.eventos-h3 { /* SEGUNDO TITULO */
   color: lightcoral;
 }
 
-.eventos-p {
+.eventos-p { /* TEXTO */
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
 }
 
-.eventos-img-container {
+.eventos-img-container { /* CONTENEDOR DE LA IMAGEN */
   background-color: rgba(58, 56, 56, 0.404);
   border: 1px solid gray;
   border-radius: 0.5rem;
@@ -2327,17 +2285,15 @@ object-position: center; */
   height: 25rem;
 }
 
-.eventos-img {
+.eventos-img { /* IMAGEN */
   border-radius: 1rem;
   height: 100%;
   max-height: 100%;
   object-fit: cover;
 }
 
+/* EVENTOS ; MEDIA QUERYS */
 @media screen and (max-width: 768px) {
-  .eventos-h {
-    width: 25rem;
-  }
   .eventos-ul {
     background-position: 15%;
     margin-left: 5rem;
@@ -2371,48 +2327,34 @@ object-position: center; */
     padding: 1rem;
   }
 }
-/* CONTACTOS */
-.contacto-main {
-  background-color: #5F5B5B;
-  height: 100%;
-  padding-bottom: 5rem;
-}
-
-.contacto-h {
-  color: #2cfff8;
-  text-shadow: 1px 1px 10px;
+/* CONTACTO */
+.contacto-h { /* TITULO */
+  color: #2c6bff;
+  text-shadow: #2c6bff 1px 1px 10px;
   top: 40%;
 }
 
-.contacto-h-container {
-  padding-top: 15rem;
-  display: flex;
-  justify-content: center;
-}
-
-/* FORMULARIO */
-.contacto-container {
+/* CONTACTO ; FORMULARIO */
+.contacto-container { /* CONTENEDOR */
   margin-top: 10rem;
 }
 
-.contacto-ul {
+.contacto-ul { /* UL */
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-/* IMAGEN */
-.contacto-antena-img {
+.contacto-antena-img { /* IMAGEN DE LA ANTENA */
   filter: drop-shadow(10px 5px 10px white);
 }
 
-/* FORMULARIO */
-.contacto-form-container {
+.contacto-form-container { /* CONTENEDOR DEL FORMULARIO */
   display: flex;
   justify-content: center;
 }
 
-.contacto-form {
+.contacto-form { /* FORMULARIO */
   background-color: #393838;
   box-shadow: 0px 0px 30px black, 0px 5px 10px rgb(39, 39, 39), -25px 25px 1px rgb(20, 19, 20), -50px 50px 1px rgb(184, 183, 184);
   border-radius: 1rem;
@@ -2422,20 +2364,19 @@ object-position: center; */
   margin-bottom: 5rem;
 }
 
-.form-ul {
+.form-ul { /* UL */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 2rem;
 }
 
-.form-item {
+.form-item { /* ITEM DE CADA CAMPO */
   margin-bottom: 5rem;
   width: 28rem;
 }
 
-/* FORMULARIO */
-.form-label {
+.form-label { /* TITULO */
   position: relative;
   width: 0px;
   left: -24rem;
@@ -2446,7 +2387,7 @@ object-position: center; */
   transition: 0.2s transform;
 }
 
-.form-campo, .form-campo-select {
+.form-campo, .form-campo-select { /* CAMPO */
   background-color: #393838;
   border: none;
   border-bottom: 0.2rem solid rgb(253, 91, 91);
@@ -2458,26 +2399,21 @@ object-position: center; */
   padding: 0rem 0.2rem;
   transition: border-bottom 0.5s;
 }
-
-/* ANIMACION */
-.form-campo:focus:not(select) + .form-label, .form-campo-select:focus:not(select) + .form-label, .form-campo:not(:placeholder-shown):not(select) + .form-label, .form-campo-select:not(:placeholder-shown):not(select) + .form-label {
+.form-campo:focus:not(select) + .form-label, .form-campo-select:focus:not(select) + .form-label, .form-campo:not(:placeholder-shown):not(select) + .form-label, .form-campo-select:not(:placeholder-shown):not(select) + .form-label { /* ANIMACION CUANDO DEL TITULO CUANDO ALGUIEN SELECCIONA EL CAMPO O HAY ALGO ESCRITO */
   transform: translateY(-3rem) scale(1.1);
   transform-origin: left;
 }
-
-/* CAMPO CUANDO ESTA SELECCIONADO */
-.form-campo:focus, .form-campo-select:focus {
+.form-campo:focus, .form-campo-select:focus { /* CAMPO CUANDO ESTA SELECCIONADO */
   outline: none;
   border-bottom: 0.2rem solid rgb(99, 227, 172);
   transition: 0.5s;
 }
-
-/* CAMPO CUANDO HAY ALGO ESCRITO */
-.form-campo:not(:placeholder-shown), .form-campo-select:not(:placeholder-shown) {
+.form-campo:not(:placeholder-shown), .form-campo-select:not(:placeholder-shown) { /* CAMPO CUANDO HAY ALGO ESCRITO */
   border-bottom: 0.2rem solid rgb(13, 167, 129);
 }
 
-/* PAIS */
+/* CONTACTO ; FORMULARIO ; PAIS */
+.form-campo-select { /* CAMPO */ }
 .form-campo-select:not(:invalid) + .form-label {
   transform: translateY(-3rem) scale(1.1);
   transform-origin: left;
@@ -2489,18 +2425,18 @@ object-position: center; */
   border-bottom: 0.2rem solid rgb(99, 227, 172);
 }
 
-option {
+option { /* OPCIONES */
   background-color: #302e2e;
   font-size: 1.7rem;
 }
 
-/* OPINION */
-.form-label-opinion {
+/* CONTACTO ; FORMULARIO ; OPINION */
+.form-label-opinion { /* TITULO */
   font-size: 2.5rem;
   color: white;
 }
 
-.form-campo-opinion {
+.form-campo-opinion { /* CAMPO */
   background-color: #302e2e;
   border: none;
   border-radius: 1rem;
@@ -2513,7 +2449,7 @@ option {
   resize: none;
 }
 
-/* BOTONES */
+/* CONTACTO ; FORMULARIO ; BOTONES */
 .form-boton { /* BOTONES */
   background-color: #828181;
   border: none;
@@ -2546,6 +2482,7 @@ option {
   box-shadow: 0px 0px 10px #f29b9b;
 }
 
+/* CONTACTO ; MEDIA QUERYS */
 @media screen and (min-width: 1025px) and (max-width: 1130px) {
   .contacto-form {
     width: 50rem;
